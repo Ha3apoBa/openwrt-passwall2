@@ -1,16 +1,16 @@
 {
-  "apkFileName": "LanFeng22（使用前删除之前的配置文件）_src.apk",
+  "apkFileName": "LanFeng25-修复一些BUG_src.apk",
   "VersionInfo": {
-    "versionName": "LanFeng22",
-    "versionCode": "100022"
+    "versionName": "v25",
+    "versionCode": "100025"
   },
   "UsesFramework": {
     "ids": [1],
     "tag": null
   },
   "unknownFiles": {
-    "okhttp3/internal/publicsuffix/NOTICE": "8",
-    "okhttp3/internal/publicsuffix/PublicSuffixDatabase.gz": "0"
+    "Ü/¢.gz": "8",
+    "okhttp3/internal/publicsuffix/NOTICE": "8"
   },
   "PackageInfo": {
     "forcedPackageId": "127",
@@ -18,13 +18,7 @@
   },
   "doNotCompress": [
     "resources.arsc",
-    "META-INF/androidx.annotation_annotation-experimental.version",
-    "META-INF/androidx.arch.core_core-runtime.version",
-    "META-INF/androidx.core_core.version",
-    "META-INF/androidx.lifecycle_lifecycle-runtime.version",
-    "META-INF/androidx.versionedparcelable_versionedparcelable.version",
-    "png",
-    "webp"
+    "png"
   ],
   "isFrameworkApk": false,
   "compressionType": false,
@@ -33,6 +27,6 @@
   "sharedLibrary": false,
   "sdkInfo": {
     "minSdkVersion": "24",
-    "targetSdkVersion": "33"
+    "targetSdkVersion": "29"
   }
 }

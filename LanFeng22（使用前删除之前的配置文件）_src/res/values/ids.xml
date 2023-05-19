@@ -43,10 +43,6 @@
     <item type="id" name="icon" />
     <item type="id" name="icon_group" />
     <item type="id" name="info" />
-    <item type="id" name="item1" />
-    <item type="id" name="item2" />
-    <item type="id" name="item3" />
-    <item type="id" name="item4" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
     <item type="id" name="notification_background" />

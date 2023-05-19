@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    android:compileSdkVersion="33"
-    android:compileSdkVersionCodename="13"
-    package="xdc.sohoad.lanfeng.douyin"
-    platformBuildVersionCode="33"
-    platformBuildVersionName="13"
+    android:compileSdkVersion="32"
+    android:compileSdkVersionCodename="12"
+    package="xdc.sohoad.lanfeng"
+    platformBuildVersionCode="32"
+    platformBuildVersionName="12"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@mipmap/ic"
         android:supportsRtl="true"
         android:extractNativeLibs="false"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_round"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:requestLegacyExternalStorage="true">
         <meta-data
@@ -19,7 +19,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="LanFeng不再支持低版本,自行测试 \n长按视频上半部分呼出设置 \n抖音需要存储权限 \n不生效请重启抖音" />
+            android:value="给你的抖音增加一些额外的功能" />
         <meta-data
             android:name="xposedminversion"
             android:value="89" />
