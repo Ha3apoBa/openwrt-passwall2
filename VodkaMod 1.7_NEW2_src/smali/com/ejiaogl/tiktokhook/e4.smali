@@ -1,4 +1,4 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/e4;
+.class public final Lcom/ejiaogl/tiktokhook/e4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,6 +1,17 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/a7;
-.super Lcom/ejiaogl/tiktokhook/w3;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/a7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ejiaogl/tiktokhook/a7$a;
+    }
+.end annotation
 
 
 # direct methods
@@ -12,17 +23,10 @@
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/w3;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public abstract M()Ljava/lang/Thread;
+.method public abstract M()V
+.end method
+
+.method public abstract N(Lcom/ejiaogl/tiktokhook/a7$a;)Z
 .end method

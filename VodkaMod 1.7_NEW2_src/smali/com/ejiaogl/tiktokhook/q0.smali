@@ -1,32 +1,71 @@
-.class public final synthetic Lcom/ejiaogl/tiktokhook/q0;
+.class public final Lcom/ejiaogl/tiktokhook/q0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/q8;
-
 
 # static fields
-.field private static RT:[I
+.field private static aek:[I
+
+.field private static ael:[I
+
+.field private static aem:[I
+
+.field private static aen:[I
+
+.field private static aeo:[I
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:Landroid/widget/ImageView;
 
-.field public final synthetic c:Z
+.field public b:Lcom/ejiaogl/tiktokhook/dh;
+
+.field public c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0xd
+    const v0, 0x1
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_4
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->aen:[I
+
+    const v0, 0x1
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_3
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->aeo:[I
+
+    const v0, 0x6
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_2
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v0, 0x4
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->aem:[I
+
+    const v0, 0x2
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q0;->aek:[I
 
     nop
 
@@ -34,613 +73,618 @@
 
     :array_0
     .array-data 4
-        0x842ab4
-        0x23df9b2
-        0x2e692c7
-        0x29d5258
-        0x50d0574
-        0x5e92da
-        0x4383b83
-        0x15d0cc5
-        0x2eb7144
-        0x24d2530
-        0x50073a6
-        0x5b55aa8
-        0x320fc32
+        0x3ee1a5d
+        0x3070568
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x4ea272f
+        0x3a76631
+        0x9f250d
+        0x2243351
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x4b28dd1
+        0x2d8b9eb
+        0x48bd4b7
+        0x4f69532
+        0x565dbff
+        0x3c7f22e
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x2651a1e
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x34dde3e
     .end array-data
 .end method
 
-.method public synthetic constructor <init>(ZI)V
+.method public constructor <init>(Landroid/widget/ImageView;)V
     .locals 8
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move/from16 v1, p1
+    move-object/from16 v2, p1
 
-    move/from16 v2, p2
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iput v2, v0, Lcom/ejiaogl/tiktokhook/q0;->b:I
+    const/4 v0, 0x0
 
-    iput-boolean v1, v0, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+    iput v0, v1, Lcom/ejiaogl/tiktokhook/q0;->c:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object v2, v1, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final a()V
+    .locals 9
 
-    :cond_0
-    move-object/from16 v4, p0
+    move-object/from16 v3, p0
 
-    move-object/from16 v5, p1
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
 
-    iget v0, v4, Lcom/ejiaogl/tiktokhook/q0;->b:I
-
-    const/4 v1, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    goto/16 :goto_11
-
-    :pswitch_0
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_1
-
-    const-wide v2, -0xdfbb2ec551cdL
-
-    .line 1
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/b5;->a(Landroid/graphics/drawable/Drawable;)V
 
-    const v8, 0x0
+    sget-object v5, Lcom/ejiaogl/tiktokhook/q0;->aek:[I
 
-    aget v8, v7, v8
+    const v6, 0x0
 
-    if-ltz v8, :cond_1
+    aget v6, v5, v6
+
+    if-ltz v6, :cond_0
 
     :goto_0
-    const v7, 0xabf884
+    const v5, 0x7cb72b
 
-    xor-int v7, v7, v8
+    xor-int v5, v5, v6
 
-    and-int v7, v8, v7
+    rem-int v5, v6, v5
 
-    const v8, 0x40230
-
-    if-eq v7, v8, :cond_1
+    if-gtz v5, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    return-object v1
+    :cond_0
+    if-eqz v0, :cond_1
 
-    .line 2
-    :pswitch_1
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+    iget-object v1, v3, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    check-cast v5, Ljava/lang/Boolean;
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_2
+    iget-object v2, v3, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
 
-    const-wide v2, -0xdc412ec551cdL
+    invoke-virtual {v2}, Landroid/view/View;->getDrawableState()[I
 
-    .line 3
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-static {v0, v1, v2}, Lcom/ejiaogl/tiktokhook/l0;->e(Landroid/graphics/drawable/Drawable;Lcom/ejiaogl/tiktokhook/dh;[I)V
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    sget-object v5, Lcom/ejiaogl/tiktokhook/q0;->aek:[I
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    const v6, 0x1
 
-    const v8, 0x1
+    aget v6, v5, v6
 
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_2
+    if-ltz v6, :cond_1
 
     :goto_1
-    const v7, 0xacabc
+    const v5, 0x4f6c46b
 
-    xor-int v7, v7, v8
+    xor-int v5, v5, v6
 
-    and-int v7, v8, v7
+    and-int v5, v6, v5
 
-    const v8, 0x2353102
+    const v6, 0x3010100
 
-    if-eq v7, v8, :cond_2
+    if-eq v5, v6, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    return-object v1
+    :cond_1
+    return-void
+.end method
 
-    .line 4
-    :pswitch_2
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+.method public final b(Landroid/util/AttributeSet;I)V
+    .locals 15
 
-    check-cast v5, Ljava/lang/String;
+    move-object/from16 v7, p0
 
-    if-eqz v0, :cond_3
+    move-object/from16 v8, p1
 
-    const-wide v2, -0xdc472ec551cdL
+    move/from16 v9, p2
 
-    .line 5
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    iget-object v0, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    sget-object v3, Lcom/ejiaogl/tiktokhook/gf;->u:[I
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    invoke-static {v0, v8, v3, v9}, Lcom/ejiaogl/tiktokhook/fh;->n(Landroid/content/Context;Landroid/util/AttributeSet;[II)Lcom/ejiaogl/tiktokhook/fh;
 
-    const v8, 0x2
+    move-result-object v0
 
-    aget v8, v7, v8
+    iget-object v1, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
 
-    if-ltz v8, :cond_3
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 1
+    iget-object v5, v0, Lcom/ejiaogl/tiktokhook/fh;->b:Landroid/content/res/TypedArray;
+
+    move-object v4, v8
+
+    move v6, v9
+
+    .line 2
+    invoke-static/range {v1 .. v6}, Lcom/ejiaogl/tiktokhook/ni;->h(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;I)V
+
+    :try_start_0
+    iget-object v8, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v8}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    const/4 v9, -0x1
+
+    if-nez v8, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, v9}, Lcom/ejiaogl/tiktokhook/fh;->i(II)I
+
+    move-result v1
+
+    if-eq v1, v9, :cond_0
+
+    iget-object v8, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v8}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    invoke-static {v8, v1}, Lcom/ejiaogl/tiktokhook/b4;->p(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_0
+
+    iget-object v1, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x0
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_0
+
+    :goto_0
+    const v11, 0x1c70919
+
+    xor-int v11, v11, v12
+
+    and-int v11, v12, v11
+
+    if-gtz v11, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v8, :cond_1
+
+    invoke-static {v8}, Lcom/ejiaogl/tiktokhook/b5;->a(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x1
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_1
+
+    const v11, 0x4366ac0
+
+    xor-int v11, v11, v12
+
+    rem-int v11, v12, v11
+
+    const v12, 0x2d8b9eb
+
+    if-ne v11, v12, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_1
+    const/4 v8, 0x2
+
+    invoke-virtual {v0, v8}, Lcom/ejiaogl/tiktokhook/fh;->l(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v8}, Lcom/ejiaogl/tiktokhook/fh;->b(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v8
+
+    .line 3
+    invoke-static {v1, v8}, Lcom/ejiaogl/tiktokhook/b9;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x2
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_2
 
     :goto_2
-    const v7, 0xeb81b5
+    const v11, 0x22cd654
 
-    xor-int v7, v7, v8
+    xor-int v11, v11, v12
 
-    rem-int v7, v8, v7
+    rem-int v11, v12, v11
 
-    if-gtz v7, :cond_3
+    if-gtz v11, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v8, 0x3
+
+    .line 4
+    invoke-virtual {v0, v8}, Lcom/ejiaogl/tiktokhook/fh;->l(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v7, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v8, v9}, Lcom/ejiaogl/tiktokhook/fh;->g(II)I
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    invoke-static {v8, v9}, Lcom/ejiaogl/tiktokhook/b5;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v8
+
+    .line 5
+    invoke-static {v1, v8}, Lcom/ejiaogl/tiktokhook/b9;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x3
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_3
+
+    :goto_3
+    const v11, 0x5076f27
+
+    xor-int v11, v11, v12
+
+    and-int v11, v12, v11
+
+    if-gtz v11, :cond_3
+
+    goto :goto_3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 6
+    :cond_3
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/fh;->o()V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x4
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_4
+
+    const v11, 0x59acf92
+
+    xor-int v11, v11, v12
+
+    rem-int v11, v12, v11
+
+    const v12, 0x6a75de
+
+    if-ne v11, v12, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    :goto_4
+    return-void
+
+    :catchall_0
+    move-exception v8
+
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/fh;->o()V
+
+    sget-object v11, Lcom/ejiaogl/tiktokhook/q0;->ael:[I
+
+    const v12, 0x5
+
+    aget v12, v11, v12
+
+    if-ltz v12, :cond_5
+
+    :goto_5
+    const v11, 0x3065032
+
+    xor-int v11, v11, v12
+
+    and-int v11, v12, v11
+
+    if-gtz v11, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    throw v8
+.end method
+
+.method public final c(I)V
+    .locals 8
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p1
+
+    if-eqz v2, :cond_2
+
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/ejiaogl/tiktokhook/b4;->p(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Lcom/ejiaogl/tiktokhook/b5;->a(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aem:[I
+
+    const v5, 0x0
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_0
+
+    :goto_0
+    const v4, 0x23473cd
+
+    xor-int v4, v4, v5
+
+    and-int v4, v5, v4
+
+    if-gtz v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aem:[I
+
+    const v5, 0x1
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_1
+
+    const v4, 0x898762
+
+    xor-int v4, v4, v5
+
+    rem-int v4, v5, v4
+
+    const v5, 0x7884de
+
+    if-ne v4, v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_1
+    goto :goto_2
+
+    :cond_2
+    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/q0;->a:Landroid/widget/ImageView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aem:[I
+
+    const v5, 0x2
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_3
+
+    const v4, 0x55d9243
+
+    xor-int v4, v4, v5
+
+    rem-int v4, v5, v4
+
+    const v5, 0x9f250d
+
+    if-ne v4, v5, :cond_3
 
     goto :goto_2
 
     :cond_3
-    return-object v1
+    :goto_2
+    invoke-virtual {v1}, Lcom/ejiaogl/tiktokhook/q0;->a()V
 
-    .line 6
-    :pswitch_3
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aem:[I
 
-    check-cast v5, Ljava/lang/String;
+    const v5, 0x3
 
-    if-eqz v0, :cond_4
+    aget v5, v4, v5
 
-    const-wide v2, -0xdc522ec551cdL
+    if-ltz v5, :cond_4
 
-    .line 7
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    const v4, 0x239b6fe
 
-    move-result-object v0
+    xor-int v4, v4, v5
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    and-int v4, v5, v4
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    const v5, 0x40101
 
-    const v8, 0x3
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_4
-
-    :goto_3
-    const v7, 0x472c7f9
-
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    const v8, 0x29d5258
-
-    if-eq v7, v8, :cond_4
+    if-ne v4, v5, :cond_4
 
     goto :goto_3
 
     :cond_4
-    return-object v1
+    :goto_3
+    return-void
+.end method
 
-    .line 8
-    :pswitch_4
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+.method public final d(Landroid/content/res/ColorStateList;)V
+    .locals 8
 
-    check-cast v5, Ljava/lang/Boolean;
+    move-object/from16 v1, p0
 
-    if-eqz v0, :cond_5
+    move-object/from16 v2, p1
 
-    const-wide v2, -0xdc632ec551cdL
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    .line 9
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    new-instance v0, Lcom/ejiaogl/tiktokhook/dh;
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/dh;-><init>()V
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    const v8, 0x4
+    :cond_0
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    aget v8, v7, v8
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/dh;->a:Landroid/content/res/ColorStateList;
 
-    if-ltz v8, :cond_5
+    const/4 v2, 0x1
 
-    const v7, 0x5b34b7a
+    iput-boolean v2, v0, Lcom/ejiaogl/tiktokhook/dh;->d:Z
 
-    :goto_4
-    xor-int v7, v7, v8
+    invoke-virtual {v1}, Lcom/ejiaogl/tiktokhook/q0;->a()V
 
-    and-int v7, v8, v7
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aen:[I
 
-    if-eqz v7, :cond_0
+    const v5, 0x0
 
-    goto :goto_5
+    aget v5, v4, v5
 
-    goto :goto_4
+    if-ltz v5, :cond_1
 
-    :cond_5
-    :goto_5
-    return-object v1
+    :goto_0
+    const v4, 0x468d4a1
 
-    .line 10
-    :pswitch_5
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+    xor-int v4, v4, v5
 
-    check-cast v5, Ljava/lang/String;
+    and-int v4, v5, v4
 
-    if-eqz v0, :cond_6
+    const v5, 0x3050a1e
 
-    const-wide v2, -0xdc662ec551cdL
+    if-eq v4, v5, :cond_1
 
-    .line 11
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_1
+    return-void
+.end method
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+.method public final e(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 8
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    move-object/from16 v1, p0
 
-    const v8, 0x5
+    move-object/from16 v2, p1
 
-    aget v8, v7, v8
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    if-ltz v8, :cond_6
+    if-nez v0, :cond_0
 
-    const v7, 0x27edc24
+    new-instance v0, Lcom/ejiaogl/tiktokhook/dh;
 
-    :goto_6
-    xor-int v7, v7, v8
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/dh;-><init>()V
 
-    and-int v7, v8, v7
+    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    if-eqz v7, :cond_0
+    :cond_0
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/q0;->b:Lcom/ejiaogl/tiktokhook/dh;
 
-    goto :goto_7
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/dh;->b:Landroid/graphics/PorterDuff$Mode;
 
-    goto :goto_6
+    const/4 v2, 0x1
 
-    :cond_6
-    :goto_7
-    return-object v1
+    iput-boolean v2, v0, Lcom/ejiaogl/tiktokhook/dh;->c:Z
 
-    .line 12
-    :pswitch_6
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
+    invoke-virtual {v1}, Lcom/ejiaogl/tiktokhook/q0;->a()V
 
-    check-cast v5, Ljava/lang/Boolean;
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q0;->aeo:[I
 
-    if-eqz v0, :cond_7
+    const v5, 0x0
 
-    const-wide v2, -0xdc722ec551cdL
+    aget v5, v4, v5
 
-    .line 13
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
+    if-ltz v5, :cond_1
 
-    move-result-object v0
+    const v4, 0x3a62bbb
 
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
+    xor-int v4, v4, v5
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
+    and-int v4, v5, v4
 
-    const v8, 0x6
+    const v5, 0x411004
 
-    aget v8, v7, v8
+    if-ne v4, v5, :cond_1
 
-    if-ltz v8, :cond_7
+    goto :goto_0
 
-    const v7, 0x4611db8
-
-    :goto_8
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    if-eqz v7, :cond_0
-
-    goto :goto_9
-
-    goto :goto_8
-
-    :cond_7
-    :goto_9
-    return-object v1
-
-    .line 14
-    :pswitch_7
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/String;
-
-    if-eqz v0, :cond_8
-
-    const-wide v2, -0xdc792ec551cdL
-
-    .line 15
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0x7
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_8
-
-    :goto_a
-    const v7, 0x3fde264
-
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    const v8, 0x15d0cc5
-
-    if-eq v7, v8, :cond_8
-
-    goto :goto_a
-
-    :cond_8
-    return-object v1
-
-    .line 16
-    :pswitch_8
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/String;
-
-    if-eqz v0, :cond_b
-
-    const-wide v2, -0xdfa62ec551cdL
-
-    .line 17
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    const/4 v0, 0x0
-
-    if-nez v5, :cond_9
-
-    goto :goto_d
-
-    .line 18
-    :cond_9
-    :try_start_0
-    invoke-static {v5}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0x8
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_a
-
-    const v7, 0x5db8a3a
-
-    :goto_b
-    xor-int v7, v7, v8
-
-    and-int v7, v8, v7
-
-    if-eqz v7, :cond_0
-
-    goto :goto_c
-
-    goto :goto_b
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_a
-    :goto_c
-    const/4 v0, 0x1
-
-    :catch_0
-    :goto_d
-    if-eqz v0, :cond_b
-
-    const-wide v2, -0xdfa92ec551cdL
-
-    .line 19
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0x9
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_b
-
-    :goto_e
-    const v7, 0x344e086
-
-    xor-int v7, v7, v8
-
-    and-int v7, v8, v7
-
-    const v8, 0x90530
-
-    if-eq v7, v8, :cond_b
-
-    goto :goto_e
-
-    :cond_b
-    return-object v1
-
-    .line 20
-    :pswitch_9
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/String;
-
-    if-eqz v0, :cond_c
-
-    const-wide v2, -0xdfac2ec551cdL
-
-    .line 21
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0xa
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_c
-
-    :goto_f
-    const v7, 0x3a37560
-
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    if-gtz v7, :cond_c
-
-    goto :goto_f
-
-    :cond_c
-    return-object v1
-
-    .line 22
-    :pswitch_a
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_d
-
-    const-wide v2, -0xdc072ec551cdL
-
-    .line 23
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0xb
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_d
-
-    :goto_10
-    const v7, 0x2a1b0b7
-
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    if-gtz v7, :cond_d
-
-    goto :goto_10
-
-    :cond_d
-    return-object v1
-
-    .line 24
-    :goto_11
-    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/q0;->c:Z
-
-    check-cast v5, Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_e
-
-    const-wide v2, -0xdfb22ec551cdL
-
-    .line 25
-    invoke-static {v2, v3}, Lcom/ejiaogl/tiktokhook/y4;->a(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lcom/ejiaogl/tiktokhook/hook;->k(Ljava/lang/String;Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q0;->RT:[I
-
-    const v8, 0xc
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_e
-
-    const v7, 0x4760470
-
-    xor-int v7, v7, v8
-
-    and-int v7, v8, v7
-
-    const v8, 0x300f802
-
-    if-ne v7, v8, :cond_e
-
-    goto :goto_12
-
-    :cond_e
-    :goto_12
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    :goto_0
+    return-void
 .end method

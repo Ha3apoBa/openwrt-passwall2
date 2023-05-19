@@ -3,6 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/graphics/drawable/IconCompat$a;
+    }
+.end annotation
+
+
 # static fields
 .field public static final k:Landroid/graphics/PorterDuff$Mode;
 
@@ -208,7 +216,7 @@
     if-lt v1, v5, :cond_1
 
     .line 2
-    invoke-static {v3}, Lcom/ejiaogl/tiktokhook/u9;->a(Ljava/lang/Object;)I
+    invoke-static {v3}, Landroidx/core/graphics/drawable/IconCompat$a;->a(Ljava/lang/Object;)I
 
     move-result v1
 

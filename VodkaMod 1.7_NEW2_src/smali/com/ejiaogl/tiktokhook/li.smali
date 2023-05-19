@@ -1,49 +1,48 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/li;
+.class public final synthetic Lcom/ejiaogl/tiktokhook/li;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/ejiaogl/tiktokhook/ad;
+
+
+# static fields
+.field public static final synthetic a:Lcom/ejiaogl/tiktokhook/li;
+
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static synthetic constructor <clinit>()V
     .locals 1
 
-    nop
+    new-instance v0, Lcom/ejiaogl/tiktokhook/li;
+
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/li;-><init>()V
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/li;->a:Lcom/ejiaogl/tiktokhook/li;
 
     return-void
 .end method
 
-.method public static a(Landroid/widget/TextView;)Z
+.method public synthetic constructor <init>()V
     .locals 6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getIncludeFontPadding()Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public static b(Landroid/widget/TextView;)I
-    .locals 6
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final a(Lcom/ejiaogl/tiktokhook/e3;)Lcom/ejiaogl/tiktokhook/e3;
+    .locals 8
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getMaxLines()I
+    move-object/from16 v1, p0
 
-    move-result v0
+    move-object/from16 v2, p1
 
-    return v0
-.end method
+    sget-object v0, Lcom/ejiaogl/tiktokhook/ni;->a:Ljava/util/WeakHashMap;
 
-.method public static c(Landroid/widget/TextView;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getMinLines()I
-
-    move-result v0
-
-    return v0
+    return-object v2
 .end method

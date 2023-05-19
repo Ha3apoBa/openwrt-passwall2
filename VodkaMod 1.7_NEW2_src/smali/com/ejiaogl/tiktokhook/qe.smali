@@ -1,23 +1,62 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/qe;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/qe;
+.super Ljava/lang/Exception;
 .source "SourceFile"
 
 
 # static fields
-.field public static final d:Lcom/ejiaogl/tiktokhook/j0;
+.field public static final c:Ljava/lang/reflect/Method;
+
+
+# instance fields
+.field public b:Ljava/io/IOException;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/j0;
+    :try_start_0
+    const-class v0, Ljava/lang/Throwable;
 
-    const/16 v1, 0x12
+    const-string v1, "addSuppressed"
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/j0;-><init>(I)V
+    const/4 v2, 0x1
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qe;->d:Lcom/ejiaogl/tiktokhook/j0;
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Ljava/lang/Throwable;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-object v0, Lcom/ejiaogl/tiktokhook/qe;->c:Ljava/lang/reflect/Method;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/io/IOException;)V
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/qe;->b:Ljava/io/IOException;
 
     return-void
 .end method

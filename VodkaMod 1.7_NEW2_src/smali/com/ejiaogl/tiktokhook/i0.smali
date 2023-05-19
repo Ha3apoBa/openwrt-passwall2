@@ -1,6 +1,13 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/i0;
+.class public final Lcom/ejiaogl/tiktokhook/i0;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroidx/appcompat/widget/ContentFrameLayout$a;
+
+
+# instance fields
+.field public final synthetic a:Lcom/ejiaogl/tiktokhook/k0;
 
 
 # direct methods
@@ -10,12 +17,4 @@
     nop
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract b()Z
-.end method
-
-.method public abstract c()Z
 .end method

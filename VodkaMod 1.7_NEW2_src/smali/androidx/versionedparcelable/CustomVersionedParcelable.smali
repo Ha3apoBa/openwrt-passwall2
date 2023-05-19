@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/kk;
+.implements Lcom/ejiaogl/tiktokhook/ki;
 
 
 # direct methods

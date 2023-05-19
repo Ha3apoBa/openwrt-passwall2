@@ -1,6 +1,10 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/o1;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/o1;
+.super Lcom/ejiaogl/tiktokhook/a6;
 .source "SourceFile"
+
+
+# instance fields
+.field public final h:Ljava/lang/Thread;
 
 
 # direct methods
@@ -12,56 +16,28 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;ILandroid/widget/TextView;Landroid/text/TextPaint;)Landroid/text/StaticLayout;
-    .locals 18
-
-    move-object/from16 v8, p0
-
-    move-object/from16 v9, p1
-
-    move/from16 v10, p2
-
-    move-object/from16 v11, p3
-
-    move-object/from16 v12, p4
-
-    invoke-virtual {v11}, Landroid/widget/TextView;->getLineSpacingMultiplier()F
-
-    move-result v5
-
-    invoke-virtual {v11}, Landroid/widget/TextView;->getLineSpacingExtra()F
-
-    move-result v6
-
-    invoke-virtual {v11}, Landroid/widget/TextView;->getIncludeFontPadding()Z
-
-    move-result v7
-
-    new-instance v11, Landroid/text/StaticLayout;
-
-    move-object v0, v11
-
-    move-object v1, v8
-
-    move-object v2, v12
-
-    move v3, v10
-
-    move-object v4, v9
-
-    invoke-direct/range {v0 .. v7}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
-
-    return-object v11
-.end method
-
-.method public static b(Landroid/widget/TextView;)I
-    .locals 6
+.method public constructor <init>(Ljava/lang/Thread;)V
+    .locals 7
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getMaxLines()I
+    move-object/from16 v1, p1
 
-    move-result v0
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/a6;-><init>()V
 
-    return v0
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/o1;->h:Ljava/lang/Thread;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final Y()Ljava/lang/Thread;
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/o1;->h:Ljava/lang/Thread;
+
+    return-object v0
 .end method

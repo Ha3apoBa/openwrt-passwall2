@@ -1,329 +1,88 @@
 .class public final Lcom/ejiaogl/tiktokhook/h9;
-.super Ljava/lang/Object;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/ih;
-
-
-# static fields
-.field private static WB:[I
 
 
 # instance fields
-.field public final b:Lcom/ejiaogl/tiktokhook/j2;
-
-.field public c:I
-
-.field public d:B
-
-.field public e:I
-
-.field public f:I
-
-.field public g:S
+.field public final synthetic a:Lcom/ejiaogl/tiktokhook/i9;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x3
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/h9;->WB:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x1f68c39
-        0x21491f6
-        0x1e3bd1e    # 8.3658E-38f
-    .end array-data
 .end method
 
-.method public constructor <init>(Lcom/ejiaogl/tiktokhook/j2;)V
-    .locals 7
+.method public constructor <init>(Landroid/view/inputmethod/InputConnection;Lcom/ejiaogl/tiktokhook/i9;)V
+    .locals 8
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v2, p2
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/h9;->a:Lcom/ejiaogl/tiktokhook/i9;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lcom/ejiaogl/tiktokhook/ui;
-    .locals 7
+.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+    .locals 12
 
-    move-object/from16 v1, p0
+    move-object/from16 v3, p0
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
+    move-object/from16 v4, p1
 
-    invoke-interface {v0}, Lcom/ejiaogl/tiktokhook/ih;->b()Lcom/ejiaogl/tiktokhook/ui;
+    move/from16 v5, p2
 
-    move-result-object v0
+    move-object/from16 v6, p3
 
-    return-object v0
-.end method
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/h9;->a:Lcom/ejiaogl/tiktokhook/i9;
 
-.method public final close()V
-    .locals 6
+    if-nez v4, :cond_0
 
-    move-object/from16 v0, p0
-
-    return-void
-.end method
-
-.method public final q(Lcom/ejiaogl/tiktokhook/h2;J)J
-    .locals 17
-
-    move-object/from16 v8, p0
-
-    move-object/from16 v9, p1
-
-    move-wide/from16 v10, p2
-
-    :goto_0
-    iget v0, v8, Lcom/ejiaogl/tiktokhook/h9;->f:I
-
-    const-wide/16 v1, -0x1
-
-    if-nez v0, :cond_6
-
-    iget-object v0, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    iget-short v3, v8, Lcom/ejiaogl/tiktokhook/h9;->g:S
-
-    int-to-long v3, v3
-
-    invoke-interface {v0, v3, v4}, Lcom/ejiaogl/tiktokhook/j2;->x(J)V
-
-    const/4 v0, 0x0
-
-    iput-short v0, v8, Lcom/ejiaogl/tiktokhook/h9;->g:S
-
-    iget-byte v3, v8, Lcom/ejiaogl/tiktokhook/h9;->d:B
-
-    and-int/lit8 v3, v3, 0x4
-
-    if-eqz v3, :cond_0
-
-    return-wide v1
-
-    .line 1
-    :cond_0
-    iget v1, v8, Lcom/ejiaogl/tiktokhook/h9;->e:I
-
-    iget-object v2, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    invoke-static {v2}, Lcom/ejiaogl/tiktokhook/l9;->d(Lcom/ejiaogl/tiktokhook/j2;)I
-
-    move-result v2
-
-    iput v2, v8, Lcom/ejiaogl/tiktokhook/h9;->f:I
-
-    iput v2, v8, Lcom/ejiaogl/tiktokhook/h9;->c:I
-
-    iget-object v2, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    invoke-interface {v2}, Lcom/ejiaogl/tiktokhook/j2;->H()B
-
-    move-result v2
-
-    and-int/lit16 v2, v2, 0xff
-
-    int-to-byte v2, v2
-
-    iget-object v3, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    invoke-interface {v3}, Lcom/ejiaogl/tiktokhook/j2;->H()B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    int-to-byte v3, v3
-
-    iput-byte v3, v8, Lcom/ejiaogl/tiktokhook/h9;->d:B
-
-    .line 2
-    sget-object v3, Lcom/ejiaogl/tiktokhook/l9;->a:Ljava/util/logging/Logger;
-
-    .line 3
-    sget-object v4, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
-
-    invoke-virtual {v3, v4}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_1
-
-    iget v4, v8, Lcom/ejiaogl/tiktokhook/h9;->e:I
-
-    iget v6, v8, Lcom/ejiaogl/tiktokhook/h9;->c:I
-
-    iget-byte v7, v8, Lcom/ejiaogl/tiktokhook/h9;->d:B
-
-    invoke-static {v5, v4, v6, v2, v7}, Lcom/ejiaogl/tiktokhook/i9;->a(ZIIBB)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/logging/Logger;->fine(Ljava/lang/String;)V
-
-    sget-object v13, Lcom/ejiaogl/tiktokhook/h9;->WB:[I
-
-    const v14, 0x0
-
-    aget v14, v13, v14
-
-    if-ltz v14, :cond_1
-
-    const v13, 0xb37417
-
-    xor-int v13, v13, v14
-
-    and-int v13, v14, v13
-
-    const v14, 0x1448828
-
-    if-ne v13, v14, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_1
-    iget-object v3, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    invoke-interface {v3}, Lcom/ejiaogl/tiktokhook/j2;->J()I
-
-    move-result v3
-
-    const v4, 0x7fffffff
-
-    and-int/2addr v3, v4
-
-    iput v3, v8, Lcom/ejiaogl/tiktokhook/h9;->e:I
-
-    const/16 v4, 0x9
-
-    const/4 v6, 0x0
-
-    if-ne v2, v4, :cond_4
-
-    if-ne v3, v1, :cond_2
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_2
-    new-array v9, v0, [Ljava/lang/Object;
+    .line 1
+    :cond_0
+    new-instance v1, Lcom/ejiaogl/tiktokhook/j9;
 
-    const-string v10, "TYPE_CONTINUATION streamId changed"
+    new-instance v2, Lcom/ejiaogl/tiktokhook/j9$a;
 
-    invoke-static {v10, v9}, Lcom/ejiaogl/tiktokhook/l9;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/IOException;
+    invoke-direct {v2, v4}, Lcom/ejiaogl/tiktokhook/j9$a;-><init>(Ljava/lang/Object;)V
 
-    sget-object v13, Lcom/ejiaogl/tiktokhook/h9;->WB:[I
+    invoke-direct {v1, v2}, Lcom/ejiaogl/tiktokhook/j9;-><init>(Lcom/ejiaogl/tiktokhook/j9$b;)V
 
-    const v14, 0x1
+    .line 2
+    :goto_0
+    check-cast v0, Lcom/ejiaogl/tiktokhook/g9;
 
-    aget v14, v13, v14
+    invoke-virtual {v0, v1, v5, v6}, Lcom/ejiaogl/tiktokhook/g9;->a(Lcom/ejiaogl/tiktokhook/j9;ILandroid/os/Bundle;)Z
 
-    if-ltz v14, :cond_3
+    move-result v0
 
-    :goto_2
-    const v13, 0x569d19b
+    if-eqz v0, :cond_1
 
-    xor-int v13, v13, v14
+    const/4 v4, 0x1
 
-    and-int v13, v14, v13
+    return v4
 
-    const v14, 0x2140064
+    :cond_1
+    invoke-super {v3, v4, v5, v6}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
 
-    if-eq v13, v14, :cond_3
+    move-result v4
 
-    goto :goto_2
-
-    :cond_3
-    throw v6
-
-    :cond_4
-    new-array v9, v5, [Ljava/lang/Object;
-
-    invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object v10
-
-    aput-object v10, v9, v0
-
-    const-string v10, "%s != TYPE_CONTINUATION"
-
-    invoke-static {v10, v9}, Lcom/ejiaogl/tiktokhook/l9;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/IOException;
-
-    sget-object v13, Lcom/ejiaogl/tiktokhook/h9;->WB:[I
-
-    const v14, 0x2
-
-    aget v14, v13, v14
-
-    if-ltz v14, :cond_5
-
-    :goto_3
-    const v13, 0x2d5fbf3
-
-    xor-int v13, v13, v14
-
-    and-int v13, v14, v13
-
-    if-gtz v13, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    throw v6
-
-    .line 4
-    :cond_6
-    iget-object v3, v8, Lcom/ejiaogl/tiktokhook/h9;->b:Lcom/ejiaogl/tiktokhook/j2;
-
-    int-to-long v4, v0
-
-    invoke-static {v10, v11, v4, v5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v10
-
-    invoke-interface {v3, v9, v10, v11}, Lcom/ejiaogl/tiktokhook/ih;->q(Lcom/ejiaogl/tiktokhook/h2;J)J
-
-    move-result-wide v9
-
-    cmp-long v11, v9, v1
-
-    if-nez v11, :cond_7
-
-    return-wide v1
-
-    :cond_7
-    iget v11, v8, Lcom/ejiaogl/tiktokhook/h9;->f:I
-
-    int-to-long v0, v11
-
-    sub-long/2addr v0, v9
-
-    long-to-int v11, v0
-
-    iput v11, v8, Lcom/ejiaogl/tiktokhook/h9;->f:I
-
-    return-wide v9
+    return v4
 .end method

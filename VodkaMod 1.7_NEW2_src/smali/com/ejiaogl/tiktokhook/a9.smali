@@ -1,797 +1,687 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/a9;
+.class public final Lcom/ejiaogl/tiktokhook/a9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ejiaogl/tiktokhook/a9$a;
+    }
+.end annotation
+
+
 # static fields
-.field public static final a:[Lcom/ejiaogl/tiktokhook/y8;
+.field public static final b:[I
 
-.field public static final b:Ljava/util/Map;
+.field public static final c:[B
 
-.field private static sz:[I
+.field public static final d:Lcom/ejiaogl/tiktokhook/a9;
+
+
+# instance fields
+.field public final a:Lcom/ejiaogl/tiktokhook/a9$a;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    const v0, 0x1
+    const/16 v0, 0x100
 
-    new-array v0, v0, [I
+    new-array v1, v0, [I
 
-    fill-array-data v0, :array_0
+    fill-array-data v1, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/a9;->sz:[I
+    sput-object v1, Lcom/ejiaogl/tiktokhook/a9;->b:[I
 
-    const/16 v0, 0x3d
+    new-array v0, v0, [B
 
-    new-array v0, v0, [Lcom/ejiaogl/tiktokhook/y8;
+    fill-array-data v0, :array_1
 
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
+    sput-object v0, Lcom/ejiaogl/tiktokhook/a9;->c:[B
 
-    sget-object v2, Lcom/ejiaogl/tiktokhook/y8;->h:Lcom/ejiaogl/tiktokhook/k2;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/a9;
 
-    const-string v3, ""
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/a9;-><init>()V
 
-    invoke-direct {v1, v2, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/y8;->e:Lcom/ejiaogl/tiktokhook/k2;
-
-    const-string v5, "GET"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v5, 0x1
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "POST"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v4, 0x2
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/y8;->f:Lcom/ejiaogl/tiktokhook/k2;
-
-    const-string v5, "/"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v5, 0x3
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "/index.html"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v4, 0x4
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/y8;->g:Lcom/ejiaogl/tiktokhook/k2;
-
-    const-string v5, "http"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v5, 0x5
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "https"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v4, 0x6
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/y8;->d:Lcom/ejiaogl/tiktokhook/k2;
-
-    const-string v5, "200"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/4 v5, 0x7
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "204"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v5, 0x8
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "206"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v5, 0x9
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "304"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v5, 0xa
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "400"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v5, 0xb
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "404"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v5, 0xc
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v5, "500"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Lcom/ejiaogl/tiktokhook/k2;Ljava/lang/String;)V
-
-    const/16 v4, 0xd
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "accept-charset"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0xe
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "accept-encoding"
-
-    const-string v5, "gzip, deflate"
-
-    invoke-direct {v1, v4, v5}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0xf
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "accept-language"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x10
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "accept-ranges"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x11
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "accept"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x12
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "access-control-allow-origin"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x13
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "age"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x14
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "allow"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x15
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "authorization"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x16
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "cache-control"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x17
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-disposition"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x18
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-encoding"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x19
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-language"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1a
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-length"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1b
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-location"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1c
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-range"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1d
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "content-type"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1e
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "cookie"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x1f
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "date"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x20
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "etag"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x21
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "expect"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x22
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "expires"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x23
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "from"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x24
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "host"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x25
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "if-match"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x26
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "if-modified-since"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x27
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "if-none-match"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x28
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "if-range"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x29
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "if-unmodified-since"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2a
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "last-modified"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2b
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "link"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2c
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "location"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2d
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "max-forwards"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2e
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "proxy-authenticate"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x2f
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "proxy-authorization"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x30
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "range"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x31
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "referer"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x32
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "refresh"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x33
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "retry-after"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x34
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "server"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x35
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "set-cookie"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x36
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "strict-transport-security"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x37
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "transfer-encoding"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x38
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "user-agent"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x39
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "vary"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x3a
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "via"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v4, 0x3b
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/y8;
-
-    const-string v4, "www-authenticate"
-
-    invoke-direct {v1, v4, v3}, Lcom/ejiaogl/tiktokhook/y8;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v3, 0x3c
-
-    aput-object v1, v0, v3
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/a9;->a:[Lcom/ejiaogl/tiktokhook/y8;
-
-    .line 1
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    array-length v0, v0
-
-    invoke-direct {v1, v0}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    :goto_0
-    sget-object v0, Lcom/ejiaogl/tiktokhook/a9;->a:[Lcom/ejiaogl/tiktokhook/y8;
-
-    array-length v3, v0
-
-    if-ge v2, v3, :cond_1
-
-    aget-object v3, v0, v2
-
-    iget-object v3, v3, Lcom/ejiaogl/tiktokhook/y8;->a:Lcom/ejiaogl/tiktokhook/k2;
-
-    invoke-interface {v1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    aget-object v0, v0, v2
-
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/y8;->a:Lcom/ejiaogl/tiktokhook/k2;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {v1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    .line 2
-    sput-object v0, Lcom/ejiaogl/tiktokhook/a9;->b:Ljava/util/Map;
+    sput-object v0, Lcom/ejiaogl/tiktokhook/a9;->d:Lcom/ejiaogl/tiktokhook/a9;
 
     return-void
 
-    nop
-
     :array_0
     .array-data 4
-        0xaa4e09
+        0x1ff8
+        0x7fffd8
+        0xfffffe2
+        0xfffffe3
+        0xfffffe4
+        0xfffffe5
+        0xfffffe6
+        0xfffffe7
+        0xfffffe8
+        0xffffea
+        0x3ffffffc    # 1.9999995f
+        0xfffffe9
+        0xfffffea
+        0x3ffffffd    # 1.9999996f
+        0xfffffeb
+        0xfffffec
+        0xfffffed
+        0xfffffee
+        0xfffffef
+        0xffffff0
+        0xffffff1
+        0xffffff2
+        0x3ffffffe    # 1.9999998f
+        0xffffff3
+        0xffffff4
+        0xffffff5
+        0xffffff6
+        0xffffff7
+        0xffffff8
+        0xffffff9
+        0xffffffa
+        0xffffffb
+        0x14
+        0x3f8
+        0x3f9
+        0xffa
+        0x1ff9
+        0x15
+        0xf8
+        0x7fa
+        0x3fa
+        0x3fb
+        0xf9
+        0x7fb
+        0xfa
+        0x16
+        0x17
+        0x18
+        0x0
+        0x1
+        0x2
+        0x19
+        0x1a
+        0x1b
+        0x1c
+        0x1d
+        0x1e
+        0x1f
+        0x5c
+        0xfb
+        0x7ffc
+        0x20
+        0xffb
+        0x3fc
+        0x1ffa
+        0x21
+        0x5d
+        0x5e
+        0x5f
+        0x60
+        0x61
+        0x62
+        0x63
+        0x64
+        0x65
+        0x66
+        0x67
+        0x68
+        0x69
+        0x6a
+        0x6b
+        0x6c
+        0x6d
+        0x6e
+        0x6f
+        0x70
+        0x71
+        0x72
+        0xfc
+        0x73
+        0xfd
+        0x1ffb
+        0x7fff0
+        0x1ffc
+        0x3ffc
+        0x22
+        0x7ffd
+        0x3
+        0x23
+        0x4
+        0x24
+        0x5
+        0x25
+        0x26
+        0x27
+        0x6
+        0x74
+        0x75
+        0x28
+        0x29
+        0x2a
+        0x7
+        0x2b
+        0x76
+        0x2c
+        0x8
+        0x9
+        0x2d
+        0x77
+        0x78
+        0x79
+        0x7a
+        0x7b
+        0x7ffe
+        0x7fc
+        0x3ffd
+        0x1ffd
+        0xffffffc
+        0xfffe6
+        0x3fffd2
+        0xfffe7
+        0xfffe8
+        0x3fffd3
+        0x3fffd4
+        0x3fffd5
+        0x7fffd9
+        0x3fffd6
+        0x7fffda
+        0x7fffdb
+        0x7fffdc
+        0x7fffdd
+        0x7fffde
+        0xffffeb
+        0x7fffdf
+        0xffffec
+        0xffffed
+        0x3fffd7
+        0x7fffe0
+        0xffffee
+        0x7fffe1
+        0x7fffe2
+        0x7fffe3
+        0x7fffe4
+        0x1fffdc
+        0x3fffd8
+        0x7fffe5
+        0x3fffd9
+        0x7fffe6
+        0x7fffe7
+        0xffffef
+        0x3fffda
+        0x1fffdd
+        0xfffe9
+        0x3fffdb
+        0x3fffdc
+        0x7fffe8
+        0x7fffe9
+        0x1fffde
+        0x7fffea
+        0x3fffdd
+        0x3fffde
+        0xfffff0
+        0x1fffdf
+        0x3fffdf
+        0x7fffeb
+        0x7fffec
+        0x1fffe0
+        0x1fffe1
+        0x3fffe0
+        0x1fffe2
+        0x7fffed
+        0x3fffe1
+        0x7fffee
+        0x7fffef
+        0xfffea
+        0x3fffe2
+        0x3fffe3
+        0x3fffe4
+        0x7ffff0
+        0x3fffe5
+        0x3fffe6
+        0x7ffff1
+        0x3ffffe0
+        0x3ffffe1
+        0xfffeb
+        0x7fff1
+        0x3fffe7
+        0x7ffff2
+        0x3fffe8
+        0x1ffffec
+        0x3ffffe2
+        0x3ffffe3
+        0x3ffffe4
+        0x7ffffde
+        0x7ffffdf
+        0x3ffffe5
+        0xfffff1
+        0x1ffffed
+        0x7fff2
+        0x1fffe3
+        0x3ffffe6
+        0x7ffffe0
+        0x7ffffe1
+        0x3ffffe7
+        0x7ffffe2
+        0xfffff2
+        0x1fffe4
+        0x1fffe5
+        0x3ffffe8
+        0x3ffffe9
+        0xffffffd
+        0x7ffffe3
+        0x7ffffe4
+        0x7ffffe5
+        0xfffec
+        0xfffff3
+        0xfffed
+        0x1fffe6
+        0x3fffe9
+        0x1fffe7
+        0x1fffe8
+        0x7ffff3
+        0x3fffea
+        0x3fffeb
+        0x1ffffee
+        0x1ffffef
+        0xfffff4
+        0xfffff5
+        0x3ffffea
+        0x7ffff4
+        0x3ffffeb
+        0x7ffffe6
+        0x3ffffec
+        0x3ffffed
+        0x7ffffe7
+        0x7ffffe8
+        0x7ffffe9
+        0x7ffffea
+        0x7ffffeb
+        0xffffffe
+        0x7ffffec
+        0x7ffffed
+        0x7ffffee
+        0x7ffffef
+        0x7fffff0
+        0x3ffffee
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0xdt
+        0x17t
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x18t
+        0x1et
+        0x1ct
+        0x1ct
+        0x1et
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1et
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x1ct
+        0x6t
+        0xat
+        0xat
+        0xct
+        0xdt
+        0x6t
+        0x8t
+        0xbt
+        0xat
+        0xat
+        0x8t
+        0xbt
+        0x8t
+        0x6t
+        0x6t
+        0x6t
+        0x5t
+        0x5t
+        0x5t
+        0x6t
+        0x6t
+        0x6t
+        0x6t
+        0x6t
+        0x6t
+        0x6t
+        0x7t
+        0x8t
+        0xft
+        0x6t
+        0xct
+        0xat
+        0xdt
+        0x6t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x8t
+        0x7t
+        0x8t
+        0xdt
+        0x13t
+        0xdt
+        0xet
+        0x6t
+        0xft
+        0x5t
+        0x6t
+        0x5t
+        0x6t
+        0x5t
+        0x6t
+        0x6t
+        0x6t
+        0x5t
+        0x7t
+        0x7t
+        0x6t
+        0x6t
+        0x6t
+        0x5t
+        0x6t
+        0x7t
+        0x6t
+        0x5t
+        0x5t
+        0x6t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0x7t
+        0xft
+        0xbt
+        0xet
+        0xdt
+        0x1ct
+        0x14t
+        0x16t
+        0x14t
+        0x14t
+        0x16t
+        0x16t
+        0x16t
+        0x17t
+        0x16t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x18t
+        0x17t
+        0x18t
+        0x18t
+        0x16t
+        0x17t
+        0x18t
+        0x17t
+        0x17t
+        0x17t
+        0x17t
+        0x15t
+        0x16t
+        0x17t
+        0x16t
+        0x17t
+        0x17t
+        0x18t
+        0x16t
+        0x15t
+        0x14t
+        0x16t
+        0x16t
+        0x17t
+        0x17t
+        0x15t
+        0x17t
+        0x16t
+        0x16t
+        0x18t
+        0x15t
+        0x16t
+        0x17t
+        0x17t
+        0x15t
+        0x15t
+        0x16t
+        0x15t
+        0x17t
+        0x16t
+        0x17t
+        0x17t
+        0x14t
+        0x16t
+        0x16t
+        0x16t
+        0x17t
+        0x16t
+        0x16t
+        0x17t
+        0x1at
+        0x1at
+        0x14t
+        0x13t
+        0x16t
+        0x17t
+        0x16t
+        0x19t
+        0x1at
+        0x1at
+        0x1at
+        0x1bt
+        0x1bt
+        0x1at
+        0x18t
+        0x19t
+        0x13t
+        0x15t
+        0x1at
+        0x1bt
+        0x1bt
+        0x1at
+        0x1bt
+        0x18t
+        0x15t
+        0x15t
+        0x1at
+        0x1at
+        0x1ct
+        0x1bt
+        0x1bt
+        0x1bt
+        0x14t
+        0x18t
+        0x14t
+        0x15t
+        0x16t
+        0x15t
+        0x15t
+        0x17t
+        0x16t
+        0x16t
+        0x19t
+        0x19t
+        0x18t
+        0x18t
+        0x1at
+        0x17t
+        0x1at
+        0x1bt
+        0x1at
+        0x1at
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1ct
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1bt
+        0x1at
     .end array-data
 .end method
 
-.method public static a(Lcom/ejiaogl/tiktokhook/k2;)Lcom/ejiaogl/tiktokhook/k2;
-    .locals 10
+.method public constructor <init>()V
+    .locals 13
 
-    move-object/from16 v4, p0
+    move-object/from16 v7, p0
+
+    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/ejiaogl/tiktokhook/a9$a;
+
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/a9$a;-><init>()V
+
+    iput-object v0, v7, Lcom/ejiaogl/tiktokhook/a9;->a:Lcom/ejiaogl/tiktokhook/a9$a;
+
+    const/4 v0, 0x0
 
     .line 1
-    iget-object v0, v4, Lcom/ejiaogl/tiktokhook/k2;->b:[B
-
-    array-length v0, v0
-
-    const/4 v1, 0x0
-
     :goto_0
-    if-ge v1, v0, :cond_3
+    sget-object v1, Lcom/ejiaogl/tiktokhook/a9;->c:[B
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_4
+
+    sget-object v2, Lcom/ejiaogl/tiktokhook/a9;->b:[I
+
+    aget v2, v2, v0
+
+    aget-byte v1, v1, v0
 
     .line 2
-    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/k2;->b:[B
+    new-instance v3, Lcom/ejiaogl/tiktokhook/a9$a;
 
-    aget-byte v2, v2, v1
+    invoke-direct {v3, v0, v1}, Lcom/ejiaogl/tiktokhook/a9$a;-><init>(II)V
 
-    const/16 v3, 0x41
-
-    if-lt v2, v3, :cond_2
-
-    const/16 v3, 0x5a
-
-    if-le v2, v3, :cond_0
-
-    goto :goto_2
-
-    .line 3
-    :cond_0
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "PROTOCOL_ERROR response malformed: mixed case name: "
-
-    .line 4
-    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/a4;->b(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    .line 5
-    invoke-virtual {v4}, Lcom/ejiaogl/tiktokhook/k2;->f()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v6, Lcom/ejiaogl/tiktokhook/a9;->sz:[I
-
-    const v7, 0x0
-
-    aget v7, v6, v7
-
-    if-ltz v7, :cond_1
+    iget-object v4, v7, Lcom/ejiaogl/tiktokhook/a9;->a:Lcom/ejiaogl/tiktokhook/a9$a;
 
     :goto_1
-    const v6, 0x19476c
+    const/16 v5, 0x8
 
-    xor-int v6, v6, v7
+    if-le v1, v5, :cond_2
 
-    and-int v6, v7, v6
+    add-int/lit8 v1, v1, -0x8
 
-    const v7, 0xa20801
+    int-to-byte v1, v1
 
-    if-eq v6, v7, :cond_1
+    ushr-int v5, v2, v1
+
+    and-int/lit16 v5, v5, 0xff
+
+    .line 3
+    iget-object v4, v4, Lcom/ejiaogl/tiktokhook/a9$a;->a:[Lcom/ejiaogl/tiktokhook/a9$a;
+
+    if-eqz v4, :cond_1
+
+    .line 4
+    aget-object v6, v4, v5
+
+    if-nez v6, :cond_0
+
+    new-instance v6, Lcom/ejiaogl/tiktokhook/a9$a;
+
+    invoke-direct {v6}, Lcom/ejiaogl/tiktokhook/a9$a;-><init>()V
+
+    aput-object v6, v4, v5
+
+    :cond_0
+    aget-object v4, v4, v5
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object v4
+    const-string v1, "invalid dictionary: prefix not unique"
 
-    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :cond_2
+    rsub-int/lit8 v1, v1, 0x8
+
+    shl-int/2addr v2, v1
+
+    and-int/lit16 v2, v2, 0xff
+
+    const/4 v5, 0x1
+
+    shl-int v1, v5, v1
+
+    move v5, v2
+
     :goto_2
-    add-int/lit8 v1, v1, 0x1
+    add-int v6, v2, v1
+
+    if-ge v5, v6, :cond_3
+
+    .line 5
+    iget-object v6, v4, Lcom/ejiaogl/tiktokhook/a9$a;->a:[Lcom/ejiaogl/tiktokhook/a9$a;
+
+    .line 6
+    aput-object v3, v6, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_3
-    return-object v4
+    :cond_4
+    return-void
 .end method

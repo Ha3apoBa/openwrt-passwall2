@@ -19,18 +19,16 @@
 
 
 # instance fields
-.field public final b:Lcom/ejiaogl/tiktokhook/kk;
+.field public final b:Lcom/ejiaogl/tiktokhook/ki;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/m0;
+    new-instance v0, Landroidx/versionedparcelable/ParcelImpl$a;
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/m0;-><init>(I)V
+    invoke-direct {v0}, Landroidx/versionedparcelable/ParcelImpl$a;-><init>()V
 
     sput-object v0, Landroidx/versionedparcelable/ParcelImpl;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -42,15 +40,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/jk;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/ji;
 
-    invoke-direct {v0, p1}, Lcom/ejiaogl/tiktokhook/jk;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/ejiaogl/tiktokhook/ji;-><init>(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/ik;->k()Lcom/ejiaogl/tiktokhook/kk;
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/ii;->o()Lcom/ejiaogl/tiktokhook/ki;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->b:Lcom/ejiaogl/tiktokhook/kk;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->b:Lcom/ejiaogl/tiktokhook/ki;
 
     return-void
 .end method
@@ -68,13 +66,13 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    new-instance p2, Lcom/ejiaogl/tiktokhook/jk;
+    new-instance p2, Lcom/ejiaogl/tiktokhook/ji;
 
-    invoke-direct {p2, p1}, Lcom/ejiaogl/tiktokhook/jk;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p2, p1}, Lcom/ejiaogl/tiktokhook/ji;-><init>(Landroid/os/Parcel;)V
 
-    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->b:Lcom/ejiaogl/tiktokhook/kk;
+    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->b:Lcom/ejiaogl/tiktokhook/ki;
 
-    invoke-virtual {p2, p1}, Lcom/ejiaogl/tiktokhook/ik;->q(Lcom/ejiaogl/tiktokhook/kk;)V
+    invoke-virtual {p2, p1}, Lcom/ejiaogl/tiktokhook/ii;->y(Lcom/ejiaogl/tiktokhook/ki;)V
 
     return-void
 .end method

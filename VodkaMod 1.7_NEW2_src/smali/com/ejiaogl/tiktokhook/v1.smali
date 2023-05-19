@@ -2,70 +2,85 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Comparable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/io/Serializable;",
+        "Ljava/lang/Comparable<",
+        "Lcom/ejiaogl/tiktokhook/v1;",
+        ">;"
+    }
+.end annotation
+
 
 # static fields
-.field public static volatile d:Lcom/ejiaogl/tiktokhook/v1;
+.field public static final e:[C
 
-.field private static dH:[I
-
-.field private static dI:[I
-
-.field public static final e:Ljava/lang/Object;
+.field public static final f:Lcom/ejiaogl/tiktokhook/v1;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final b:[B
 
-.field public final b:Ljava/util/HashSet;
+.field public transient c:I
 
-.field public final c:Landroid/content/Context;
+.field public transient d:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x5
+    const/16 v0, 0x10
 
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
-
-    const v0, 0x2
-
-    new-array v0, v0, [I
+    new-array v0, v0, [C
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/v1;->dH:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/v1;->e:[C
 
-    new-instance v0, Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [B
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/v1;->e:Ljava/lang/Object;
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/v1;->d([B)Lcom/ejiaogl/tiktokhook/v1;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/v1;->f:Lcom/ejiaogl/tiktokhook/v1;
 
     return-void
 
-    :array_0
-    .array-data 4
-        0x31ce5fb
-        0x2b4932f
-    .end array-data
+    nop
 
-    :array_1
-    .array-data 4
-        0x391ac8
-        0x563bb0a
-        0x231d185
-        0x274b11f
-        0x27c70ab
+    :array_0
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>([B)V
     .locals 7
 
     move-object/from16 v0, p0
@@ -74,515 +89,780 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/v1;->c:Landroid/content/Context;
-
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/v1;->b:Ljava/util/HashSet;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/v1;->b:[B
 
     return-void
 .end method
 
-.method public static c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/v1;
+.method public static b(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/v1;
     .locals 8
 
     move-object/from16 v2, p0
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/v1;->d:Lcom/ejiaogl/tiktokhook/v1;
+    if-eqz v2, :cond_0
 
-    if-nez v0, :cond_1
+    new-instance v0, Lcom/ejiaogl/tiktokhook/v1;
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/v1;->e:Ljava/lang/Object;
+    sget-object v1, Lcom/ejiaogl/tiktokhook/ci;->a:Ljava/nio/charset/Charset;
 
-    monitor-enter v0
+    invoke-virtual {v2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    :try_start_0
-    sget-object v1, Lcom/ejiaogl/tiktokhook/v1;->d:Lcom/ejiaogl/tiktokhook/v1;
+    move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/v1;-><init>([B)V
 
-    new-instance v1, Lcom/ejiaogl/tiktokhook/v1;
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/v1;->d:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lcom/ejiaogl/tiktokhook/v1;-><init>(Landroid/content/Context;)V
-
-    sput-object v1, Lcom/ejiaogl/tiktokhook/v1;->d:Lcom/ejiaogl/tiktokhook/v1;
+    return-object v0
 
     :cond_0
-    monitor-exit v0
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_0
+    const-string v0, "s == null"
 
-    :catchall_0
-    move-exception v2
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
+.end method
 
-    :cond_1
-    :goto_0
-    sget-object v2, Lcom/ejiaogl/tiktokhook/v1;->d:Lcom/ejiaogl/tiktokhook/v1;
+.method public static varargs d([B)Lcom/ejiaogl/tiktokhook/v1;
+    .locals 7
 
-    return-object v2
+    move-object/from16 v1, p0
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Lcom/ejiaogl/tiktokhook/v1;
+
+    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [B
+
+    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/v1;-><init>([B)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "data == null"
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/os/Bundle;)V
-    .locals 12
+.method public final a()Ljava/lang/String;
+    .locals 18
 
-    :cond_0
-    move-object/from16 v5, p0
+    move-object/from16 v12, p0
 
-    move-object/from16 v6, p1
-
-    iget-object v0, v5, Lcom/ejiaogl/tiktokhook/v1;->c:Landroid/content/Context;
-
-    const v1, 0x7f0e001b
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v6, :cond_5
-
-    :try_start_0
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    invoke-virtual {v6}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v6, v3, v4}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v3
-
-    const-class v4, Lcom/ejiaogl/tiktokhook/x9;
-
-    invoke-virtual {v4, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v5, Lcom/ejiaogl/tiktokhook/v1;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v4, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dH:[I
-
-    const v9, 0x0
-
-    aget v9, v8, v9
-
-    if-ltz v9, :cond_2
-
-    const v8, 0x7193e5
-
-    :goto_1
-    xor-int v8, v8, v9
-
-    and-int v8, v9, v8
-
-    if-eqz v8, :cond_0
-
-    goto :goto_2
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    goto :goto_0
-
-    :cond_3
-    iget-object v6, v5, Lcom/ejiaogl/tiktokhook/v1;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v6}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :goto_3
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Class;
-
-    invoke-virtual {v5, v0, v1}, Lcom/ejiaogl/tiktokhook/v1;->b(Ljava/lang/Class;Ljava/util/Set;)Ljava/lang/Object;
-
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dH:[I
-
-    const v9, 0x1
-
-    aget v9, v8, v9
-
-    if-ltz v9, :cond_4
-
-    :goto_4
-    const v8, 0x22b3577
-
-    xor-int v8, v8, v9
-
-    and-int v8, v9, v8
-
-    if-gtz v8, :cond_4
-
-    goto :goto_4
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_4
-    goto :goto_3
-
-    :catch_0
-    move-exception v6
-
-    new-instance v0, Lcom/ejiaogl/tiktokhook/qh;
-
-    invoke-direct {v0, v6}, Lcom/ejiaogl/tiktokhook/qh;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_5
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Class;Ljava/util/Set;)Ljava/lang/Object;
-    .locals 12
-
-    :cond_0
-    move-object/from16 v4, p0
-
-    move-object/from16 v5, p1
-
-    move-object/from16 v6, p2
-
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/lj;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v12, Lcom/ejiaogl/tiktokhook/v1;->b:[B
 
     .line 1
-    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    sget-object v1, Lcom/ejiaogl/tiktokhook/gf;->c:[B
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
+    .line 2
+    array-length v2, v0
 
-    const v9, 0x0
+    const/4 v3, 0x2
 
-    aget v9, v8, v9
+    add-int/2addr v2, v3
 
-    if-ltz v9, :cond_1
+    mul-int/lit8 v2, v2, 0x4
 
-    const v8, 0xe16bc9
+    div-int/lit8 v2, v2, 0x3
 
-    xor-int v8, v8, v9
+    new-array v2, v2, [B
 
-    and-int v8, v9, v8
+    array-length v4, v0
 
-    const v9, 0x181000
+    array-length v5, v0
 
-    if-ne v8, v9, :cond_1
+    rem-int/lit8 v5, v5, 0x3
+
+    sub-int/2addr v4, v5
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    move v7, v6
+
+    :goto_0
+    if-ge v6, v4, :cond_0
+
+    add-int/lit8 v8, v7, 0x1
+
+    aget-byte v9, v0, v6
+
+    and-int/lit16 v9, v9, 0xff
+
+    shr-int/2addr v9, v3
+
+    aget-byte v9, v1, v9
+
+    aput-byte v9, v2, v7
+
+    add-int/lit8 v7, v8, 0x1
+
+    aget-byte v9, v0, v6
+
+    and-int/lit8 v9, v9, 0x3
+
+    shl-int/lit8 v9, v9, 0x4
+
+    add-int/lit8 v10, v6, 0x1
+
+    aget-byte v11, v0, v10
+
+    and-int/lit16 v11, v11, 0xff
+
+    shr-int/lit8 v11, v11, 0x4
+
+    or-int/2addr v9, v11
+
+    aget-byte v9, v1, v9
+
+    aput-byte v9, v2, v8
+
+    add-int/lit8 v8, v7, 0x1
+
+    aget-byte v9, v0, v10
+
+    and-int/lit8 v9, v9, 0xf
+
+    shl-int/2addr v9, v3
+
+    add-int/lit8 v10, v6, 0x2
+
+    aget-byte v11, v0, v10
+
+    and-int/lit16 v11, v11, 0xff
+
+    shr-int/lit8 v11, v11, 0x6
+
+    or-int/2addr v9, v11
+
+    aget-byte v9, v1, v9
+
+    aput-byte v9, v2, v7
+
+    add-int/lit8 v7, v8, 0x1
+
+    aget-byte v9, v0, v10
+
+    and-int/lit8 v9, v9, 0x3f
+
+    aget-byte v9, v1, v9
+
+    aput-byte v9, v2, v8
+
+    add-int/lit8 v6, v6, 0x3
 
     goto :goto_0
 
-    .line 2
+    :cond_0
+    array-length v6, v0
+
+    rem-int/lit8 v6, v6, 0x3
+
+    const/16 v8, 0x3d
+
+    const/4 v9, 0x1
+
+    if-eq v6, v9, :cond_2
+
+    if-eq v6, v3, :cond_1
+
+    goto :goto_1
+
     :cond_1
-    :goto_0
-    invoke-interface {v6, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    add-int/lit8 v6, v7, 0x1
 
-    move-result v0
+    aget-byte v10, v0, v4
 
-    const/4 v1, 0x0
+    and-int/lit16 v10, v10, 0xff
 
-    if-nez v0, :cond_8
+    shr-int/2addr v10, v3
 
-    iget-object v0, v4, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    aget-byte v10, v1, v10
 
-    invoke-virtual {v0, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    aput-byte v10, v2, v7
 
-    move-result v0
+    add-int/lit8 v7, v6, 0x1
 
-    if-nez v0, :cond_6
+    aget-byte v10, v0, v4
 
-    invoke-interface {v6, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    and-int/lit8 v10, v10, 0x3
 
-    :try_start_1
-    new-array v0, v1, [Ljava/lang/Class;
+    shl-int/lit8 v10, v10, 0x4
 
-    invoke-virtual {v5, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    add-int/2addr v4, v9
 
-    move-result-object v0
+    aget-byte v9, v0, v4
 
-    new-array v1, v1, [Ljava/lang/Object;
+    and-int/lit16 v9, v9, 0xff
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    shr-int/lit8 v9, v9, 0x4
 
-    move-result-object v0
+    or-int/2addr v9, v10
 
-    check-cast v0, Lcom/ejiaogl/tiktokhook/x9;
+    aget-byte v9, v1, v9
 
-    invoke-interface {v0}, Lcom/ejiaogl/tiktokhook/x9;->a()Ljava/util/List;
+    aput-byte v9, v2, v6
 
-    move-result-object v1
+    add-int/lit8 v6, v7, 0x1
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    aget-byte v0, v0, v4
 
-    move-result v2
+    and-int/lit8 v0, v0, 0xf
 
-    if-nez v2, :cond_4
+    shl-int/2addr v0, v3
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    aget-byte v0, v1, v0
 
-    move-result-object v1
+    aput-byte v0, v2, v7
+
+    add-int/lit8 v7, v6, 0x1
+
+    aput-byte v8, v2, v6
+
+    goto :goto_1
 
     :cond_2
+    add-int/lit8 v6, v7, 0x1
+
+    aget-byte v9, v0, v4
+
+    and-int/lit16 v9, v9, 0xff
+
+    shr-int/lit8 v3, v9, 0x2
+
+    aget-byte v3, v1, v3
+
+    aput-byte v3, v2, v7
+
+    add-int/lit8 v3, v6, 0x1
+
+    aget-byte v0, v0, v4
+
+    and-int/lit8 v0, v0, 0x3
+
+    shl-int/lit8 v0, v0, 0x4
+
+    aget-byte v0, v1, v0
+
+    aput-byte v0, v2, v6
+
+    add-int/lit8 v0, v3, 0x1
+
+    aput-byte v8, v2, v3
+
+    add-int/lit8 v7, v0, 0x1
+
+    aput-byte v8, v2, v0
+
     :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_0
+    new-instance v0, Ljava/lang/String;
+
+    const-string v1, "US-ASCII"
+
+    invoke-direct {v0, v2, v5, v7, v1}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 15
+
+    move-object/from16 v9, p0
+
+    iget-object v0, v9, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    new-array v1, v1, [C
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v5, v0, v3
+
+    add-int/lit8 v6, v4, 0x1
+
+    sget-object v7, Lcom/ejiaogl/tiktokhook/v1;->e:[C
+
+    shr-int/lit8 v8, v5, 0x4
+
+    and-int/lit8 v8, v8, 0xf
+
+    aget-char v8, v7, v8
+
+    aput-char v8, v1, v4
+
+    add-int/lit8 v4, v6, 0x1
+
+    and-int/lit8 v5, v5, 0xf
+
+    aget-char v5, v7, v5
+
+    aput-char v5, v1, v6
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    return-object v0
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 16
+
+    move-object/from16 v9, p0
+
+    move-object/from16 v10, p1
+
+    check-cast v10, Lcom/ejiaogl/tiktokhook/v1;
+
+    .line 1
+    iget-object v0, v9, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v0, v0
+
+    iget-object v1, v10, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v1, v1
+
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    const/4 v3, 0x0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v4, v3
 
-    move-result-object v2
+    :goto_0
+    const/4 v5, -0x1
 
-    check-cast v2, Ljava/lang/Class;
+    const/4 v6, 0x1
 
-    iget-object v3, v4, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    if-ge v4, v2, :cond_2
 
-    invoke-virtual {v3, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    .line 3
+    iget-object v7, v9, Lcom/ejiaogl/tiktokhook/v1;->b:[B
 
-    move-result v3
+    aget-byte v7, v7, v4
 
-    if-nez v3, :cond_2
+    and-int/lit16 v7, v7, 0xff
 
-    invoke-virtual {v4, v2, v6}, Lcom/ejiaogl/tiktokhook/v1;->b(Ljava/lang/Class;Ljava/util/Set;)Ljava/lang/Object;
+    iget-object v8, v10, Lcom/ejiaogl/tiktokhook/v1;->b:[B
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
+    aget-byte v8, v8, v4
 
-    const v9, 0x1
+    and-int/lit16 v8, v8, 0xff
 
-    aget v9, v8, v9
+    if-ne v7, v8, :cond_0
 
-    if-ltz v9, :cond_3
+    add-int/lit8 v4, v4, 0x1
 
-    :goto_2
-    const v8, 0xdd11e9
+    goto :goto_0
 
-    xor-int v8, v8, v9
+    :cond_0
+    if-ge v7, v8, :cond_1
 
-    and-int v8, v9, v8
+    :goto_1
+    move v3, v5
 
-    if-gtz v8, :cond_3
+    goto :goto_2
+
+    :cond_1
+    move v3, v6
+
+    goto :goto_2
+
+    :cond_2
+    if-ne v0, v1, :cond_3
 
     goto :goto_2
 
     :cond_3
+    if-ge v0, v1, :cond_1
+
     goto :goto_1
 
-    :cond_4
-    iget-object v1, v4, Lcom/ejiaogl/tiktokhook/v1;->c:Landroid/content/Context;
+    :goto_2
+    return v3
+.end method
 
-    invoke-interface {v0, v1}, Lcom/ejiaogl/tiktokhook/x9;->b(Landroid/content/Context;)Ljava/lang/Object;
+.method public final e()Lcom/ejiaogl/tiktokhook/v1;
+    .locals 12
 
-    move-result-object v0
+    move-object/from16 v6, p0
 
-    invoke-interface {v6, v5}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    iget-object v6, v4, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    :goto_0
+    iget-object v1, v6, Lcom/ejiaogl/tiktokhook/v1;->b:[B
 
-    invoke-virtual {v6, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    array-length v2, v1
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
+    if-ge v0, v2, :cond_5
 
-    const v9, 0x2
+    aget-byte v2, v1, v0
 
-    aget v9, v8, v9
+    const/16 v3, 0x41
 
-    if-ltz v9, :cond_5
+    if-lt v2, v3, :cond_4
 
-    const v8, 0x10052ac
+    const/16 v4, 0x5a
 
-    xor-int v8, v8, v9
-
-    and-int v8, v9, v8
-
-    const v9, 0x2318101
-
-    if-ne v8, v9, :cond_5
+    if-le v2, v4, :cond_0
 
     goto :goto_3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_5
-    :goto_3
-    goto :goto_4
+    :cond_0
+    invoke-virtual {v1}, [B->clone()Ljava/lang/Object;
 
-    :catchall_0
-    move-exception v5
+    move-result-object v1
 
-    :try_start_2
-    new-instance v6, Lcom/ejiaogl/tiktokhook/qh;
+    check-cast v1, [B
 
-    invoke-direct {v6, v5}, Lcom/ejiaogl/tiktokhook/qh;-><init>(Ljava/lang/Throwable;)V
+    add-int/lit8 v5, v0, 0x1
 
-    throw v6
+    add-int/lit8 v2, v2, 0x20
 
-    :cond_6
-    iget-object v6, v4, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    int-to-byte v2, v2
 
-    invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    aput-byte v2, v1, v0
 
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    :goto_1
+    array-length v0, v1
 
-    .line 3
-    :goto_4
-    invoke-static {}, Landroid/os/Trace;->endSection()V
+    if-ge v5, v0, :cond_3
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
+    aget-byte v0, v1, v5
 
-    const v9, 0x3
+    if-lt v0, v3, :cond_2
 
-    aget v9, v8, v9
+    if-le v0, v4, :cond_1
 
-    if-ltz v9, :cond_7
+    goto :goto_2
 
-    const v8, 0x30057e1
+    :cond_1
+    add-int/lit8 v0, v0, 0x20
 
-    xor-int v8, v8, v9
+    int-to-byte v0, v0
 
-    and-int v8, v9, v8
+    aput-byte v0, v1, v5
 
-    const v9, 0x74a01e
+    :cond_2
+    :goto_2
+    add-int/lit8 v5, v5, 0x1
 
-    if-ne v8, v9, :cond_7
+    goto :goto_1
 
-    goto :goto_5
+    :cond_3
+    new-instance v0, Lcom/ejiaogl/tiktokhook/v1;
 
-    :cond_7
-    :goto_5
+    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/v1;-><init>([B)V
+
     return-object v0
 
-    :cond_8
-    :try_start_3
-    const-string v6, "Cannot initialize %s. Cycle detected."
+    :cond_4
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    return-object v6
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 14
+
+    move-object/from16 v7, p0
+
+    move-object/from16 v8, p1
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Ljava/lang/Object;
+    if-ne v8, v7, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, v8, Lcom/ejiaogl/tiktokhook/v1;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_4
+
+    check-cast v8, Lcom/ejiaogl/tiktokhook/v1;
+
+    .line 1
+    iget-object v8, v8, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v1, v8
+
+    .line 2
+    iget-object v3, v7, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v4, v3
+
+    if-ne v1, v4, :cond_4
+
+    array-length v1, v3
+
+    .line 3
+    array-length v4, v8
+
+    sub-int/2addr v4, v1
+
+    if-ltz v4, :cond_3
+
+    array-length v4, v3
+
+    sub-int/2addr v4, v1
+
+    if-ltz v4, :cond_3
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ci;->a:Ljava/nio/charset/Charset;
+
+    move v4, v2
+
+    :goto_0
+    if-ge v4, v1, :cond_2
+
+    add-int/lit8 v5, v4, 0x0
 
     .line 4
-    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    aget-byte v6, v8, v5
 
-    move-result-object v5
+    aget-byte v5, v3, v5
 
-    aput-object v5, v0, v1
+    if-eq v6, v5, :cond_1
 
-    invoke-static {v6, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move v8, v2
 
-    move-result-object v5
+    goto :goto_1
 
-    new-instance v6, Ljava/lang/IllegalStateException;
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
 
-    invoke-direct {v6, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    throw v6
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :cond_2
+    move v8, v0
 
-    :catchall_1
-    move-exception v5
+    :goto_1
+    if-eqz v8, :cond_3
 
-    .line 5
-    invoke-static {}, Landroid/os/Trace;->endSection()V
+    move v8, v0
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/v1;->dI:[I
+    goto :goto_2
 
-    const v9, 0x4
+    :cond_3
+    move v8, v2
 
-    aget v9, v8, v9
+    :goto_2
+    if-eqz v8, :cond_4
 
-    if-ltz v9, :cond_9
+    goto :goto_3
 
-    const v8, 0x2518f45
+    :cond_4
+    move v0, v2
 
-    :goto_6
-    xor-int v8, v8, v9
+    :goto_3
+    return v0
+.end method
 
-    and-int v8, v9, v8
+.method public final f()Ljava/lang/String;
+    .locals 9
 
-    if-eqz v8, :cond_0
+    move-object/from16 v3, p0
 
-    goto :goto_7
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/v1;->d:Ljava/lang/String;
 
-    goto :goto_6
+    if-eqz v0, :cond_0
 
-    .line 6
-    :cond_9
-    :goto_7
-    throw v5
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    iget-object v1, v3, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    sget-object v2, Lcom/ejiaogl/tiktokhook/ci;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    iput-object v0, v3, Lcom/ejiaogl/tiktokhook/v1;->d:Ljava/lang/String;
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    iget v0, v1, Lcom/ejiaogl/tiktokhook/v1;->c:I
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v0
+
+    iput v0, v1, Lcom/ejiaogl/tiktokhook/v1;->c:I
+
+    :goto_0
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 12
+
+    move-object/from16 v6, p0
+
+    iget-object v0, v6, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    array-length v1, v0
+
+    if-nez v1, :cond_0
+
+    const-string v0, "ByteString[size=0]"
+
+    return-object v0
+
+    :cond_0
+    array-length v1, v0
+
+    const/16 v2, 0x10
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x2
+
+    if-gt v1, v2, :cond_1
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    array-length v0, v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v1, v4
+
+    invoke-virtual {v6}, Lcom/ejiaogl/tiktokhook/v1;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v1, v3
+
+    const-string v0, "ByteString[size=%s data=%s]"
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    new-array v1, v5, [Ljava/lang/Object;
+
+    array-length v0, v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v1, v4
+
+    const-string v0, "MD5"
+
+    .line 1
+    :try_start_0
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    iget-object v2, v6, Lcom/ejiaogl/tiktokhook/v1;->b:[B
+
+    invoke-virtual {v0, v2}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/v1;->d([B)Lcom/ejiaogl/tiktokhook/v1;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 2
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/v1;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v1, v3
+
+    const-string v0, "ByteString[size=%s md5=%s]"
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    .line 3
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
 .end method

@@ -1,26 +1,24 @@
 .class public Landroidx/appcompat/widget/AlertDialogLayout;
-.super Lcom/ejiaogl/tiktokhook/wa;
+.super Landroidx/appcompat/widget/b;
 .source "SourceFile"
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2, v0}, Lcom/ejiaogl/tiktokhook/wa;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
-.method public static h(Landroid/view/View;)I
+.method public static j(Landroid/view/View;)I
     .locals 3
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/bl;->a:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/ni;->a:Ljava/util/WeakHashMap;
 
     .line 1
-    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/pk;->d(Landroid/view/View;)I
+    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/ni$c;->d(Landroid/view/View;)I
 
     move-result v0
 
@@ -50,7 +48,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/appcompat/widget/AlertDialogLayout;->h(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/appcompat/widget/AlertDialogLayout;->j(Landroid/view/View;)I
 
     move-result p0
 
@@ -93,7 +91,7 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/wa;->getGravity()I
+    invoke-virtual {p0}, Landroidx/appcompat/widget/b;->getGravity()I
 
     move-result v2
 
@@ -144,7 +142,7 @@
     add-int p3, p5, v3
 
     :goto_0
-    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/wa;->getDividerDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/b;->getDividerDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p5
 
@@ -190,7 +188,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/va;
+    check-cast v6, Landroidx/appcompat/widget/b$a;
 
     iget v7, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
@@ -199,10 +197,10 @@
     move v7, v2
 
     :cond_3
-    sget-object v8, Lcom/ejiaogl/tiktokhook/bl;->a:Ljava/lang/reflect/Field;
+    sget-object v8, Lcom/ejiaogl/tiktokhook/ni;->a:Ljava/util/WeakHashMap;
 
     .line 1
-    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/qk;->d(Landroid/view/View;)I
+    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/ni$d;->d(Landroid/view/View;)I
 
     move-result v8
 
@@ -250,7 +248,7 @@
     sub-int/2addr v7, v8
 
     :goto_3
-    invoke-virtual {p0, v0}, Lcom/ejiaogl/tiktokhook/wa;->g(I)Z
+    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/b;->i(I)Z
 
     move-result v8
 
@@ -425,7 +423,7 @@
 
     invoke-virtual {v2, v7, v1}, Landroid/view/View;->measure(II)V
 
-    invoke-static {v2}, Landroidx/appcompat/widget/AlertDialogLayout;->h(Landroid/view/View;)I
+    invoke-static {v2}, Landroidx/appcompat/widget/AlertDialogLayout;->j(Landroid/view/View;)I
 
     move-result v11
 
@@ -651,7 +649,7 @@
 
     move-object v13, v0
 
-    check-cast v13, Lcom/ejiaogl/tiktokhook/va;
+    check-cast v13, Landroidx/appcompat/widget/b$a;
 
     iget v0, v13, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
@@ -693,7 +691,7 @@
     if-nez v1, :cond_12
 
     .line 3
-    invoke-super/range {p0 .. p2}, Lcom/ejiaogl/tiktokhook/wa;->onMeasure(II)V
+    invoke-super/range {p0 .. p2}, Landroidx/appcompat/widget/b;->onMeasure(II)V
 
     :cond_12
     return-void

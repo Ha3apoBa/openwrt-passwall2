@@ -1,66 +1,141 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/nc;
+.class public final Lcom/ejiaogl/tiktokhook/nc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field private static ed:[I
+.field public static final a:Ljava/lang/String;
+
+.field public static final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
+    .line 1
+    sget-object v0, Lcom/ejiaogl/tiktokhook/hd;->a:Lcom/ejiaogl/tiktokhook/hd;
 
-    new-array v0, v0, [I
+    .line 2
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    fill-array-data v0, :array_0
+    const-string v0, "OkHttp-Sent-Millis"
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/nc;->ed:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/nc;->a:Ljava/lang/String;
 
-    nop
+    const-string v0, "OkHttp-Received-Millis"
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/nc;->b:Ljava/lang/String;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x4288edd
-    .end array-data
 .end method
 
-.method public static a(Landroid/view/Display;Landroid/graphics/Point;)V
-    .locals 7
+.method public static a(Lcom/ejiaogl/tiktokhook/r8;)J
+    .locals 8
 
-    :cond_0
-    move-object/from16 v0, p0
+    move-object/from16 v2, p0
 
-    move-object/from16 v1, p1
+    const-string v0, "Content-Length"
 
-    invoke-virtual {v0, v1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+    invoke-virtual {v2, v0}, Lcom/ejiaogl/tiktokhook/r8;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/nc;->ed:[I
+    move-result-object v2
 
-    const v4, 0x0
+    const-wide/16 v0, -0x1
 
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_1
-
-    const v3, 0x493666e
-
-    :goto_0
-    xor-int v3, v3, v4
-
-    and-int v3, v4, v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
+    if-nez v2, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    return-void
+    :cond_0
+    :try_start_0
+    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :goto_0
+    return-wide v0
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    const-string v0, "Connection"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Keep-Alive"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Proxy-Authenticate"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Proxy-Authorization"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "TE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Trailers"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Transfer-Encoding"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Upgrade"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
 .end method

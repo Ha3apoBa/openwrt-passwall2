@@ -1,16 +1,14 @@
 .class public final Lcom/ejiaogl/tiktokhook/yj;
-.super Lcom/ejiaogl/tiktokhook/w3;
+.super Lde/robv/android/xposed/XC_MethodHook;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lcom/ejiaogl/tiktokhook/yj;
-
-.field private static sv:[I
+.field private static lb:[I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const v0, 0x1
@@ -19,19 +17,15 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/yj;->sv:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/yj;->lb:[I
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/yj;
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/yj;-><init>()V
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/yj;->c:Lcom/ejiaogl/tiktokhook/yj;
+    nop
 
     return-void
 
     :array_0
     .array-data 4
-        0x2da8070
+        0x12c2dc
     .end array-data
 .end method
 
@@ -40,55 +34,86 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/w3;-><init>()V
+    invoke-direct {v0}, Lde/robv/android/xposed/XC_MethodHook;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final K(Lcom/ejiaogl/tiktokhook/u3;Ljava/lang/Runnable;)V
-    .locals 10
+.method public final afterHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
+    .locals 12
 
-    :cond_0
-    move-object/from16 v2, p0
+    move-object/from16 v5, p0
 
-    move-object/from16 v3, p1
+    move-object/from16 v6, p1
 
-    move-object/from16 v4, p2
+    invoke-super {v5, v6}, Lde/robv/android/xposed/XC_MethodHook;->afterHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/t4;->d:Lcom/ejiaogl/tiktokhook/t4;
+    sget-object v8, Lcom/ejiaogl/tiktokhook/yj;->lb:[I
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/ki;->g:Lcom/ejiaogl/tiktokhook/ii;
+    const v9, 0x0
 
-    iget-object v3, v3, Lcom/ejiaogl/tiktokhook/hg;->c:Lcom/ejiaogl/tiktokhook/b4;
+    aget v9, v8, v9
 
-    const/4 v1, 0x0
+    if-ltz v9, :cond_0
 
-    invoke-virtual {v3, v4, v0, v1}, Lcom/ejiaogl/tiktokhook/b4;->L(Ljava/lang/Runnable;Lcom/ejiaogl/tiktokhook/ii;Z)V
+    const v8, 0x5333178
 
-    sget-object v6, Lcom/ejiaogl/tiktokhook/yj;->sv:[I
+    xor-int v8, v8, v9
 
-    const v7, 0x0
+    and-int v8, v9, v8
 
-    aget v7, v6, v7
+    const v9, 0xc284
 
-    if-ltz v7, :cond_1
-
-    const v6, 0x5f0a960
-
-    :goto_0
-    xor-int v6, v6, v7
-
-    rem-int v6, v7, v6
-
-    if-eqz v6, :cond_0
-
-    goto :goto_1
+    if-ne v8, v9, :cond_0
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
+    :goto_0
+    iget-object v0, v6, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->thisObject:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
     :goto_1
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, v0, v2
+
+    iget-object v4, v6, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->thisObject:Ljava/lang/Object;
+
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    instance-of v4, v4, Landroid/view/View;
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, v6, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->thisObject:Ljava/lang/Object;
+
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/view/View;
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
     return-void
 .end method

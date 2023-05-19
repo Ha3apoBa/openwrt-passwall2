@@ -1,138 +1,244 @@
 .class public final Lcom/ejiaogl/tiktokhook/fj;
-.super Lcom/ejiaogl/tiktokhook/t;
+.super Lde/robv/android/xposed/XC_MethodHook;
 .source "SourceFile"
 
 
-# instance fields
-.field public b:I
+# static fields
+.field private static jK:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
+    const v0, 0x6
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
+
     nop
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x6c9e57
+        0x3639a56
+        0x4960200
+        0x3bd0921
+        0x472471f
+        0x5ac0289
+    .end array-data
 .end method
 
 .method public constructor <init>()V
-    .locals 7
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v1}, Lcom/ejiaogl/tiktokhook/t;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, v1, Lcom/ejiaogl/tiktokhook/fj;->b:I
-
-    const v0, 0x800013
-
-    iput v0, v1, Lcom/ejiaogl/tiktokhook/t;->a:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 8
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    invoke-direct {v0, v1, v2}, Lcom/ejiaogl/tiktokhook/t;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    invoke-direct {v0}, Lde/robv/android/xposed/XC_MethodHook;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 7
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final beforeHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
+    .locals 10
 
-    move-object/from16 v1, p1
+    :cond_0
+    move-object/from16 v3, p0
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/t;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object/from16 v4, p1
 
-    const/4 v1, 0x0
+    invoke-super {v3, v4}, Lde/robv/android/xposed/XC_MethodHook;->beforeHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
 
-    iput v1, v0, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
 
-    return-void
-.end method
+    const v7, 0x0
 
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 8
+    aget v7, v6, v7
 
-    move-object/from16 v1, p0
+    if-ltz v7, :cond_1
 
-    move-object/from16 v2, p1
+    const v6, 0x516184
 
-    invoke-direct {v1, v2}, Lcom/ejiaogl/tiktokhook/t;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    :goto_0
+    xor-int v6, v6, v7
 
-    const/4 v0, 0x0
+    and-int v6, v7, v6
 
-    iput v0, v1, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    if-eqz v6, :cond_0
+
+    goto :goto_1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    new-instance v0, Lorg/json/JSONObject;
+
+    iget-object v1, v4, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x1
+
+    aget-object v1, v1, v2
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "orderSn === "
 
     .line 1
-    iget v0, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/sf;->c(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    move-result-object v1
 
-    iget v0, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    .line 2
+    iget-object v4, v4, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->args:[Ljava/lang/Object;
 
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    const/4 v2, 0x0
 
-    iget v0, v2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    aget-object v4, v4, v2
 
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
 
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    const v7, 0x1
 
-    return-void
-.end method
+    aget v7, v6, v7
 
-.method public constructor <init>(Lcom/ejiaogl/tiktokhook/fj;)V
-    .locals 8
+    if-ltz v7, :cond_2
 
-    move-object/from16 v1, p0
+    :goto_2
+    const v6, 0x343be03
 
-    move-object/from16 v2, p1
+    xor-int v6, v6, v7
 
-    invoke-direct {v1, v2}, Lcom/ejiaogl/tiktokhook/t;-><init>(Lcom/ejiaogl/tiktokhook/t;)V
+    rem-int v6, v7, v6
 
-    const/4 v0, 0x0
+    const v7, 0x1fe9b4
 
-    iput v0, v1, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    if-eq v6, v7, :cond_2
 
-    iget v2, v2, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    goto :goto_2
 
-    iput v2, v1, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v4
 
-.method public constructor <init>(Lcom/ejiaogl/tiktokhook/t;)V
-    .locals 7
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/hook;->g(Ljava/lang/String;)V
 
-    move-object/from16 v0, p0
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
 
-    move-object/from16 v1, p1
+    const v7, 0x2
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/t;-><init>(Lcom/ejiaogl/tiktokhook/t;)V
+    aget v7, v6, v7
 
-    const/4 v1, 0x0
+    if-ltz v7, :cond_3
 
-    iput v1, v0, Lcom/ejiaogl/tiktokhook/fj;->b:I
+    const v6, 0x223df37
 
+    :goto_3
+    xor-int v6, v6, v7
+
+    and-int v6, v7, v6
+
+    if-eqz v6, :cond_0
+
+    goto :goto_4
+
+    goto :goto_3
+
+    :cond_3
+    :goto_4
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "param === "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
+
+    const v7, 0x3
+
+    aget v7, v6, v7
+
+    if-ltz v7, :cond_4
+
+    const v6, 0x3e72ebe
+
+    xor-int v6, v6, v7
+
+    rem-int v6, v7, v6
+
+    const v7, 0x377ceb
+
+    if-ne v6, v7, :cond_4
+
+    goto :goto_5
+
+    :cond_4
+    :goto_5
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
+
+    const v7, 0x4
+
+    aget v7, v6, v7
+
+    if-ltz v7, :cond_5
+
+    :goto_6
+    const v6, 0x596e160
+
+    xor-int v6, v6, v7
+
+    and-int v6, v7, v6
+
+    if-gtz v6, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/hook;->g(Ljava/lang/String;)V
+
+    sget-object v6, Lcom/ejiaogl/tiktokhook/fj;->jK:[I
+
+    const v7, 0x5
+
+    aget v7, v6, v7
+
+    if-ltz v7, :cond_6
+
+    const v6, 0x332114b
+
+    xor-int v6, v6, v7
+
+    rem-int v6, v7, v6
+
+    const v7, 0x5ac0289
+
+    if-ne v6, v7, :cond_6
+
+    goto :goto_7
+
+    :cond_6
+    :goto_7
     return-void
 .end method

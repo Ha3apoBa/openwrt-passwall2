@@ -1,32 +1,23 @@
-.class public final Lcom/ejiaogl/tiktokhook/ya;
-.super Ljava/lang/Object;
+.class public abstract Lcom/ejiaogl/tiktokhook/ya;
+.super Lcom/ejiaogl/tiktokhook/n3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
 
 # static fields
-.field private static Se:[I
-
-
-# instance fields
-.field public final synthetic e:I
-
-.field public final synthetic f:Ljava/lang/Object;
+.field private static yS:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x2
+    const v0, 0x3
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ya;->Se:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ya;->yS:[I
 
     nop
 
@@ -34,136 +25,177 @@
 
     :array_0
     .array-data 4
-        0x3664e2b
-        0xa0792e
+        0x536d053
+        0xc05e6
+        0x4042137
     .end array-data
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Object;I)V
-    .locals 8
+.method public constructor <init>()V
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    move/from16 v2, p2
-
-    iput v2, v0, Lcom/ejiaogl/tiktokhook/ya;->e:I
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/ya;->f:Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/n3;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 11
+.method public abstract R()Lcom/ejiaogl/tiktokhook/ya;
+.end method
 
-    move-object/from16 v0, p0
+.method public final S()Ljava/lang/String;
+    .locals 8
 
-    move-object/from16 v1, p1
+    move-object/from16 v2, p0
 
-    move-object/from16 v2, p2
-
-    move/from16 v3, p3
-
-    move-wide/from16 v4, p4
-
-    iget v1, v0, Lcom/ejiaogl/tiktokhook/ya;->e:I
-
-    packed-switch v1, :pswitch_data_0
-
-    goto :goto_1
-
-    :pswitch_0
-    const/4 v1, -0x1
-
-    if-eq v3, v1, :cond_0
+    sget-object v0, Lcom/ejiaogl/tiktokhook/t4;->a:Lcom/ejiaogl/tiktokhook/h4;
 
     .line 1
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/ya;->f:Ljava/lang/Object;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/ab;->a:Lcom/ejiaogl/tiktokhook/ya;
 
-    check-cast v1, Lcom/ejiaogl/tiktokhook/eb;
+    if-ne v2, v0, :cond_0
 
-    iget-object v1, v1, Lcom/ejiaogl/tiktokhook/eb;->g:Lcom/ejiaogl/tiktokhook/sc;
+    const-string v0, "Dispatchers.Main"
 
-    if-eqz v1, :cond_0
+    return-object v0
 
-    const/4 v2, 0x0
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/ejiaogl/tiktokhook/q5;->setListSelectionHidden(Z)V
+    .line 2
+    :try_start_0
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/ya;->R()Lcom/ejiaogl/tiktokhook/ya;
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/ya;->Se:[I
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const v8, 0x0
+    goto :goto_0
 
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_0
+    :catch_0
+    move-object v0, v1
 
     :goto_0
-    const v7, 0x563248f
+    if-ne v2, v0, :cond_1
 
-    xor-int v7, v7, v8
+    const-string v0, "Dispatchers.Main.immediate"
 
-    and-int v7, v8, v7
+    return-object v0
 
-    const v8, 0x2044a20
+    :cond_1
+    return-object v1
+.end method
 
-    if-eq v7, v8, :cond_0
+.method public toString()Ljava/lang/String;
+    .locals 8
+
+    move-object/from16 v2, p0
+
+    invoke-virtual {v2}, Lcom/ejiaogl/tiktokhook/ya;->S()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ya;->yS:[I
+
+    const v5, 0x0
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_0
+
+    const v4, 0x128a103
+
+    xor-int v4, v4, v5
+
+    rem-int v4, v5, v4
+
+    const v5, 0x1185f03
+
+    if-ne v4, v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
+    :goto_0
+    const/16 v1, 0x40
 
-    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ya;->yS:[I
+
+    const v5, 0x1
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_1
+
     :goto_1
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/ya;->f:Ljava/lang/Object;
+    const v4, 0x1e1854a
 
-    check-cast v1, Landroidx/appcompat/widget/SearchView;
+    xor-int v4, v4, v5
 
-    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/SearchView;->m(I)Z
+    rem-int v4, v5, v4
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/ya;->Se:[I
+    const v5, 0xc05e6
 
-    const v8, 0x1
+    if-eq v4, v5, :cond_1
 
-    aget v8, v7, v8
+    goto :goto_1
 
-    if-ltz v8, :cond_1
+    :cond_1
+    invoke-static {v2}, Lcom/ejiaogl/tiktokhook/b4;->q(Ljava/lang/Object;)Ljava/lang/String;
 
-    const v7, 0x327bf07
+    move-result-object v1
 
-    xor-int v7, v7, v8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    rem-int v7, v8, v7
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ya;->yS:[I
 
-    const v8, 0xa0792e
+    const v5, 0x2
 
-    if-ne v7, v8, :cond_1
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_2
+
+    :goto_2
+    const v4, 0x49fcaf7
+
+    xor-int v4, v4, v5
+
+    rem-int v4, v5, v4
+
+    const v5, 0x5c9ab7
+
+    if-eq v4, v5, :cond_2
 
     goto :goto_2
 
-    :cond_1
-    :goto_2
-    return-void
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object v0
 
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
+    :cond_3
+    return-object v0
 .end method

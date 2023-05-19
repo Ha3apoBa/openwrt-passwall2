@@ -3,91 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
-
-
-# static fields
-.field private static dZ:[I
+.implements Lcom/ejiaogl/tiktokhook/og;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/SearchView;
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/pg;->dZ:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x2840be7
-    .end array-data
 .end method
 
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
+.method public constructor <init>(I)V
     .locals 7
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/pg;->a:Landroidx/appcompat/widget/SearchView;
+    move/from16 v1, p1
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/pg;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 9
+.method public final a()I
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    iget v0, v1, Lcom/ejiaogl/tiktokhook/pg;->a:I
+
+    return v0
+.end method
+
+.method public final b()V
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    move/from16 v2, p2
-
-    move-object/from16 v3, p3
-
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/pg;->a:Landroidx/appcompat/widget/SearchView;
-
-    invoke-virtual {v1}, Landroidx/appcompat/widget/SearchView;->p()V
-
-    sget-object v5, Lcom/ejiaogl/tiktokhook/pg;->dZ:[I
-
-    const v6, 0x0
-
-    aget v6, v5, v6
-
-    if-ltz v6, :cond_0
-
-    :goto_0
-    const v5, 0x55eb75d
-
-    xor-int v5, v5, v6
-
-    rem-int v5, v6, v5
-
-    if-gtz v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    return v1
+    return-void
 .end method

@@ -3,21 +3,16 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lcom/ejiaogl/tiktokhook/j0;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/j0;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/j0;-><init>(I)V
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/r3;->b:Lcom/ejiaogl/tiktokhook/j0;
+    nop
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract c()Lcom/ejiaogl/tiktokhook/r3;
 .end method

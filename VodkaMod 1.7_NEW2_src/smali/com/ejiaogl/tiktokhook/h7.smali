@@ -1,98 +1,130 @@
-.class public final synthetic Lcom/ejiaogl/tiktokhook/h7;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/h7;
+.super Lcom/ejiaogl/tiktokhook/dc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # static fields
-.field public static final synthetic a:Lcom/ejiaogl/tiktokhook/h7;
+.field private static aes:[I
+
+
+# instance fields
+.field public final synthetic c:I
+
+.field public final synthetic d:Lcom/ejiaogl/tiktokhook/c7;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/h7;
+    const v0, 0x1
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/h7;-><init>()V
+    new-array v0, v0, [I
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/h7;->a:Lcom/ejiaogl/tiktokhook/h7;
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/h7;->aes:[I
+
+    nop
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x1d5a53f
+    .end array-data
 .end method
 
-.method public synthetic constructor <init>()V
-    .locals 6
+.method public varargs constructor <init>(Lcom/ejiaogl/tiktokhook/c7;[Ljava/lang/Object;ILcom/ejiaogl/tiktokhook/y5;)V
+    .locals 10
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    move/from16 v3, p3
+
+    move-object/from16 v4, p4
+
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/h7;->d:Lcom/ejiaogl/tiktokhook/c7;
+
+    iput v3, v0, Lcom/ejiaogl/tiktokhook/h7;->c:I
+
+    const-string v1, "OkHttp %s Push Reset[%s]"
+
+    invoke-direct {v0, v1, v2}, Lcom/ejiaogl/tiktokhook/dc;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 12
+.method public final a()V
+    .locals 9
 
-    move-object/from16 v4, p0
+    move-object/from16 v3, p0
 
-    move-object/from16 v5, p1
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/h7;->d:Lcom/ejiaogl/tiktokhook/c7;
 
-    move-object/from16 v6, p2
+    .line 1
+    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/c7;->k:Lcom/ejiaogl/tiktokhook/rd;
 
-    check-cast v5, [B
+    .line 2
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v6, [B
+    sget-object v5, Lcom/ejiaogl/tiktokhook/h7;->aes:[I
 
-    sget v0, Lcom/ejiaogl/tiktokhook/zg;->i:I
+    const v6, 0x0
 
-    array-length v0, v5
+    aget v6, v5, v6
 
-    array-length v1, v6
-
-    if-eq v0, v1, :cond_0
-
-    array-length v5, v5
-
-    array-length v6, v6
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    move v1, v0
+    if-ltz v6, :cond_0
 
     :goto_0
-    array-length v2, v5
+    const v5, 0x4240538
 
-    if-ge v1, v2, :cond_2
+    xor-int v5, v5, v6
 
-    aget-byte v2, v5, v1
+    rem-int v5, v6, v5
 
-    aget-byte v3, v6, v1
+    const v6, 0x1d5a53f
 
-    if-eq v2, v3, :cond_1
-
-    aget-byte v5, v5, v1
-
-    aget-byte v6, v6, v1
-
-    :goto_1
-    sub-int v0, v5, v6
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
+    if-eq v5, v6, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    :goto_2
-    return v0
+    :cond_0
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/h7;->d:Lcom/ejiaogl/tiktokhook/c7;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v3, Lcom/ejiaogl/tiktokhook/h7;->d:Lcom/ejiaogl/tiktokhook/c7;
+
+    .line 3
+    iget-object v1, v1, Lcom/ejiaogl/tiktokhook/c7;->t:Ljava/util/LinkedHashSet;
+
+    .line 4
+    iget v2, v3, Lcom/ejiaogl/tiktokhook/h7;->c:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

@@ -1,6 +1,10 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/q;
-.super Lcom/ejiaogl/tiktokhook/t0;
+.class public final Lcom/ejiaogl/tiktokhook/q;
+.super Lcom/ejiaogl/tiktokhook/g3;
 .source "SourceFile"
+
+
+# static fields
+.field public static final synthetic b:I
 
 
 # direct methods

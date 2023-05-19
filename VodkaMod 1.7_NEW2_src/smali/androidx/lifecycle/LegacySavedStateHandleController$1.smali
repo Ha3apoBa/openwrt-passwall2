@@ -3,29 +3,31 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/pa;
+.implements Landroidx/lifecycle/e;
 
 
 # instance fields
-.field public final synthetic a:Lcom/ejiaogl/tiktokhook/t0;
+.field public final synthetic a:Landroidx/lifecycle/d;
+
+.field public final synthetic b:Lcom/ejiaogl/tiktokhook/ze;
 
 
 # virtual methods
-.method public final b(Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;)V
+.method public final f(Lcom/ejiaogl/tiktokhook/ha;Landroidx/lifecycle/d$b;)V
     .locals 0
 
-    sget-object p1, Lcom/ejiaogl/tiktokhook/la;->ON_START:Lcom/ejiaogl/tiktokhook/la;
+    sget-object p1, Landroidx/lifecycle/d$b;->ON_START:Landroidx/lifecycle/d$b;
 
-    if-eq p2, p1, :cond_0
+    if-ne p2, p1, :cond_0
 
-    return-void
+    iget-object p1, p0, Landroidx/lifecycle/LegacySavedStateHandleController$1;->a:Landroidx/lifecycle/d;
+
+    invoke-virtual {p1, p0}, Landroidx/lifecycle/d;->c(Lcom/ejiaogl/tiktokhook/ga;)V
+
+    iget-object p1, p0, Landroidx/lifecycle/LegacySavedStateHandleController$1;->b:Lcom/ejiaogl/tiktokhook/ze;
+
+    invoke-virtual {p1}, Lcom/ejiaogl/tiktokhook/ze;->c()V
 
     :cond_0
-    iget-object p1, p0, Landroidx/lifecycle/LegacySavedStateHandleController$1;->a:Lcom/ejiaogl/tiktokhook/t0;
-
-    invoke-virtual {p1, p0}, Lcom/ejiaogl/tiktokhook/t0;->o(Lcom/ejiaogl/tiktokhook/qa;)V
-
-    const/4 p1, 0x0
-
-    throw p1
+    return-void
 .end method

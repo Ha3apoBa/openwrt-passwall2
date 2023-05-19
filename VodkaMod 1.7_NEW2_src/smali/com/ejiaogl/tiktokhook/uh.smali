@@ -1,192 +1,74 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/uh;
-.super Lcom/ejiaogl/tiktokhook/th;
+.class public final Lcom/ejiaogl/tiktokhook/uh;
+.super Lcom/ejiaogl/tiktokhook/n3;
 .source "SourceFile"
 
 
 # static fields
-.field private static pw:[I
+.field public static final c:Lcom/ejiaogl/tiktokhook/uh;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
+    new-instance v0, Lcom/ejiaogl/tiktokhook/uh;
 
-    new-array v0, v0, [I
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/uh;-><init>()V
 
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/uh;->pw:[I
-
-    nop
+    sput-object v0, Lcom/ejiaogl/tiktokhook/uh;->c:Lcom/ejiaogl/tiktokhook/uh;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x42fc909
-    .end array-data
 .end method
 
-.method public static D(Ljava/lang/CharSequence;CII)I
-    .locals 9
+.method public constructor <init>()V
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move/from16 v1, p1
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/n3;-><init>()V
 
-    move/from16 v2, p2
-
-    move/from16 v3, p3
-
-    and-int/lit8 v3, v3, 0x2
-
-    if-eqz v3, :cond_0
-
-    const/4 v2, 0x0
-
-    :cond_0
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->indexOf(II)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public static final E(Ljava/lang/CharSequence;)Z
-    .locals 11
 
-    move-object/from16 v5, p0
+# virtual methods
+.method public final P(Lcom/ejiaogl/tiktokhook/l3;Ljava/lang/Runnable;)V
+    .locals 8
 
-    const-string v0, "<this>"
+    move-object/from16 v0, p0
 
-    invoke-static {v5, v0}, Lcom/ejiaogl/tiktokhook/t0;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v1, p1
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/uh;->pw:[I
+    move-object/from16 v2, p2
 
-    const v8, 0x0
+    sget-object v2, Lcom/ejiaogl/tiktokhook/dj;->b:Lcom/ejiaogl/tiktokhook/dj$a;
 
-    aget v8, v7, v8
+    invoke-interface {v1, v2}, Lcom/ejiaogl/tiktokhook/l3;->get(Lcom/ejiaogl/tiktokhook/l3$b;)Lcom/ejiaogl/tiktokhook/l3$a;
 
-    if-ltz v8, :cond_0
+    move-result-object v1
 
-    :goto_0
-    const v7, 0x1af9817
+    check-cast v1, Lcom/ejiaogl/tiktokhook/dj;
 
-    xor-int v7, v7, v8
+    if-eqz v1, :cond_0
 
-    rem-int v7, v8, v7
-
-    const v8, 0x42fc909
-
-    if-eq v7, v8, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
+    new-instance v1, Ljava/lang/UnsupportedOperationException;
 
-    move-result v0
+    const-string v2, "Dispatchers.Unconfined.dispatch function can only be used by the yield function. If you wrap Unconfined dispatcher in your code, make sure you properly delegate isDispatchNeeded and dispatch calls."
 
-    const/4 v1, 0x0
+    invoke-direct {v1, v2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x1
+    throw v1
+.end method
 
-    if-eqz v0, :cond_6
+.method public final toString()Ljava/lang/String;
+    .locals 7
 
-    .line 1
-    new-instance v0, Lcom/ejiaogl/tiktokhook/ca;
+    move-object/from16 v1, p0
 
-    invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
+    const-string v0, "Dispatchers.Unconfined"
 
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-direct {v0, v1, v3}, Lcom/ejiaogl/tiktokhook/ca;-><init>(II)V
-
-    .line 2
-    instance-of v3, v0, Ljava/util/Collection;
-
-    if-eqz v3, :cond_2
-
-    move-object v3, v0
-
-    check-cast v3, Ljava/util/Collection;
-
-    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    :cond_1
-    move v5, v2
-
-    goto :goto_3
-
-    :cond_2
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    move-object v3, v0
-
-    check-cast v3, Lcom/ejiaogl/tiktokhook/ba;
-
-    invoke-virtual {v3}, Lcom/ejiaogl/tiktokhook/ba;->a()I
-
-    move-result v3
-
-    invoke-interface {v5, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v3
-
-    .line 3
-    invoke-static {v3}, Ljava/lang/Character;->isWhitespace(C)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    invoke-static {v3}, Ljava/lang/Character;->isSpaceChar(C)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move v3, v1
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    move v3, v2
-
-    :goto_2
-    if-nez v3, :cond_3
-
-    move v5, v1
-
-    :goto_3
-    if-eqz v5, :cond_7
-
-    :cond_6
-    move v1, v2
-
-    :cond_7
-    return v1
+    return-object v0
 .end method

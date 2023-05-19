@@ -1,14 +1,10 @@
 .class public final Lcom/ejiaogl/tiktokhook/z4;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field private static iF:[I
-
-
-# instance fields
-.field public final b:Lcom/ejiaogl/tiktokhook/u3;
+.field private static Ln:[I
 
 
 # direct methods
@@ -21,7 +17,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/z4;->iF:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/z4;->Ln:[I
 
     nop
 
@@ -29,38 +25,70 @@
 
     :array_0
     .array-data 4
-        0x53aa0d5
+        0x150477d
     .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 7
+.method public static a(Landroid/graphics/drawable/Drawable;)I
+    .locals 6
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/v6;->b:Lcom/ejiaogl/tiktokhook/v6;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
-    invoke-direct {v1}, Ljava/lang/RuntimeException;-><init>()V
+    move-result v0
 
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/z4;->b:Lcom/ejiaogl/tiktokhook/u3;
-
-    return-void
+    return v0
 .end method
 
-
-# virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
+.method public static b(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;I)Landroid/graphics/drawable/Drawable;
     .locals 7
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x0
+    move/from16 v1, p1
 
-    new-array v0, v0, [Ljava/lang/StackTraceElement;
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChild(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    move-result-object v0
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/z4;->iF:[I
+    return-object v0
+.end method
+
+.method public static c(Landroid/graphics/drawable/InsetDrawable;)Landroid/graphics/drawable/Drawable;
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static d(Landroid/graphics/drawable/Drawable;)Z
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static e(Landroid/graphics/drawable/Drawable;Z)V
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
+
+    sget-object v3, Lcom/ejiaogl/tiktokhook/z4;->Ln:[I
 
     const v4, 0x0
 
@@ -68,33 +96,19 @@
 
     if-ltz v4, :cond_0
 
-    :goto_0
-    const v3, 0xa143be
+    const v3, 0x4d867e7
 
     xor-int v3, v3, v4
 
-    and-int v3, v4, v3
+    rem-int v3, v4, v3
 
-    const v4, 0x51aa041
+    const v4, 0x150477d
 
-    if-eq v3, v4, :cond_0
+    if-ne v3, v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-object v1
-.end method
-
-.method public final getLocalizedMessage()Ljava/lang/String;
-    .locals 7
-
-    move-object/from16 v1, p0
-
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/z4;->b:Lcom/ejiaogl/tiktokhook/u3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return-void
 .end method

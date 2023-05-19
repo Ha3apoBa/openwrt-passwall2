@@ -1,118 +1,164 @@
 .class public final Lcom/ejiaogl/tiktokhook/tc;
-.super Lcom/ejiaogl/tiktokhook/eb;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/jc;
 
 
 # static fields
-.field public static D:Ljava/lang/reflect/Method;
-
-
-# instance fields
-.field public C:Lcom/ejiaogl/tiktokhook/jc;
+.field public static final a:Ljava/util/logging/Logger;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    :try_start_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-class v0, Lcom/ejiaogl/tiktokhook/tc;
 
-    const/16 v1, 0x1c
-
-    if-gt v0, v1, :cond_0
-
-    const-class v0, Landroid/widget/PopupWindow;
-
-    const-string v1, "setTouchModal"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Class;
-
-    const/4 v3, 0x0
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/tc;->D:Ljava/lang/reflect/Method;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    goto :goto_0
+    move-result-object v0
 
-    :catch_0
-    const-string v0, "MenuPopupWindow"
+    sput-object v0, Lcom/ejiaogl/tiktokhook/tc;->a:Ljava/util/logging/Logger;
 
-    const-string v1, "Could not find method setTouchModal() on PopupWindow. Oh well."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    :goto_0
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;II)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    move/from16 v2, p2
-
-    move/from16 v3, p3
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/ejiaogl/tiktokhook/eb;-><init>(Landroid/content/Context;II)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c(Lcom/ejiaogl/tiktokhook/hc;Landroid/view/MenuItem;)V
-    .locals 9
+.method public static a(Lcom/ejiaogl/tiktokhook/of;)Lcom/ejiaogl/tiktokhook/r1;
+    .locals 7
 
     move-object/from16 v1, p0
 
-    move-object/from16 v2, p1
+    if-eqz v1, :cond_0
 
-    move-object/from16 v3, p2
+    new-instance v0, Lcom/ejiaogl/tiktokhook/ud;
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/tc;->C:Lcom/ejiaogl/tiktokhook/jc;
+    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/ud;-><init>(Lcom/ejiaogl/tiktokhook/of;)V
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, v2, v3}, Lcom/ejiaogl/tiktokhook/jc;->c(Lcom/ejiaogl/tiktokhook/hc;Landroid/view/MenuItem;)V
+    return-object v0
 
     :cond_0
-    return-void
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "source == null"
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
-.method public final f(Lcom/ejiaogl/tiktokhook/hc;Landroid/view/MenuItem;)V
-    .locals 9
+.method public static b(Ljava/net/Socket;)Lcom/ejiaogl/tiktokhook/nf;
+    .locals 8
 
-    move-object/from16 v1, p0
+    move-object/from16 v2, p0
 
-    move-object/from16 v2, p1
+    if-eqz v2, :cond_1
 
-    move-object/from16 v3, p2
+    .line 1
+    new-instance v0, Lcom/ejiaogl/tiktokhook/sc;
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/tc;->C:Lcom/ejiaogl/tiktokhook/jc;
+    invoke-direct {v0, v2}, Lcom/ejiaogl/tiktokhook/sc;-><init>(Ljava/net/Socket;)V
 
-    if-eqz v0, :cond_0
+    .line 2
+    invoke-virtual {v2}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
-    invoke-interface {v0, v2, v3}, Lcom/ejiaogl/tiktokhook/jc;->f(Lcom/ejiaogl/tiktokhook/hc;Landroid/view/MenuItem;)V
+    move-result-object v2
 
+    if-eqz v2, :cond_0
+
+    .line 3
+    new-instance v1, Lcom/ejiaogl/tiktokhook/qc;
+
+    invoke-direct {v1, v0, v2}, Lcom/ejiaogl/tiktokhook/qc;-><init>(Lcom/ejiaogl/tiktokhook/bh;Ljava/io/OutputStream;)V
+
+    .line 4
+    new-instance v2, Lcom/ejiaogl/tiktokhook/i1;
+
+    invoke-direct {v2, v0, v1}, Lcom/ejiaogl/tiktokhook/i1;-><init>(Lcom/ejiaogl/tiktokhook/k1;Lcom/ejiaogl/tiktokhook/nf;)V
+
+    return-object v2
+
+    .line 5
     :cond_0
-    return-void
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "out == null"
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    .line 6
+    :cond_1
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "socket == null"
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+.end method
+
+.method public static c(Ljava/net/Socket;)Lcom/ejiaogl/tiktokhook/of;
+    .locals 8
+
+    move-object/from16 v2, p0
+
+    if-eqz v2, :cond_1
+
+    .line 1
+    new-instance v0, Lcom/ejiaogl/tiktokhook/sc;
+
+    invoke-direct {v0, v2}, Lcom/ejiaogl/tiktokhook/sc;-><init>(Ljava/net/Socket;)V
+
+    .line 2
+    invoke-virtual {v2}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    .line 3
+    new-instance v1, Lcom/ejiaogl/tiktokhook/rc;
+
+    invoke-direct {v1, v0, v2}, Lcom/ejiaogl/tiktokhook/rc;-><init>(Lcom/ejiaogl/tiktokhook/bh;Ljava/io/InputStream;)V
+
+    .line 4
+    new-instance v2, Lcom/ejiaogl/tiktokhook/j1;
+
+    invoke-direct {v2, v0, v1}, Lcom/ejiaogl/tiktokhook/j1;-><init>(Lcom/ejiaogl/tiktokhook/k1;Lcom/ejiaogl/tiktokhook/of;)V
+
+    return-object v2
+
+    .line 5
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "in == null"
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    .line 6
+    :cond_1
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "socket == null"
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
 .end method

@@ -1,93 +1,63 @@
-.class public final synthetic Lcom/ejiaogl/tiktokhook/j4;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/j4;
+.super Lcom/ejiaogl/tiktokhook/cf;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # static fields
-.field private static hC:[I
-
-
-# instance fields
-.field public final synthetic e:Lcom/ejiaogl/tiktokhook/p8;
+.field public static final d:Lcom/ejiaogl/tiktokhook/j4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
+    new-instance v0, Lcom/ejiaogl/tiktokhook/j4;
 
-    new-array v0, v0, [I
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/j4;-><init>()V
 
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/j4;->hC:[I
-
-    nop
+    sput-object v0, Lcom/ejiaogl/tiktokhook/j4;->d:Lcom/ejiaogl/tiktokhook/j4;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x2513795
-    .end array-data
 .end method
 
-.method public synthetic constructor <init>(Lcom/ejiaogl/tiktokhook/p8;)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 10
 
-    move-object/from16 v0, p0
+    move-object/from16 v4, p0
 
-    move-object/from16 v1, p1
+    sget v0, Lcom/ejiaogl/tiktokhook/rg;->b:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v1, Lcom/ejiaogl/tiktokhook/rg;->c:I
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/j4;->e:Lcom/ejiaogl/tiktokhook/p8;
+    sget-wide v2, Lcom/ejiaogl/tiktokhook/rg;->d:J
+
+    invoke-direct {v4, v0, v1, v2, v3}, Lcom/ejiaogl/tiktokhook/cf;-><init>(IIJ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final close()V
     .locals 8
+
+    move-object/from16 v2, p0
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Dispatchers.Default cannot be closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
 
     move-object/from16 v1, p0
 
-    move-object/from16 v2, p1
+    const-string v0, "Dispatchers.Default"
 
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/j4;->e:Lcom/ejiaogl/tiktokhook/p8;
-
-    const-string v0, "$onClickAction"
-
-    invoke-static {v2, v0}, Lcom/ejiaogl/tiktokhook/t0;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/j4;->hC:[I
-
-    const v5, 0x0
-
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_0
-
-    const v4, 0x2aad3c0
-
-    xor-int v4, v4, v5
-
-    rem-int v4, v5, v4
-
-    const v5, 0x596eeb
-
-    if-ne v4, v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Lcom/ejiaogl/tiktokhook/p8;->a()V
-
-    return-void
+    return-object v0
 .end method

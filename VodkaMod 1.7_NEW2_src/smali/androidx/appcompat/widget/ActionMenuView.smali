@@ -1,88 +1,101 @@
 .class public Landroidx/appcompat/widget/ActionMenuView;
-.super Lcom/ejiaogl/tiktokhook/wa;
+.super Landroidx/appcompat/widget/b;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/gc;
+.implements Landroidx/appcompat/view/menu/d$b;
+.implements Landroidx/appcompat/view/menu/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/appcompat/widget/ActionMenuView$c;,
+        Landroidx/appcompat/widget/ActionMenuView$a;,
+        Landroidx/appcompat/widget/ActionMenuView$b;,
+        Landroidx/appcompat/widget/ActionMenuView$d;,
+        Landroidx/appcompat/widget/ActionMenuView$e;
+    }
+.end annotation
 
 
 # instance fields
-.field public A:I
+.field public A:Landroidx/appcompat/widget/ActionMenuView$e;
 
-.field public B:I
+.field public p:Landroidx/appcompat/view/menu/d;
 
-.field public C:I
+.field public q:Landroid/content/Context;
 
-.field public D:Lcom/ejiaogl/tiktokhook/l0;
+.field public r:I
 
-.field public t:Lcom/ejiaogl/tiktokhook/hc;
+.field public s:Z
 
-.field public u:Landroid/content/Context;
+.field public t:Landroidx/appcompat/widget/a;
 
-.field public v:I
+.field public u:Landroidx/appcompat/view/menu/g$a;
 
-.field public w:Lcom/ejiaogl/tiktokhook/h0;
+.field public v:Landroidx/appcompat/view/menu/d$a;
 
-.field public x:Lcom/ejiaogl/tiktokhook/uc;
+.field public w:Z
 
-.field public y:Lcom/ejiaogl/tiktokhook/fc;
+.field public x:I
 
-.field public z:Z
+.field public y:I
+
+.field public z:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1
-    invoke-direct {p0, p1, p2, v0}, Lcom/ejiaogl/tiktokhook/wa;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 p2, 0x0
 
-    .line 2
-    invoke-virtual {p0, v0}, Lcom/ejiaogl/tiktokhook/wa;->setBaselineAligned(Z)V
+    invoke-virtual {p0, p2}, Landroidx/appcompat/widget/b;->setBaselineAligned(Z)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p2
+    move-result-object v0
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     const/high16 v1, 0x42600000    # 56.0f
 
-    mul-float/2addr v1, p2
+    mul-float/2addr v1, v0
 
     float-to-int v1, v1
 
-    iput v1, p0, Landroidx/appcompat/widget/ActionMenuView;->B:I
+    iput v1, p0, Landroidx/appcompat/widget/ActionMenuView;->y:I
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    mul-float/2addr p2, v1
+    mul-float/2addr v0, v1
 
-    float-to-int p2, p2
+    float-to-int v0, v0
 
-    iput p2, p0, Landroidx/appcompat/widget/ActionMenuView;->C:I
+    iput v0, p0, Landroidx/appcompat/widget/ActionMenuView;->z:I
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->u:Landroid/content/Context;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->q:Landroid/content/Context;
 
-    iput v0, p0, Landroidx/appcompat/widget/ActionMenuView;->v:I
+    iput p2, p0, Landroidx/appcompat/widget/ActionMenuView;->r:I
 
     return-void
 .end method
 
-.method public static k(Landroid/view/View;IIII)I
+.method public static m(Landroid/view/View;IIII)I
     .locals 5
 
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
     invoke-static {p3}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -118,7 +131,7 @@
 
     if-eqz p4, :cond_1
 
-    invoke-virtual {p4}, Landroidx/appcompat/view/menu/ActionMenuItemView;->q()Z
+    invoke-virtual {p4}, Landroidx/appcompat/view/menu/ActionMenuItemView;->p()Z
 
     move-result p4
 
@@ -179,7 +192,7 @@
     move v3, v1
 
     :goto_2
-    iget-boolean p2, v0, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean p2, v0, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-nez p2, :cond_6
 
@@ -188,9 +201,9 @@
     move v1, v2
 
     :cond_6
-    iput-boolean v1, v0, Lcom/ejiaogl/tiktokhook/k0;->d:Z
+    iput-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView$c;->d:Z
 
-    iput v3, v0, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iput v3, v0, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
     mul-int/2addr p1, v3
 
@@ -207,16 +220,16 @@
 
 
 # virtual methods
-.method public final a(Lcom/ejiaogl/tiktokhook/kc;)Z
+.method public final b(Landroidx/appcompat/view/menu/e;)Z
     .locals 3
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/ejiaogl/tiktokhook/hc;->r(Landroid/view/MenuItem;Lcom/ejiaogl/tiktokhook/vc;I)Z
+    invoke-virtual {v0, p1, v1, v2}, Landroidx/appcompat/view/menu/d;->r(Landroid/view/MenuItem;Landroidx/appcompat/view/menu/g;I)Z
 
     move-result p1
 
@@ -226,19 +239,9 @@
 .method public final checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 0
 
-    instance-of p1, p1, Lcom/ejiaogl/tiktokhook/k0;
+    instance-of p1, p1, Landroidx/appcompat/widget/ActionMenuView$c;
 
     return p1
-.end method
-
-.method public final bridge synthetic d()Lcom/ejiaogl/tiktokhook/va;
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->h()Lcom/ejiaogl/tiktokhook/k0;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public final dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
@@ -249,34 +252,34 @@
     return p1
 .end method
 
-.method public final e(Landroid/util/AttributeSet;)Lcom/ejiaogl/tiktokhook/va;
+.method public final bridge synthetic f()Landroidx/appcompat/widget/b$a;
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->j()Landroidx/appcompat/widget/ActionMenuView$c;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final g(Landroid/util/AttributeSet;)Landroidx/appcompat/widget/b$a;
     .locals 2
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/k0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/ejiaogl/tiktokhook/k0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v1, p1}, Landroidx/appcompat/widget/ActionMenuView$c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
-.end method
-
-.method public final bridge synthetic f(Landroid/view/ViewGroup$LayoutParams;)Lcom/ejiaogl/tiktokhook/va;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionMenuView;->i(Landroid/view/ViewGroup$LayoutParams;)Lcom/ejiaogl/tiktokhook/k0;
-
-    move-result-object p1
-
-    return-object p1
 .end method
 
 .method public final bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->h()Lcom/ejiaogl/tiktokhook/k0;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->j()Landroidx/appcompat/widget/ActionMenuView$c;
 
     move-result-object v0
 
@@ -286,13 +289,13 @@
 .method public final generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/k0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/ejiaogl/tiktokhook/k0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v1, p1}, Landroidx/appcompat/widget/ActionMenuView$c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
@@ -300,7 +303,7 @@
 .method public final bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionMenuView;->i(Landroid/view/ViewGroup$LayoutParams;)Lcom/ejiaogl/tiktokhook/k0;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionMenuView;->k(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/ActionMenuView$c;
 
     move-result-object p1
 
@@ -308,9 +311,9 @@
 .end method
 
 .method public getMenu()Landroid/view/Menu;
-    .locals 4
+    .locals 3
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     if-nez v0, :cond_1
 
@@ -318,73 +321,67 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/ejiaogl/tiktokhook/hc;
+    new-instance v1, Landroidx/appcompat/view/menu/d;
 
-    invoke-direct {v1, v0}, Lcom/ejiaogl/tiktokhook/hc;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Landroidx/appcompat/view/menu/d;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iput-object v1, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
-    new-instance v2, Lcom/ejiaogl/tiktokhook/z;
+    new-instance v2, Landroidx/appcompat/widget/ActionMenuView$d;
 
-    const/4 v3, 0x4
+    invoke-direct {v2, p0}, Landroidx/appcompat/widget/ActionMenuView$d;-><init>(Landroidx/appcompat/widget/ActionMenuView;)V
 
-    invoke-direct {v2, p0, v3}, Lcom/ejiaogl/tiktokhook/z;-><init>(Ljava/lang/Object;I)V
+    invoke-virtual {v1, v2}, Landroidx/appcompat/view/menu/d;->u(Landroidx/appcompat/view/menu/d$a;)V
 
-    .line 1
-    iput-object v2, v1, Lcom/ejiaogl/tiktokhook/hc;->e:Lcom/ejiaogl/tiktokhook/fc;
+    new-instance v1, Landroidx/appcompat/widget/a;
 
-    .line 2
-    new-instance v1, Lcom/ejiaogl/tiktokhook/h0;
+    invoke-direct {v1, v0}, Landroidx/appcompat/widget/a;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v1, v0}, Lcom/ejiaogl/tiktokhook/h0;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iput-object v1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
     const/4 v0, 0x1
 
-    .line 3
-    iput-boolean v0, v1, Lcom/ejiaogl/tiktokhook/h0;->o:Z
+    .line 1
+    iput-boolean v0, v1, Landroidx/appcompat/widget/a;->l:Z
 
-    iput-boolean v0, v1, Lcom/ejiaogl/tiktokhook/h0;->p:Z
+    iput-boolean v0, v1, Landroidx/appcompat/widget/a;->m:Z
 
-    .line 4
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->x:Lcom/ejiaogl/tiktokhook/uc;
+    .line 2
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->u:Landroidx/appcompat/view/menu/g$a;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/ejiaogl/tiktokhook/j0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$b;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Landroidx/appcompat/widget/ActionMenuView$b;-><init>()V
 
-    invoke-direct {v0, v2}, Lcom/ejiaogl/tiktokhook/j0;-><init>(I)V
+    .line 3
+    :goto_0
+    iput-object v0, v1, Landroidx/appcompat/view/menu/a;->e:Landroidx/appcompat/view/menu/g$a;
+
+    .line 4
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
+
+    iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuView;->q:Landroid/content/Context;
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/view/menu/d;->b(Landroidx/appcompat/view/menu/g;Landroid/content/Context;)V
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
     .line 5
-    :goto_0
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/h0;->i:Lcom/ejiaogl/tiktokhook/uc;
+    iput-object p0, v0, Landroidx/appcompat/view/menu/a;->h:Landroidx/appcompat/view/menu/h;
+
+    iget-object v0, v0, Landroidx/appcompat/view/menu/a;->c:Landroidx/appcompat/view/menu/d;
 
     .line 6
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuView;->u:Landroid/content/Context;
-
-    invoke-virtual {v0, v1, v2}, Lcom/ejiaogl/tiktokhook/hc;->b(Lcom/ejiaogl/tiktokhook/vc;Landroid/content/Context;)V
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iput-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     .line 7
-    iput-object p0, v0, Lcom/ejiaogl/tiktokhook/h0;->k:Landroidx/appcompat/widget/ActionMenuView;
-
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/h0;->g:Lcom/ejiaogl/tiktokhook/hc;
-
-    .line 8
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
-
-    .line 9
     :cond_1
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     return-object v0
 .end method
@@ -394,9 +391,9 @@
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->getMenu()Landroid/view/Menu;
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/h0;->l:Lcom/ejiaogl/tiktokhook/g0;
+    iget-object v1, v0, Landroidx/appcompat/widget/a;->i:Landroidx/appcompat/widget/a$d;
 
     if-eqz v1, :cond_0
 
@@ -407,11 +404,11 @@
     goto :goto_0
 
     :cond_0
-    iget-boolean v1, v0, Lcom/ejiaogl/tiktokhook/h0;->n:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/a;->k:Z
 
     if-eqz v1, :cond_1
 
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/h0;->m:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Landroidx/appcompat/widget/a;->j:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -425,7 +422,7 @@
 .method public getPopupTheme()I
     .locals 1
 
-    iget v0, p0, Landroidx/appcompat/widget/ActionMenuView;->v:I
+    iget v0, p0, Landroidx/appcompat/widget/ActionMenuView;->r:I
 
     return v0
 .end method
@@ -438,12 +435,22 @@
     return v0
 .end method
 
-.method public final h()Lcom/ejiaogl/tiktokhook/k0;
+.method public final bridge synthetic h(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/b$a;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionMenuView;->k(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/ActionMenuView$c;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final j()Landroidx/appcompat/widget/ActionMenuView$c;
     .locals 2
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/k0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/k0;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ActionMenuView$c;-><init>()V
 
     const/16 v1, 0x10
 
@@ -452,27 +459,27 @@
     return-object v0
 .end method
 
-.method public final i(Landroid/view/ViewGroup$LayoutParams;)Lcom/ejiaogl/tiktokhook/k0;
+.method public final k(Landroid/view/ViewGroup$LayoutParams;)Landroidx/appcompat/widget/ActionMenuView$c;
     .locals 1
 
     if-eqz p1, :cond_2
 
-    instance-of v0, p1, Lcom/ejiaogl/tiktokhook/k0;
+    instance-of v0, p1, Landroidx/appcompat/widget/ActionMenuView$c;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/k0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    check-cast p1, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast p1, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    invoke-direct {v0, p1}, Lcom/ejiaogl/tiktokhook/k0;-><init>(Lcom/ejiaogl/tiktokhook/k0;)V
+    invoke-direct {v0, p1}, Landroidx/appcompat/widget/ActionMenuView$c;-><init>(Landroidx/appcompat/widget/ActionMenuView$c;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/ejiaogl/tiktokhook/k0;
+    new-instance v0, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    invoke-direct {v0, p1}, Lcom/ejiaogl/tiktokhook/k0;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v0, p1}, Landroidx/appcompat/widget/ActionMenuView$c;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_0
     iget p1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
@@ -487,14 +494,14 @@
     return-object v0
 
     :cond_2
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->h()Lcom/ejiaogl/tiktokhook/k0;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->j()Landroidx/appcompat/widget/ActionMenuView$c;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final j(I)Z
+.method public final l(I)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -520,13 +527,13 @@
 
     if-ge p1, v3, :cond_1
 
-    instance-of v3, v1, Lcom/ejiaogl/tiktokhook/i0;
+    instance-of v3, v1, Landroidx/appcompat/widget/ActionMenuView$a;
 
     if-eqz v3, :cond_1
 
-    check-cast v1, Lcom/ejiaogl/tiktokhook/i0;
+    check-cast v1, Landroidx/appcompat/widget/ActionMenuView$a;
 
-    invoke-interface {v1}, Lcom/ejiaogl/tiktokhook/i0;->c()Z
+    invoke-interface {v1}, Landroidx/appcompat/widget/ActionMenuView$a;->b()Z
 
     move-result v1
 
@@ -535,13 +542,13 @@
     :cond_1
     if-lez p1, :cond_2
 
-    instance-of p1, v2, Lcom/ejiaogl/tiktokhook/i0;
+    instance-of p1, v2, Landroidx/appcompat/widget/ActionMenuView$a;
 
     if-eqz p1, :cond_2
 
-    check-cast v2, Lcom/ejiaogl/tiktokhook/i0;
+    check-cast v2, Landroidx/appcompat/widget/ActionMenuView$a;
 
-    invoke-interface {v2}, Lcom/ejiaogl/tiktokhook/i0;->b()Z
+    invoke-interface {v2}, Landroidx/appcompat/widget/ActionMenuView$a;->a()Z
 
     move-result p1
 
@@ -556,27 +563,27 @@
 
     invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/ejiaogl/tiktokhook/h0;->b()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/a;->b()V
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    invoke-virtual {p1}, Lcom/ejiaogl/tiktokhook/h0;->l()Z
+    invoke-virtual {p1}, Landroidx/appcompat/widget/a;->l()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    invoke-virtual {p1}, Lcom/ejiaogl/tiktokhook/h0;->g()Z
+    invoke-virtual {p1}, Landroidx/appcompat/widget/a;->f()Z
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    invoke-virtual {p1}, Lcom/ejiaogl/tiktokhook/h0;->m()Z
+    invoke-virtual {p1}, Landroidx/appcompat/widget/a;->m()Z
 
     :cond_0
     return-void
@@ -587,11 +594,11 @@
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/h0;->d()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/a;->c()Z
 
     :cond_0
     return-void
@@ -602,11 +609,11 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView;->z:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView;->w:Z
 
     if-nez v1, :cond_0
 
-    invoke-super/range {p0 .. p5}, Lcom/ejiaogl/tiktokhook/wa;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/b;->onLayout(ZIIII)V
 
     return-void
 
@@ -619,7 +626,7 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    invoke-virtual/range {p0 .. p0}, Lcom/ejiaogl/tiktokhook/wa;->getDividerWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/widget/b;->getDividerWidth()I
 
     move-result v3
 
@@ -637,7 +644,7 @@
 
     sub-int/2addr v5, v6
 
-    invoke-static/range {p0 .. p0}, Lcom/ejiaogl/tiktokhook/fl;->a(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Lcom/ejiaogl/tiktokhook/xi;->a(Landroid/view/View;)Z
 
     move-result v6
 
@@ -671,9 +678,9 @@
 
     move-result-object v11
 
-    check-cast v11, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v11, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    iget-boolean v14, v11, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v14, v11, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v14, :cond_4
 
@@ -681,7 +688,7 @@
 
     move-result v9
 
-    invoke-virtual {v0, v8}, Landroidx/appcompat/widget/ActionMenuView;->j(I)Z
+    invoke-virtual {v0, v8}, Landroidx/appcompat/widget/ActionMenuView;->l(I)Z
 
     move-result v14
 
@@ -755,7 +762,7 @@
 
     sub-int/2addr v5, v7
 
-    invoke-virtual {v0, v8}, Landroidx/appcompat/widget/ActionMenuView;->j(I)Z
+    invoke-virtual {v0, v8}, Landroidx/appcompat/widget/ActionMenuView;->l(I)Z
 
     add-int/lit8 v10, v10, 0x1
 
@@ -847,7 +854,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v6, Landroidx/appcompat/widget/ActionMenuView$c;
 
     invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
@@ -855,7 +862,7 @@
 
     if-eq v8, v11, :cond_9
 
-    iget-boolean v8, v6, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v8, :cond_8
 
@@ -916,7 +923,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v6, Landroidx/appcompat/widget/ActionMenuView$c;
 
     invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
@@ -924,7 +931,7 @@
 
     if-eq v8, v11, :cond_c
 
-    iget-boolean v8, v6, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v8, :cond_b
 
@@ -978,7 +985,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView;->z:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView;->w:Z
 
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -1000,39 +1007,39 @@
     move v2, v4
 
     :goto_0
-    iput-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->z:Z
+    iput-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->w:Z
 
     if-eq v1, v2, :cond_1
 
-    iput v4, v0, Landroidx/appcompat/widget/ActionMenuView;->A:I
+    iput v4, v0, Landroidx/appcompat/widget/ActionMenuView;->x:I
 
     :cond_1
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    iget-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->z:Z
+    iget-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->w:Z
 
     if-eqz v2, :cond_2
 
-    iget-object v2, v0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iget-object v2, v0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     if-eqz v2, :cond_2
 
-    iget v6, v0, Landroidx/appcompat/widget/ActionMenuView;->A:I
+    iget v6, v0, Landroidx/appcompat/widget/ActionMenuView;->x:I
 
     if-eq v1, v6, :cond_2
 
-    iput v1, v0, Landroidx/appcompat/widget/ActionMenuView;->A:I
+    iput v1, v0, Landroidx/appcompat/widget/ActionMenuView;->x:I
 
-    invoke-virtual {v2, v5}, Lcom/ejiaogl/tiktokhook/hc;->p(Z)V
+    invoke-virtual {v2, v5}, Landroidx/appcompat/view/menu/d;->p(Z)V
 
     :cond_2
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    iget-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->z:Z
+    iget-boolean v2, v0, Landroidx/appcompat/widget/ActionMenuView;->w:Z
 
     if-eqz v2, :cond_26
 
@@ -1081,7 +1088,7 @@
 
     sub-int/2addr v2, v8
 
-    iget v8, v0, Landroidx/appcompat/widget/ActionMenuView;->B:I
+    iget v8, v0, Landroidx/appcompat/widget/ActionMenuView;->y:I
 
     div-int v10, v2, v8
 
@@ -1144,7 +1151,7 @@
 
     if-eqz v2, :cond_5
 
-    iget v6, v0, Landroidx/appcompat/widget/ActionMenuView;->C:I
+    iget v6, v0, Landroidx/appcompat/widget/ActionMenuView;->z:I
 
     move/from16 v20, v3
 
@@ -1164,15 +1171,15 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v6, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    iput-boolean v3, v6, Lcom/ejiaogl/tiktokhook/k0;->f:Z
+    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->f:Z
 
-    iput v3, v6, Lcom/ejiaogl/tiktokhook/k0;->c:I
+    iput v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->c:I
 
-    iput v3, v6, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iput v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
-    iput-boolean v3, v6, Lcom/ejiaogl/tiktokhook/k0;->d:Z
+    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->d:Z
 
     iput v3, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
@@ -1184,7 +1191,7 @@
 
     check-cast v2, Landroidx/appcompat/view/menu/ActionMenuItemView;
 
-    invoke-virtual {v2}, Landroidx/appcompat/view/menu/ActionMenuItemView;->q()Z
+    invoke-virtual {v2}, Landroidx/appcompat/view/menu/ActionMenuItemView;->p()Z
 
     move-result v2
 
@@ -1198,9 +1205,9 @@
     const/4 v2, 0x0
 
     :goto_3
-    iput-boolean v2, v6, Lcom/ejiaogl/tiktokhook/k0;->e:Z
+    iput-boolean v2, v6, Landroidx/appcompat/widget/ActionMenuView$c;->e:Z
 
-    iget-boolean v2, v6, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v2, v6, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v2, :cond_7
 
@@ -1212,7 +1219,7 @@
     move v2, v10
 
     :goto_4
-    invoke-static {v4, v11, v2, v7, v9}, Landroidx/appcompat/widget/ActionMenuView;->k(Landroid/view/View;IIII)I
+    invoke-static {v4, v11, v2, v7, v9}, Landroidx/appcompat/widget/ActionMenuView;->m(Landroid/view/View;IIII)I
 
     move-result v2
 
@@ -1220,14 +1227,14 @@
 
     move-result v12
 
-    iget-boolean v3, v6, Lcom/ejiaogl/tiktokhook/k0;->d:Z
+    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->d:Z
 
     if-eqz v3, :cond_8
 
     add-int/lit8 v13, v13, 0x1
 
     :cond_8
-    iget-boolean v3, v6, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v3, :cond_9
 
@@ -1319,18 +1326,18 @@
 
     move-object/from16 v5, v24
 
-    check-cast v5, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v5, Landroidx/appcompat/widget/ActionMenuView$c;
 
     move/from16 v24, v6
 
-    iget-boolean v6, v5, Lcom/ejiaogl/tiktokhook/k0;->d:Z
+    iget-boolean v6, v5, Landroidx/appcompat/widget/ActionMenuView$c;->d:Z
 
     if-nez v6, :cond_d
 
     goto :goto_9
 
     :cond_d
-    iget v5, v5, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iget v5, v5, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
     if-ge v5, v9, :cond_e
 
@@ -1390,7 +1397,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v6, Landroidx/appcompat/widget/ActionMenuView$c;
 
     move/from16 v26, v13
 
@@ -1408,7 +1415,7 @@
 
     if-nez v20, :cond_13
 
-    iget v5, v6, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iget v5, v6, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
     if-ne v5, v9, :cond_12
 
@@ -1422,7 +1429,7 @@
     :cond_13
     if-eqz v4, :cond_14
 
-    iget-boolean v13, v6, Lcom/ejiaogl/tiktokhook/k0;->e:Z
+    iget-boolean v13, v6, Landroidx/appcompat/widget/ActionMenuView$c;->e:Z
 
     if-eqz v13, :cond_14
 
@@ -1430,7 +1437,7 @@
 
     if-ne v10, v13, :cond_14
 
-    iget v14, v0, Landroidx/appcompat/widget/ActionMenuView;->C:I
+    iget v14, v0, Landroidx/appcompat/widget/ActionMenuView;->z:I
 
     add-int v13, v14, v11
 
@@ -1446,15 +1453,15 @@
     move/from16 v27, v4
 
     :goto_b
-    iget v4, v6, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iget v4, v6, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
     const/4 v5, 0x1
 
     add-int/2addr v4, v5
 
-    iput v4, v6, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iput v4, v6, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
-    iput-boolean v5, v6, Lcom/ejiaogl/tiktokhook/k0;->f:Z
+    iput-boolean v5, v6, Landroidx/appcompat/widget/ActionMenuView$c;->f:Z
 
     add-int/lit8 v10, v10, -0x1
 
@@ -1541,9 +1548,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v3, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    iget-boolean v3, v3, Lcom/ejiaogl/tiktokhook/k0;->e:Z
+    iget-boolean v3, v3, Landroidx/appcompat/widget/ActionMenuView$c;->e:Z
 
     if-nez v3, :cond_19
 
@@ -1574,9 +1581,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v3, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    iget-boolean v3, v3, Lcom/ejiaogl/tiktokhook/k0;->e:Z
+    iget-boolean v3, v3, Landroidx/appcompat/widget/ActionMenuView$c;->e:Z
 
     if-nez v3, :cond_1a
 
@@ -1637,21 +1644,21 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v5, Landroidx/appcompat/widget/ActionMenuView$c;
 
     instance-of v4, v4, Landroidx/appcompat/view/menu/ActionMenuItemView;
 
     if-eqz v4, :cond_1e
 
-    iput v3, v5, Lcom/ejiaogl/tiktokhook/k0;->c:I
+    iput v3, v5, Landroidx/appcompat/widget/ActionMenuView$c;->c:I
 
     const/4 v4, 0x1
 
-    iput-boolean v4, v5, Lcom/ejiaogl/tiktokhook/k0;->f:Z
+    iput-boolean v4, v5, Landroidx/appcompat/widget/ActionMenuView$c;->f:Z
 
     if-nez v2, :cond_1d
 
-    iget-boolean v4, v5, Lcom/ejiaogl/tiktokhook/k0;->e:Z
+    iget-boolean v4, v5, Landroidx/appcompat/widget/ActionMenuView$c;->e:Z
 
     if-nez v4, :cond_1d
 
@@ -1673,15 +1680,15 @@
     goto :goto_11
 
     :cond_1e
-    iget-boolean v4, v5, Lcom/ejiaogl/tiktokhook/k0;->a:Z
+    iget-boolean v4, v5, Landroidx/appcompat/widget/ActionMenuView$c;->a:Z
 
     if-eqz v4, :cond_1f
 
-    iput v3, v5, Lcom/ejiaogl/tiktokhook/k0;->c:I
+    iput v3, v5, Landroidx/appcompat/widget/ActionMenuView$c;->c:I
 
     const/4 v4, 0x1
 
-    iput-boolean v4, v5, Lcom/ejiaogl/tiktokhook/k0;->f:Z
+    iput-boolean v4, v5, Landroidx/appcompat/widget/ActionMenuView$c;->f:Z
 
     neg-int v6, v3
 
@@ -1739,9 +1746,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v3, Landroidx/appcompat/widget/ActionMenuView$c;
 
-    iget-boolean v5, v3, Lcom/ejiaogl/tiktokhook/k0;->f:Z
+    iget-boolean v5, v3, Landroidx/appcompat/widget/ActionMenuView$c;->f:Z
 
     if-nez v5, :cond_23
 
@@ -1750,11 +1757,11 @@
     goto :goto_13
 
     :cond_23
-    iget v5, v3, Lcom/ejiaogl/tiktokhook/k0;->b:I
+    iget v5, v3, Landroidx/appcompat/widget/ActionMenuView$c;->b:I
 
     mul-int/2addr v5, v11
 
-    iget v3, v3, Lcom/ejiaogl/tiktokhook/k0;->c:I
+    iget v3, v3, Landroidx/appcompat/widget/ActionMenuView$c;->c:I
 
     add-int/2addr v5, v3
 
@@ -1809,7 +1816,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/ejiaogl/tiktokhook/k0;
+    check-cast v2, Landroidx/appcompat/widget/ActionMenuView$c;
 
     const/4 v4, 0x0
 
@@ -1822,7 +1829,7 @@
     goto :goto_15
 
     :cond_27
-    invoke-super/range {p0 .. p2}, Lcom/ejiaogl/tiktokhook/wa;->onMeasure(II)V
+    invoke-super/range {p0 .. p2}, Landroidx/appcompat/widget/b;->onMeasure(II)V
 
     :goto_16
     return-void
@@ -1831,17 +1838,17 @@
 .method public setExpandedActionViewsExclusive(Z)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    iput-boolean p1, v0, Lcom/ejiaogl/tiktokhook/h0;->t:Z
+    iput-boolean p1, v0, Landroidx/appcompat/widget/a;->q:Z
 
     return-void
 .end method
 
-.method public setOnMenuItemClickListener(Lcom/ejiaogl/tiktokhook/l0;)V
+.method public setOnMenuItemClickListener(Landroidx/appcompat/widget/ActionMenuView$e;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->D:Lcom/ejiaogl/tiktokhook/l0;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->A:Landroidx/appcompat/widget/ActionMenuView$e;
 
     return-void
 .end method
@@ -1851,22 +1858,22 @@
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->getMenu()Landroid/view/Menu;
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/h0;->l:Lcom/ejiaogl/tiktokhook/g0;
+    iget-object v1, v0, Landroidx/appcompat/widget/a;->i:Landroidx/appcompat/widget/a$d;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p1}, Lcom/ejiaogl/tiktokhook/b1;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p1}, Lcom/ejiaogl/tiktokhook/r0;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/ejiaogl/tiktokhook/h0;->n:Z
+    iput-boolean v1, v0, Landroidx/appcompat/widget/a;->k:Z
 
-    iput-object p1, v0, Lcom/ejiaogl/tiktokhook/h0;->m:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/appcompat/widget/a;->j:Landroid/graphics/drawable/Drawable;
 
     :goto_0
     return-void
@@ -1875,17 +1882,19 @@
 .method public setOverflowReserved(Z)V
     .locals 0
 
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView;->s:Z
+
     return-void
 .end method
 
 .method public setPopupTheme(I)V
     .locals 2
 
-    iget v0, p0, Landroidx/appcompat/widget/ActionMenuView;->v:I
+    iget v0, p0, Landroidx/appcompat/widget/ActionMenuView;->r:I
 
     if-eq v0, p1, :cond_1
 
-    iput p1, p0, Landroidx/appcompat/widget/ActionMenuView;->v:I
+    iput p1, p0, Landroidx/appcompat/widget/ActionMenuView;->r:I
 
     if-nez p1, :cond_0
 
@@ -1893,7 +1902,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->u:Landroid/content/Context;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->q:Landroid/content/Context;
 
     goto :goto_0
 
@@ -1906,25 +1915,25 @@
 
     invoke-direct {v0, v1, p1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->u:Landroid/content/Context;
+    iput-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->q:Landroid/content/Context;
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public setPresenter(Lcom/ejiaogl/tiktokhook/h0;)V
+.method public setPresenter(Landroidx/appcompat/widget/a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->w:Lcom/ejiaogl/tiktokhook/h0;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Landroidx/appcompat/widget/a;
 
     .line 1
-    iput-object p0, p1, Lcom/ejiaogl/tiktokhook/h0;->k:Landroidx/appcompat/widget/ActionMenuView;
+    iput-object p0, p1, Landroidx/appcompat/view/menu/a;->h:Landroidx/appcompat/view/menu/h;
 
-    iget-object p1, p1, Lcom/ejiaogl/tiktokhook/h0;->g:Lcom/ejiaogl/tiktokhook/hc;
+    iget-object p1, p1, Landroidx/appcompat/view/menu/a;->c:Landroidx/appcompat/view/menu/d;
 
     .line 2
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->t:Lcom/ejiaogl/tiktokhook/hc;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->p:Landroidx/appcompat/view/menu/d;
 
     return-void
 .end method

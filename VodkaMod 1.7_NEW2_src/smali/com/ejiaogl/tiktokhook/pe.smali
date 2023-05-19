@@ -1,221 +1,144 @@
-.class public final enum Lcom/ejiaogl/tiktokhook/pe;
-.super Ljava/lang/Enum;
+.class public final Lcom/ejiaogl/tiktokhook/pe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum c:Lcom/ejiaogl/tiktokhook/pe;
-
-.field public static final enum d:Lcom/ejiaogl/tiktokhook/pe;
-
-.field public static final enum e:Lcom/ejiaogl/tiktokhook/pe;
-
-.field public static final enum f:Lcom/ejiaogl/tiktokhook/pe;
-
-.field public static final synthetic g:[Lcom/ejiaogl/tiktokhook/pe;
-
-
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Lcom/ejiaogl/tiktokhook/y;
+
+.field public final b:Ljava/net/Proxy;
+
+.field public final c:Ljava/net/InetSocketAddress;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
+    .locals 1
+
+    nop
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/ejiaogl/tiktokhook/y;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
     .locals 10
-
-    new-instance v0, Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v1, "HTTP_1_0"
-
-    const/4 v2, 0x0
-
-    const-string v3, "http/1.0"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/ejiaogl/tiktokhook/pe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/pe;->c:Lcom/ejiaogl/tiktokhook/pe;
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v3, "HTTP_1_1"
-
-    const/4 v4, 0x1
-
-    const-string v5, "http/1.1"
-
-    invoke-direct {v1, v3, v4, v5}, Lcom/ejiaogl/tiktokhook/pe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/ejiaogl/tiktokhook/pe;->d:Lcom/ejiaogl/tiktokhook/pe;
-
-    new-instance v3, Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v5, "SPDY_3"
-
-    const/4 v6, 0x2
-
-    const-string v7, "spdy/3.1"
-
-    invoke-direct {v3, v5, v6, v7}, Lcom/ejiaogl/tiktokhook/pe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lcom/ejiaogl/tiktokhook/pe;->e:Lcom/ejiaogl/tiktokhook/pe;
-
-    new-instance v5, Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v7, "HTTP_2"
-
-    const/4 v8, 0x3
-
-    const-string v9, "h2"
-
-    invoke-direct {v5, v7, v8, v9}, Lcom/ejiaogl/tiktokhook/pe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lcom/ejiaogl/tiktokhook/pe;->f:Lcom/ejiaogl/tiktokhook/pe;
-
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Lcom/ejiaogl/tiktokhook/pe;
-
-    aput-object v0, v7, v2
-
-    aput-object v1, v7, v4
-
-    aput-object v3, v7, v6
-
-    aput-object v5, v7, v8
-
-    sput-object v7, Lcom/ejiaogl/tiktokhook/pe;->g:[Lcom/ejiaogl/tiktokhook/pe;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 9
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move/from16 v2, p2
-
-    move-object/from16 v3, p3
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object v3, v0, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/pe;
-    .locals 8
-
-    move-object/from16 v2, p0
-
-    sget-object v0, Lcom/ejiaogl/tiktokhook/pe;->c:Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v1, "http/1.0"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    sget-object v0, Lcom/ejiaogl/tiktokhook/pe;->d:Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v1, "http/1.1"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return-object v0
-
-    :cond_1
-    sget-object v0, Lcom/ejiaogl/tiktokhook/pe;->f:Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v1, "h2"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return-object v0
-
-    :cond_2
-    sget-object v0, Lcom/ejiaogl/tiktokhook/pe;->e:Lcom/ejiaogl/tiktokhook/pe;
-
-    const-string v1, "spdy/3.1"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return-object v0
-
-    :cond_3
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Unexpected protocol: "
-
-    .line 1
-    invoke-static {v1, v2}, Lcom/ejiaogl/tiktokhook/a4;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 2
-    invoke-direct {v0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/pe;
-    .locals 7
 
     move-object/from16 v1, p0
 
-    const-class v0, Lcom/ejiaogl/tiktokhook/pe;
+    move-object/from16 v2, p1
 
-    invoke-static {v0, v1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-object/from16 v3, p2
 
-    move-result-object v1
+    move-object/from16 v4, p3
 
-    check-cast v1, Lcom/ejiaogl/tiktokhook/pe;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    return-object v1
-.end method
+    const-string v0, "address == null"
 
-.method public static values()[Lcom/ejiaogl/tiktokhook/pe;
-    .locals 6
+    invoke-static {v2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/pe;->g:[Lcom/ejiaogl/tiktokhook/pe;
+    const-string v0, "proxy == null"
 
-    invoke-virtual {v0}, [Lcom/ejiaogl/tiktokhook/pe;->clone()Ljava/lang/Object;
+    invoke-static {v3, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    const-string v0, "inetSocketAddress == null"
 
-    check-cast v0, [Lcom/ejiaogl/tiktokhook/pe;
+    invoke-static {v4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-object v0
+    iput-object v2, v1, Lcom/ejiaogl/tiktokhook/pe;->a:Lcom/ejiaogl/tiktokhook/y;
+
+    iput-object v3, v1, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/net/Proxy;
+
+    iput-object v4, v1, Lcom/ejiaogl/tiktokhook/pe;->c:Ljava/net/InetSocketAddress;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 10
 
-    move-object/from16 v1, p0
+    move-object/from16 v3, p0
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/lang/String;
+    move-object/from16 v4, p1
 
-    return-object v0
+    instance-of v0, v4, Lcom/ejiaogl/tiktokhook/pe;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast v4, Lcom/ejiaogl/tiktokhook/pe;
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/pe;->a:Lcom/ejiaogl/tiktokhook/y;
+
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/pe;->a:Lcom/ejiaogl/tiktokhook/y;
+
+    invoke-virtual {v0, v2}, Lcom/ejiaogl/tiktokhook/y;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/net/Proxy;
+
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/net/Proxy;
+
+    invoke-virtual {v0, v2}, Ljava/net/Proxy;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/pe;->c:Ljava/net/InetSocketAddress;
+
+    iget-object v4, v4, Lcom/ejiaogl/tiktokhook/pe;->c:Ljava/net/InetSocketAddress;
+
+    invoke-virtual {v0, v4}, Ljava/net/InetSocketAddress;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 8
+
+    move-object/from16 v2, p0
+
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/pe;->a:Lcom/ejiaogl/tiktokhook/y;
+
+    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/y;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/net/Proxy;
+
+    invoke-virtual {v1}, Ljava/net/Proxy;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/pe;->c:Ljava/net/InetSocketAddress;
+
+    invoke-virtual {v0}, Ljava/net/InetSocketAddress;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

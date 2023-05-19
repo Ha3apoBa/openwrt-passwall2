@@ -3,14 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/x9;
+.implements Lcom/ejiaogl/tiktokhook/e9;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/ejiaogl/tiktokhook/x9;"
+        "Lcom/ejiaogl/tiktokhook/e9<",
+        "Lcom/ejiaogl/tiktokhook/ha;",
+        ">;"
     }
 .end annotation
 
@@ -28,6 +30,16 @@
 # virtual methods
 .method public final a()Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Class<",
+            "+",
+            "Lcom/ejiaogl/tiktokhook/e9<",
+            "*>;>;>;"
+        }
+    .end annotation
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -40,14 +52,14 @@
     .locals 3
 
     .line 1
-    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/v1;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/v1;
+    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/z0;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/z0;
 
     move-result-object v0
 
     const-class v1, Landroidx/lifecycle/ProcessLifecycleInitializer;
 
     .line 2
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/v1;->b:Ljava/util/HashSet;
+    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/z0;->b:Ljava/util/HashSet;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -56,7 +68,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    sget-object v0, Lcom/ejiaogl/tiktokhook/oa;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/fa;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
@@ -75,15 +87,15 @@
 
     check-cast v0, Landroid/app/Application;
 
-    new-instance v1, Lcom/ejiaogl/tiktokhook/na;
+    new-instance v1, Lcom/ejiaogl/tiktokhook/fa$a;
 
-    invoke-direct {v1}, Lcom/ejiaogl/tiktokhook/na;-><init>()V
+    invoke-direct {v1}, Lcom/ejiaogl/tiktokhook/fa$a;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     .line 4
     :goto_0
-    sget-object v0, Lcom/ejiaogl/tiktokhook/oe;->i:Lcom/ejiaogl/tiktokhook/oe;
+    sget-object v0, Landroidx/lifecycle/h;->i:Landroidx/lifecycle/h;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -92,13 +104,13 @@
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/oe;->e:Landroid/os/Handler;
+    iput-object v1, v0, Landroidx/lifecycle/h;->e:Landroid/os/Handler;
 
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/oe;->f:Lcom/ejiaogl/tiktokhook/sa;
+    iget-object v1, v0, Landroidx/lifecycle/h;->f:Landroidx/lifecycle/f;
 
-    sget-object v2, Lcom/ejiaogl/tiktokhook/la;->ON_CREATE:Lcom/ejiaogl/tiktokhook/la;
+    sget-object v2, Landroidx/lifecycle/d$b;->ON_CREATE:Landroidx/lifecycle/d$b;
 
-    invoke-virtual {v1, v2}, Lcom/ejiaogl/tiktokhook/sa;->F(Lcom/ejiaogl/tiktokhook/la;)V
+    invoke-virtual {v1, v2}, Landroidx/lifecycle/f;->f(Landroidx/lifecycle/d$b;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -106,9 +118,9 @@
 
     check-cast p1, Landroid/app/Application;
 
-    new-instance v1, Lcom/ejiaogl/tiktokhook/ne;
+    new-instance v1, Landroidx/lifecycle/i;
 
-    invoke-direct {v1, v0}, Lcom/ejiaogl/tiktokhook/ne;-><init>(Lcom/ejiaogl/tiktokhook/oe;)V
+    invoke-direct {v1, v0}, Landroidx/lifecycle/i;-><init>(Landroidx/lifecycle/h;)V
 
     invoke-virtual {p1, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 

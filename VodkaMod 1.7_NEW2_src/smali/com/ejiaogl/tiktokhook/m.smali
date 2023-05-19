@@ -1,6 +1,15 @@
 .class public abstract Lcom/ejiaogl/tiktokhook/m;
-.super Lcom/ejiaogl/tiktokhook/t0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ejiaogl/tiktokhook/m$a;,
+        Lcom/ejiaogl/tiktokhook/m$b;
+    }
+.end annotation
 
 
 # direct methods

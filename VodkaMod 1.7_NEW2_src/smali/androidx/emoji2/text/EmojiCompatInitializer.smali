@@ -3,14 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/x9;
+.implements Lcom/ejiaogl/tiktokhook/e9;
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/emoji2/text/EmojiCompatInitializer$b;,
+        Landroidx/emoji2/text/EmojiCompatInitializer$a;,
+        Landroidx/emoji2/text/EmojiCompatInitializer$c;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/ejiaogl/tiktokhook/x9;"
+        "Lcom/ejiaogl/tiktokhook/e9<",
+        "Ljava/lang/Boolean;",
+        ">;"
     }
 .end annotation
 
@@ -28,6 +38,16 @@
 # virtual methods
 .method public final a()Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Class<",
+            "+",
+            "Lcom/ejiaogl/tiktokhook/e9<",
+            "*>;>;>;"
+        }
+    .end annotation
 
     const-class v0, Landroidx/lifecycle/ProcessLifecycleInitializer;
 
@@ -51,29 +71,29 @@
 .method public final c(Landroid/content/Context;)V
     .locals 3
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/b6;
+    new-instance v0, Landroidx/emoji2/text/EmojiCompatInitializer$a;
 
-    invoke-direct {v0, p1}, Lcom/ejiaogl/tiktokhook/b6;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Landroidx/emoji2/text/EmojiCompatInitializer$a;-><init>(Landroid/content/Context;)V
 
     .line 1
-    sget-object v1, Lcom/ejiaogl/tiktokhook/a6;->j:Lcom/ejiaogl/tiktokhook/a6;
+    sget-object v1, Landroidx/emoji2/text/c;->j:Landroidx/emoji2/text/c;
 
     if-nez v1, :cond_1
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/a6;->i:Ljava/lang/Object;
+    sget-object v1, Landroidx/emoji2/text/c;->i:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v2, Lcom/ejiaogl/tiktokhook/a6;->j:Lcom/ejiaogl/tiktokhook/a6;
+    sget-object v2, Landroidx/emoji2/text/c;->j:Landroidx/emoji2/text/c;
 
     if-nez v2, :cond_0
 
-    new-instance v2, Lcom/ejiaogl/tiktokhook/a6;
+    new-instance v2, Landroidx/emoji2/text/c;
 
-    invoke-direct {v2, v0}, Lcom/ejiaogl/tiktokhook/a6;-><init>(Lcom/ejiaogl/tiktokhook/w5;)V
+    invoke-direct {v2, v0}, Landroidx/emoji2/text/c;-><init>(Landroidx/emoji2/text/c$c;)V
 
-    sput-object v2, Lcom/ejiaogl/tiktokhook/a6;->j:Lcom/ejiaogl/tiktokhook/a6;
+    sput-object v2, Landroidx/emoji2/text/c;->j:Landroidx/emoji2/text/c;
 
     :cond_0
     monitor-exit v1
@@ -92,7 +112,7 @@
     .line 2
     :cond_1
     :goto_0
-    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/v1;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/v1;
+    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/z0;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/z0;
 
     move-result-object p1
 
@@ -101,12 +121,12 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    sget-object v1, Lcom/ejiaogl/tiktokhook/v1;->e:Ljava/lang/Object;
+    sget-object v1, Lcom/ejiaogl/tiktokhook/z0;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_1
-    iget-object v2, p1, Lcom/ejiaogl/tiktokhook/v1;->a:Ljava/util/HashMap;
+    iget-object v2, p1, Lcom/ejiaogl/tiktokhook/z0;->a:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -118,7 +138,7 @@
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    invoke-virtual {p1, v0, v2}, Lcom/ejiaogl/tiktokhook/v1;->b(Ljava/lang/Class;Ljava/util/Set;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v2}, Lcom/ejiaogl/tiktokhook/z0;->b(Ljava/lang/Class;Ljava/util/Set;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -128,26 +148,24 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 4
-    check-cast v2, Lcom/ejiaogl/tiktokhook/ra;
+    check-cast v2, Lcom/ejiaogl/tiktokhook/ha;
 
-    check-cast v2, Lcom/ejiaogl/tiktokhook/oe;
+    invoke-interface {v2}, Lcom/ejiaogl/tiktokhook/ha;->a()Landroidx/lifecycle/d;
 
-    .line 5
-    iget-object p1, v2, Lcom/ejiaogl/tiktokhook/oe;->f:Lcom/ejiaogl/tiktokhook/sa;
+    move-result-object p1
 
-    .line 6
     new-instance v0, Landroidx/emoji2/text/EmojiCompatInitializer$1;
 
-    invoke-direct {v0, p0, p1}, Landroidx/emoji2/text/EmojiCompatInitializer$1;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lcom/ejiaogl/tiktokhook/t0;)V
+    invoke-direct {v0, p0, p1}, Landroidx/emoji2/text/EmojiCompatInitializer$1;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Landroidx/lifecycle/d;)V
 
-    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/sa;->C(Lcom/ejiaogl/tiktokhook/qa;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/d;->a(Lcom/ejiaogl/tiktokhook/ga;)V
 
     return-void
 
     :catchall_1
     move-exception p1
 
-    .line 7
+    .line 5
     :try_start_2
     monitor-exit v1
     :try_end_2

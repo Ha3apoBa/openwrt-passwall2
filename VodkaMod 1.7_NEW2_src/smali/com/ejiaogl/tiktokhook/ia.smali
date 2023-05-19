@@ -3,7 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/s3;
+.implements Lcom/ejiaogl/tiktokhook/ha;
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # direct methods
@@ -17,5 +22,5 @@
 
 
 # virtual methods
-.method public abstract i()V
+.method public abstract a()Landroidx/lifecycle/f;
 .end method

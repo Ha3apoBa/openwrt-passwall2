@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final e:[I
+.field public static final a:[I
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->e:[I
+    sput-object v0, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->a:[I
 
     return-void
 .end method
@@ -31,7 +31,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->e:[I
+    sget-object v0, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->a:[I
 
     .line 1
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -53,7 +53,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1, v1}, Lcom/ejiaogl/tiktokhook/zg;->v(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1}, Lcom/ejiaogl/tiktokhook/b4;->p(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

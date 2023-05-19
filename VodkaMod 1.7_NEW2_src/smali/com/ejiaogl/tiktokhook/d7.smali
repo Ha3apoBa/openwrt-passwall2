@@ -1,98 +1,139 @@
 .class public final Lcom/ejiaogl/tiktokhook/d7;
-.super Lcom/ejiaogl/tiktokhook/e;
+.super Lcom/ejiaogl/tiktokhook/dc;
 .source "SourceFile"
 
 
-# static fields
-.field private static Dn:[I
-
-
 # instance fields
-.field public final d:Lcom/ejiaogl/tiktokhook/c7;
+.field public final synthetic c:Z
+
+.field public final synthetic d:I
+
+.field public final synthetic e:I
+
+.field public final synthetic f:Lcom/ejiaogl/tiktokhook/gd;
+
+.field public final synthetic g:Lcom/ejiaogl/tiktokhook/c7;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/d7;->Dn:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x45b29c3
-    .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 8
+.method public varargs constructor <init>(Lcom/ejiaogl/tiktokhook/c7;[Ljava/lang/Object;II)V
+    .locals 10
 
-    move-object/from16 v2, p0
+    move-object/from16 v0, p0
 
-    invoke-direct {v2}, Lcom/ejiaogl/tiktokhook/e;-><init>()V
+    move-object/from16 v1, p1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/c7;
+    move-object/from16 v2, p2
+
+    move/from16 v3, p3
+
+    move/from16 v4, p4
+
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/d7;->g:Lcom/ejiaogl/tiktokhook/c7;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/ejiaogl/tiktokhook/d7;->c:Z
+
+    iput v3, v0, Lcom/ejiaogl/tiktokhook/d7;->d:I
+
+    iput v4, v0, Lcom/ejiaogl/tiktokhook/d7;->e:I
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/c7;-><init>(I)V
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/d7;->f:Lcom/ejiaogl/tiktokhook/gd;
 
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/d7;->d:Lcom/ejiaogl/tiktokhook/c7;
+    const-string v1, "OkHttp %s ping %08x%08x"
+
+    invoke-direct {v0, v1, v2}, Lcom/ejiaogl/tiktokhook/dc;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/util/Random;
-    .locals 8
+.method public final a()V
+    .locals 16
 
-    :cond_0
-    move-object/from16 v2, p0
+    move-object/from16 v10, p0
 
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/d7;->d:Lcom/ejiaogl/tiktokhook/c7;
+    :try_start_0
+    iget-object v0, v10, Lcom/ejiaogl/tiktokhook/d7;->g:Lcom/ejiaogl/tiktokhook/c7;
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    iget-boolean v1, v10, Lcom/ejiaogl/tiktokhook/d7;->c:Z
 
-    move-result-object v0
+    iget v2, v10, Lcom/ejiaogl/tiktokhook/d7;->d:I
 
-    const-string v1, "implStorage.get()"
+    iget v3, v10, Lcom/ejiaogl/tiktokhook/d7;->e:I
 
-    invoke-static {v0, v1}, Lcom/ejiaogl/tiktokhook/t0;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v4, v10, Lcom/ejiaogl/tiktokhook/d7;->f:Lcom/ejiaogl/tiktokhook/gd;
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/d7;->Dn:[I
+    .line 1
+    iget-object v5, v0, Lcom/ejiaogl/tiktokhook/c7;->s:Lcom/ejiaogl/tiktokhook/b7;
 
-    const v5, 0x0
+    monitor-enter v5
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    aget v5, v4, v5
+    if-eqz v4, :cond_1
 
-    if-ltz v5, :cond_1
+    .line 2
+    :try_start_1
+    iget-wide v6, v4, Lcom/ejiaogl/tiktokhook/gd;->a:J
 
-    const v4, 0x7ef979
+    const-wide/16 v8, -0x1
 
-    :goto_0
-    xor-int v4, v4, v5
+    cmp-long v6, v6, v8
 
-    and-int v4, v5, v4
+    if-nez v6, :cond_0
 
-    if-eqz v4, :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    goto :goto_1
+    move-result-wide v6
+
+    iput-wide v6, v4, Lcom/ejiaogl/tiktokhook/gd;->a:J
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    check-cast v0, Ljava/util/Random;
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    .line 3
+    :cond_1
+    :goto_0
+    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/c7;->s:Lcom/ejiaogl/tiktokhook/b7;
+
+    invoke-interface {v0, v1, v2, v3}, Lcom/ejiaogl/tiktokhook/b7;->n(ZII)V
+
+    monitor-exit v5
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v0
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    :goto_1
+    return-void
 .end method

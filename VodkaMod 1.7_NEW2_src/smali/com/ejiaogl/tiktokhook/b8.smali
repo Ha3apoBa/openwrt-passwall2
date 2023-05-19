@@ -2,8 +2,20 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<P1:",
+        "Ljava/lang/Object;",
+        "P2:",
+        "Ljava/lang/Object;",
+        "R:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # direct methods
@@ -17,35 +29,10 @@
 
 
 # virtual methods
-.method public abstract A()V
-.end method
-
-.method public abstract F(IJ)V
-.end method
-
-.method public abstract f(ZZILjava/util/List;)V
-.end method
-
-.method public abstract flush()V
-.end method
-
-.method public abstract h(ILcom/ejiaogl/tiktokhook/y6;[B)V
-.end method
-
-.method public abstract j(ILcom/ejiaogl/tiktokhook/y6;)V
-.end method
-
-.method public abstract k(ZII)V
-.end method
-
-.method public abstract l()I
-.end method
-
-.method public abstract m(Lcom/ejiaogl/tiktokhook/eh;)V
-.end method
-
-.method public abstract t(Lcom/ejiaogl/tiktokhook/eh;)V
-.end method
-
-.method public abstract w(ZILcom/ejiaogl/tiktokhook/h2;I)V
+.method public abstract b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TP1;TP2;)TR;"
+        }
+    .end annotation
 .end method

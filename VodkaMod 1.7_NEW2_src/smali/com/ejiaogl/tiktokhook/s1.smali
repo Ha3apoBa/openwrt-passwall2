@@ -1,94 +1,79 @@
 .class public final Lcom/ejiaogl/tiktokhook/s1;
-.super Lcom/ejiaogl/tiktokhook/r1;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# static fields
-.field private static MO:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/s1;->MO:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x378f220
-    .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 6
+.method public static a()Z
+    .locals 10
 
-    move-object/from16 v0, p0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/r1;-><init>()V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
+    const/16 v3, 0x21
 
-# virtual methods
-.method public a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
-    .locals 8
+    if-ge v0, v3, :cond_2
 
-    move-object/from16 v0, p0
+    const/16 v3, 0x20
 
-    move-object/from16 v1, p1
+    if-lt v0, v3, :cond_3
 
-    move-object/from16 v2, p2
+    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getTextDirectionHeuristic()Landroid/text/TextDirectionHeuristic;
+    const-string v3, "REL"
 
-    move-result-object v2
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v2}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
+    move-result v3
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/s1;->MO:[I
-
-    const v5, 0x0
-
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_0
-
-    :goto_0
-    const v4, 0x252b356
-
-    xor-int v4, v4, v5
-
-    and-int v4, v5, v4
-
-    if-gtz v4, :cond_0
+    if-eqz v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-.method public b(Landroid/widget/TextView;)Z
-    .locals 7
+    invoke-virtual {v0, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-object/from16 v0, p0
+    move-result-object v0
 
-    move-object/from16 v1, p1
+    const-string v4, "Tiramisu"
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->isHorizontallyScrollable()Z
+    invoke-virtual {v4, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-result v1
+    move-result-object v3
 
+    invoke-virtual {v0, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_3
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
     return v1
 .end method

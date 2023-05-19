@@ -2,17 +2,17 @@
 <manifest
     android:compileSdkVersion="33"
     android:compileSdkVersionCodename="13"
-    package="tiktokmod.tiktok"
+    package="ss.tiktok"
     platformBuildVersionCode="33"
     platformBuildVersionName="13"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <permission
-        android:name="tiktokmod.tiktok.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="ss.tiktok.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
     <uses-permission
-        android:name="tiktokmod.tiktok.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+        android:name="ss.tiktok.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
     <application
-        android:label="@string/app_name"
+        android:label="TikTok小能手"
         android:icon="@mipmap/ejiaogl"
         android:allowBackup="true"
         android:supportsRtl="true"
@@ -24,7 +24,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="New Version Release From @VodkaModCloud" />
+            android:value="时光荏苒，抖音不变" />
         <meta-data
             android:name="xposedminversion"
             android:value="82" />
@@ -34,7 +34,7 @@
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:exported="false"
-            android:authorities="tiktokmod.tiktok.androidx-startup">
+            android:authorities="ss.tiktok.androidx-startup">
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
                 android:value="androidx.startup" />

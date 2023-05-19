@@ -65,7 +65,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/v1;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/v1;
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/z0;->c(Landroid/content/Context;)Lcom/ejiaogl/tiktokhook/z0;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
     .line 2
     new-instance v1, Landroid/content/ComponentName;
 
-    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/v1;->c:Landroid/content/Context;
+    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/z0;->c:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -94,7 +94,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/v1;->c:Landroid/content/Context;
+    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/z0;->c:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -108,7 +108,7 @@
 
     iget-object v1, v1, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/v1;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/z0;->a(Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -128,9 +128,9 @@
 
     .line 4
     :try_start_1
-    new-instance v1, Lcom/ejiaogl/tiktokhook/qh;
+    new-instance v1, Lcom/ejiaogl/tiktokhook/tf;
 
-    invoke-direct {v1, v0}, Lcom/ejiaogl/tiktokhook/qh;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Lcom/ejiaogl/tiktokhook/tf;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
     :try_end_1
@@ -151,11 +151,11 @@
 
     .line 7
     :cond_1
-    new-instance v0, Lcom/ejiaogl/tiktokhook/qh;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/tf;
 
     const-string v1, "Context cannot be null"
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/qh;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/tf;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method

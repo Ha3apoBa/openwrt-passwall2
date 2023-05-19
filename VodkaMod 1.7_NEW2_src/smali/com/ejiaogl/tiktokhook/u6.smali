@@ -1,9 +1,18 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/u6;
+.class public final Lcom/ejiaogl/tiktokhook/u6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
+# instance fields
+.field public final a:Landroid/net/Uri;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Z
+
+.field public final e:I
 
 
 # direct methods
@@ -15,88 +24,38 @@
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 6
+.method public constructor <init>(Landroid/net/Uri;IIZI)V
+    .locals 11
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move/from16 v3, p3
+
+    move/from16 v4, p4
+
+    move/from16 v5, p5
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 1
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/u6;->a:Landroid/net/Uri;
 
-# virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 8
+    iput v2, v0, Lcom/ejiaogl/tiktokhook/u6;->b:I
 
-    move-object/from16 v0, p0
+    iput v3, v0, Lcom/ejiaogl/tiktokhook/u6;->c:I
 
-    move-object/from16 v1, p1
+    iput-boolean v4, v0, Lcom/ejiaogl/tiktokhook/u6;->d:Z
 
-    move-object/from16 v2, p2
-
-    return-void
-.end method
-
-.method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
-.end method
-
-.method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
-.end method
-
-.method public onActivityResumed(Landroid/app/Activity;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
-.end method
-
-.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 8
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    return-void
-.end method
-
-.method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
+    iput v5, v0, Lcom/ejiaogl/tiktokhook/u6;->e:I
 
     return-void
 .end method

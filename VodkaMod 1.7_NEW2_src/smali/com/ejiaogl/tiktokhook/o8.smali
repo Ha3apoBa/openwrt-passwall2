@@ -1,135 +1,293 @@
-.class public abstract synthetic Lcom/ejiaogl/tiktokhook/o8;
+.class public final Lcom/ejiaogl/tiktokhook/o8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final a:Lcom/ejiaogl/tiktokhook/gh;
+
+.field public final b:Lcom/ejiaogl/tiktokhook/i2;
+
+.field public final c:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/security/cert/Certificate;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final d:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/security/cert/Certificate;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/la;->values()[Lcom/ejiaogl/tiktokhook/la;
+    nop
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/ejiaogl/tiktokhook/gh;Lcom/ejiaogl/tiktokhook/i2;Ljava/util/List;Ljava/util/List;)V
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/ejiaogl/tiktokhook/gh;",
+            "Lcom/ejiaogl/tiktokhook/i2;",
+            "Ljava/util/List<",
+            "Ljava/security/cert/Certificate;",
+            ">;",
+            "Ljava/util/List<",
+            "Ljava/security/cert/Certificate;",
+            ">;)V"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    move-object/from16 v3, p3
+
+    move-object/from16 v4, p4
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/o8;->a:Lcom/ejiaogl/tiktokhook/gh;
+
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    iput-object v3, v0, Lcom/ejiaogl/tiktokhook/o8;->c:Ljava/util/List;
+
+    iput-object v4, v0, Lcom/ejiaogl/tiktokhook/o8;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public static a(Ljavax/net/ssl/SSLSession;)Lcom/ejiaogl/tiktokhook/o8;
+    .locals 10
+
+    move-object/from16 v4, p0
+
+    invoke-interface {v4}, Ljavax/net/ssl/SSLSession;->getCipherSuite()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    if-eqz v0, :cond_3
 
-    new-array v0, v0, [I
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/i2;->a(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/i2;
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
+    move-result-object v0
+
+    invoke-interface {v4}, Ljavax/net/ssl/SSLSession;->getProtocol()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/gh;->a(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/gh;
+
+    move-result-object v1
 
     :try_start_0
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_CREATE:Lcom/ejiaogl/tiktokhook/la;
+    invoke-interface {v4}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
+    move-result-object v2
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
 
     :catch_0
-    :try_start_1
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
+    const/4 v2, 0x0
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_START:Lcom/ejiaogl/tiktokhook/la;
+    :goto_0
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {v2}, Lcom/ejiaogl/tiktokhook/di;->l([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v4}, Ljavax/net/ssl/SSLSession;->getLocalCertificates()[Ljava/security/cert/Certificate;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/di;->l([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    :cond_1
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v4
+
+    :goto_2
+    new-instance v3, Lcom/ejiaogl/tiktokhook/o8;
+
+    invoke-direct {v3, v1, v0, v2, v4}, Lcom/ejiaogl/tiktokhook/o8;-><init>(Lcom/ejiaogl/tiktokhook/gh;Lcom/ejiaogl/tiktokhook/i2;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v3
+
+    :cond_2
+    new-instance v4, Ljava/lang/IllegalStateException;
+
+    const-string v0, "tlsVersion == null"
+
+    invoke-direct {v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v4
+
+    :cond_3
+    new-instance v4, Ljava/lang/IllegalStateException;
+
+    const-string v0, "cipherSuite == null"
+
+    invoke-direct {v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v4
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 10
+
+    move-object/from16 v3, p0
+
+    move-object/from16 v4, p1
+
+    instance-of v0, v4, Lcom/ejiaogl/tiktokhook/o8;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast v4, Lcom/ejiaogl/tiktokhook/o8;
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    invoke-static {v0, v2}, Lcom/ejiaogl/tiktokhook/di;->i(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/o8;->c:Ljava/util/List;
+
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/o8;->c:Ljava/util/List;
+
+    invoke-interface {v0, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/o8;->d:Ljava/util/List;
+
+    iget-object v4, v4, Lcom/ejiaogl/tiktokhook/o8;->d:Ljava/util/List;
+
+    invoke-interface {v0, v4}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 8
+
+    move-object/from16 v2, p0
+
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/o8;->a:Lcom/ejiaogl/tiktokhook/gh;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/o8;->b:Lcom/ejiaogl/tiktokhook/i2;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    const/4 v2, 0x2
+    add-int/2addr v1, v0
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    mul-int/lit8 v1, v1, 0x1f
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/o8;->c:Ljava/util/List;
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_RESUME:Lcom/ejiaogl/tiktokhook/la;
+    invoke-interface {v0}, Ljava/util/List;->hashCode()I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result v0
 
-    move-result v1
+    add-int/2addr v0, v1
 
-    const/4 v2, 0x3
+    mul-int/lit8 v0, v0, 0x1f
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/o8;->d:Ljava/util/List;
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
-
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_PAUSE:Lcom/ejiaogl/tiktokhook/la;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
     move-result v1
 
-    const/4 v2, 0x4
+    add-int/2addr v1, v0
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
-
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_STOP:Lcom/ejiaogl/tiktokhook/la;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
-
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_DESTROY:Lcom/ejiaogl/tiktokhook/la;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Lcom/ejiaogl/tiktokhook/o8;->a:[I
-
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_ANY:Lcom/ejiaogl/tiktokhook/la;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    return-void
+    return v1
 .end method
