@@ -1,0 +1,222 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: IyUHJgBQRiZj+6L6zMjgJLKXaEY=
+X-Android-APK-Signed: 2,3
+
+Name: AndroidManifest.xml
+SHA1-Digest: b/o+IqWQ6RkpTL7lQbkkd+7ovUg=
+
+Name: META-INF/androidx.annotation_annotation-experimental.version
+SHA1-Digest: 4Tx/OE4OYuecGI9+583MUWSivc0=
+
+Name: META-INF/androidx.arch.core_core-runtime.version
+SHA1-Digest: ymKD70WLN+T3pc69vyvMW6h3TYk=
+
+Name: META-INF/androidx.core_core.version
+SHA1-Digest: turmrPuYsJ8o+Yr4P7ogfXTtoDw=
+
+Name: META-INF/androidx.lifecycle_lifecycle-runtime.version
+SHA1-Digest: t8CPN3SBxIxff4nJ7WVp2v8Eddg=
+
+Name: META-INF/androidx.versionedparcelable_versionedparcelable.versio
+ n
+SHA1-Digest: lj0KiVqVg8LF3St3iLdMHAGU9T4=
+
+Name: META-INF/com/android/build/gradle/app-metadata.properties
+SHA1-Digest: 8brtK1Ic/N3ftTeRQ+d94KIUlx0=
+
+Name: META-INF/native-image/okhttp/okhttp/native-image.properties
+SHA1-Digest: sPkjbEj3z6YgSMpM0TINUq/d+Bs=
+
+Name: META-INF/native-image/okhttp/okhttp/reflect-config.json
+SHA1-Digest: /ejttVrGQSsJH4rG5cwCTGnhM8Y=
+
+Name: META-INF/native-image/okhttp/okhttp/resource-config.json
+SHA1-Digest: PWYy1oC6/w7mPNJOq3QYeH4kdUg=
+
+Name: assets/ProtectedByNPManager.txt
+SHA1-Digest: msP7ZrzrWVab/JhQwmgYe6gxVBo=
+
+Name: assets/xposed_init
+SHA1-Digest: CZCBDRzWVilMVF5RMdp3ktvwnbs=
+
+Name: classes.dex
+SHA1-Digest: cypHSleDeJviDSAKUVr6WmV2RbA=
+
+Name: kotlin/annotation/annotation.kotlin_builtins
+SHA1-Digest: u2/Z7uzWXgLQ8saGO/SXitO0nP8=
+
+Name: kotlin/collections/collections.kotlin_builtins
+SHA1-Digest: hGzyGYoe+Vc1UOnD9Mg4kY4ZXxY=
+
+Name: kotlin/coroutines/coroutines.kotlin_builtins
+SHA1-Digest: cmy3peJy1Zdf5inD2qNB1hpYdmY=
+
+Name: kotlin/internal/internal.kotlin_builtins
+SHA1-Digest: xHkmsKALMthsenNnYsDOMtKVPLI=
+
+Name: kotlin/kotlin.kotlin_builtins
+SHA1-Digest: pcZ0iuP5T8NLScTgX/DfeIdzBlE=
+
+Name: kotlin/ranges/ranges.kotlin_builtins
+SHA1-Digest: uoCNOLWWTnndGkVv7n8CcVcUxTY=
+
+Name: kotlin/reflect/reflect.kotlin_builtins
+SHA1-Digest: qPs41j3cEReuTGR0Pq2UvzBNZ9s=
+
+Name: okhttp3/internal/publicsuffix/NOTICE
+SHA1-Digest: rP+jJxiM1zxq9Hs/IBeBG/7FrhA=
+
+Name: okhttp3/internal/publicsuffix/PublicSuffixDatabase.gz
+SHA1-Digest: Mq6Pe/CuZNL1PBXrlL6EhVY2e5E=
+
+Name: res/09.9.png
+SHA1-Digest: Mkp5ZxJGPkIrhRQaX5Vno9v0KV0=
+
+Name: res/1t.xml
+SHA1-Digest: Xr8LJJ3v7olcX0LJU57mgQMrNYk=
+
+Name: res/2-.webp
+SHA1-Digest: LfADpJ6cj1SiptQa0Nna/sok1WQ=
+
+Name: res/3N.xml
+SHA1-Digest: A4t3kMB8uE7wr02nw6K1eVHjfm8=
+
+Name: res/3c.webp
+SHA1-Digest: RFxLEUSeYYXeoKlw4foQMKcI/9M=
+
+Name: res/3m.xml
+SHA1-Digest: WNhx4Xoi0QgASJ55ewZWnTLdVAY=
+
+Name: res/4W.xml
+SHA1-Digest: aDBCw75aOHdfpk6DBLrttnrmo+Y=
+
+Name: res/7E.webp
+SHA1-Digest: xIltRmp2NgMRJoE6iQE15lKZRoE=
+
+Name: res/8V.9.png
+SHA1-Digest: PvSO+X9FNJw224qxQgCFh2HQO1M=
+
+Name: res/93.9.png
+SHA1-Digest: kzEZxUrPttE0Bt/aJ196Oc4vCdk=
+
+Name: res/C7.xml
+SHA1-Digest: bXHfUpEnLWrX998EJqiLHa5pkyo=
+
+Name: res/Cv.xml
+SHA1-Digest: avAjiU2m09yhfIX+P9mMgqP7JSg=
+
+Name: res/DS.xml
+SHA1-Digest: is0R7GsJ7A8rYSaYCydW2D6zE8k=
+
+Name: res/FZ.xml
+SHA1-Digest: DA4rVEyZ+vtpheOAFKG3WrAPiqA=
+
+Name: res/HE.xml
+SHA1-Digest: aHyaK+iATjziY2lxHYbWhkVC4MQ=
+
+Name: res/LD.png
+SHA1-Digest: 9TjjomIsmtrlcgapSknV8m4wOGU=
+
+Name: res/NR.xml
+SHA1-Digest: mCS/aNNjou07LwV7Ww286dRKurk=
+
+Name: res/O3.9.png
+SHA1-Digest: HEMz+RL4GjVPXtLvnIVAtWHMz2c=
+
+Name: res/Ot.png
+SHA1-Digest: dkkLyG6QUvgCTXDrcozC3h0HijY=
+
+Name: res/Pl.xml
+SHA1-Digest: qRoOTLR+fe4nyboGsZb/WW49uzE=
+
+Name: res/Pq.9.png
+SHA1-Digest: k4xZd7Imje8wWE7mggdEVxD1YSY=
+
+Name: res/Qv.png
+SHA1-Digest: tEtOeqVB2DItDSeWZXKwKWKiRdg=
+
+Name: res/SH.xml
+SHA1-Digest: e/wAiReGJFNCSRJ+HEX05d7/1wU=
+
+Name: res/SO.xml
+SHA1-Digest: wj8djILzRxOtqKU3QXOrqLPQlWs=
+
+Name: res/SS.xml
+SHA1-Digest: hQoor/t/Ydka1I2xxJmm4gueRlM=
+
+Name: res/T2.9.png
+SHA1-Digest: /azY3Bwq9AY3xRLiS3Wzu1AsA10=
+
+Name: res/Vd.webp
+SHA1-Digest: SZWSZLAeCowss7w+a4YRpr9jYQs=
+
+Name: res/X7.xml
+SHA1-Digest: 2BVfg0Z1MaxJyXDzIKezPHvtdbg=
+
+Name: res/Xs.9.png
+SHA1-Digest: Ht4p8VQbxxJfrNax9Ib4H7ErLEo=
+
+Name: res/YB.webp
+SHA1-Digest: M9gjHl+T4CPKjJmD0mdA+XiUslY=
+
+Name: res/aA.xml
+SHA1-Digest: Nw7A1exUrrk7m+kg0vBnLCtB3s8=
+
+Name: res/co.webp
+SHA1-Digest: UdArnTHcni0BqNT0g/fV65eWIoI=
+
+Name: res/cv.xml
+SHA1-Digest: 6JyFBUz2H6ea4I1ITckEQcgTEYc=
+
+Name: res/dH.9.png
+SHA1-Digest: Dk9dDr2Qp96cqjxULlByWa2D4f0=
+
+Name: res/eK.9.png
+SHA1-Digest: gTI6HeuOPRJhAErcfwa6tdv7fuI=
+
+Name: res/hj.9.png
+SHA1-Digest: h5G9/DYI+EV+oQCbeTI50fNsTkI=
+
+Name: res/iL.xml
+SHA1-Digest: UPmfgpK8O6AQddP0mQ9+TQuI9/8=
+
+Name: res/iN.webp
+SHA1-Digest: zS1zc0tj0u2dOKK1iwk9VH1rYVg=
+
+Name: res/iP.webp
+SHA1-Digest: jVYiURHlBnghxjEY5EcOcwgc2wU=
+
+Name: res/jK.9.png
+SHA1-Digest: w80qdtpf3uHMtm/CuSE+1rBz46M=
+
+Name: res/oy.xml
+SHA1-Digest: WsuFChAQxAKgZFJC5HOHMhlgMIw=
+
+Name: res/pS.png
+SHA1-Digest: 1D1IVGNCRVMw+OrAdzXxKKCAu34=
+
+Name: res/pY.webp
+SHA1-Digest: tyUR5VSmKmnqP70Ub7FKCzySME8=
+
+Name: res/q6.xml
+SHA1-Digest: 3osED5xPhMJc5EqHG2SrRPSxckw=
+
+Name: res/si.xml
+SHA1-Digest: YvHcOtDES/W52lavwJgLqyhao8E=
+
+Name: res/tr.9.png
+SHA1-Digest: DFi2Z6un5BaSSjaxtG8Vft3qMI8=
+
+Name: res/uF.xml
+SHA1-Digest: lG2CqKieAiBupRY3rFlcQFHpiho=
+
+Name: res/xC.webp
+SHA1-Digest: 9qgY12jkM2M/g9bu5/BzRUVy0Kc=
+
+Name: res/zt.xml
+SHA1-Digest: NU0BtX1yMyt4NtnMELYPFCv5HWw=
+
+Name: resources.arsc
+SHA1-Digest: cTz/wAs2Fz3HQ7cmmc1PGFN3sZc=
+
