@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/pa;
+.implements Landroidx/lifecycle/e;
 
 
 # annotations
@@ -14,7 +14,7 @@
 # instance fields
 .field public final a:Ljava/lang/Object;
 
-.field public final b:Lcom/ejiaogl/tiktokhook/w2;
+.field public final b:Landroidx/lifecycle/a$a;
 
 
 # direct methods
@@ -25,31 +25,31 @@
 
     iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->a:Ljava/lang/Object;
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/y2;->c:Lcom/ejiaogl/tiktokhook/y2;
+    sget-object v0, Landroidx/lifecycle/a;->c:Landroidx/lifecycle/a;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/ejiaogl/tiktokhook/y2;->b(Ljava/lang/Class;)Lcom/ejiaogl/tiktokhook/w2;
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/a;->b(Ljava/lang/Class;)Landroidx/lifecycle/a$a;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Lcom/ejiaogl/tiktokhook/w2;
+    iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Landroidx/lifecycle/a$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;)V
+.method public final f(Lcom/ejiaogl/tiktokhook/ha;Landroidx/lifecycle/d$b;)V
     .locals 3
 
-    iget-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Lcom/ejiaogl/tiktokhook/w2;
+    iget-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Landroidx/lifecycle/a$a;
 
     iget-object v1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->a:Ljava/lang/Object;
 
-    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/w2;->a:Ljava/util/HashMap;
+    iget-object v2, v0, Landroidx/lifecycle/a$a;->a:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -57,11 +57,11 @@
 
     check-cast v2, Ljava/util/List;
 
-    invoke-static {v2, p1, p2, v1}, Lcom/ejiaogl/tiktokhook/w2;->a(Ljava/util/List;Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;Ljava/lang/Object;)V
+    invoke-static {v2, p1, p2, v1}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Lcom/ejiaogl/tiktokhook/ha;Landroidx/lifecycle/d$b;Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/w2;->a:Ljava/util/HashMap;
+    iget-object v0, v0, Landroidx/lifecycle/a$a;->a:Ljava/util/HashMap;
 
-    sget-object v2, Lcom/ejiaogl/tiktokhook/la;->ON_ANY:Lcom/ejiaogl/tiktokhook/la;
+    sget-object v2, Landroidx/lifecycle/d$b;->ON_ANY:Landroidx/lifecycle/d$b;
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -69,7 +69,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    invoke-static {v0, p1, p2, v1}, Lcom/ejiaogl/tiktokhook/w2;->a(Ljava/util/List;Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;Ljava/lang/Object;)V
+    invoke-static {v0, p1, p2, v1}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Lcom/ejiaogl/tiktokhook/ha;Landroidx/lifecycle/d$b;Ljava/lang/Object;)V
 
     return-void
 .end method

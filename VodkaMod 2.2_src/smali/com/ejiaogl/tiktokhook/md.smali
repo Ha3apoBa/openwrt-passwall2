@@ -1,30 +1,137 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/md;
+.class public final Lcom/ejiaogl/tiktokhook/md;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# static fields
+.field private static agE:[I
+
+.field private static agF:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
+    const v0, 0x1
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/md;->agE:[I
+
+    const v0, 0x1
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/md;->agF:[I
+
     nop
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x2489f4e
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x2113fc
+    .end array-data
 .end method
 
+.method public static a(Landroid/widget/PopupWindow;)Z
+    .locals 6
 
-# virtual methods
-.method public abstract a(Landroid/view/View;Landroid/view/View;II)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getOverlapAnchor()Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract c(Landroid/view/View;IIIII)V
+.method public static b(Landroid/widget/PopupWindow;)I
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getWindowLayoutType()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract d(Landroid/view/View;I)V
+.method public static c(Landroid/widget/PopupWindow;Z)V
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
+
+    sget-object v3, Lcom/ejiaogl/tiktokhook/md;->agE:[I
+
+    const v4, 0x0
+
+    aget v4, v3, v4
+
+    if-ltz v4, :cond_0
+
+    :goto_0
+    const v3, 0x3394a79
+
+    xor-int v3, v3, v4
+
+    rem-int v3, v4, v3
+
+    const v4, 0x2113fc
+
+    if-eq v3, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract e(Landroid/view/View;II[II)V
-.end method
+.method public static d(Landroid/widget/PopupWindow;I)V
+    .locals 7
 
-.method public abstract f(Landroid/view/View;Landroid/view/View;II)Z
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
+
+    sget-object v3, Lcom/ejiaogl/tiktokhook/md;->agF:[I
+
+    const v4, 0x0
+
+    aget v4, v3, v4
+
+    if-ltz v4, :cond_0
+
+    :goto_0
+    const v3, 0x3794e00
+
+    xor-int v3, v3, v4
+
+    and-int v3, v4, v3
+
+    const v4, 0x914e
+
+    if-eq v3, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

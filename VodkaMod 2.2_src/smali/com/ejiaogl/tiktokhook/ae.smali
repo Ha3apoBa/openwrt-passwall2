@@ -1,55 +1,27 @@
 .class public final Lcom/ejiaogl/tiktokhook/ae;
-.super Lcom/ejiaogl/tiktokhook/ce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field private static jA:[I
-
-.field private static jB:[I
-
-.field private static jC:[I
+.field private static MS:[I
 
 
 # instance fields
-.field public final b:Ljava/lang/reflect/Method;
-
-.field public final c:Ljava/lang/reflect/Method;
-
-.field public final d:Ljava/lang/reflect/Method;
-
-.field public final e:Ljava/lang/Class;
-
-.field public final f:Ljava/lang/Class;
+.field public final a:Lcom/ejiaogl/tiktokhook/qa;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ae;->jC:[I
-
     const v0, 0x2
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ae;->jB:[I
-
-    const v0, 0x1
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ae;->jA:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ae;->MS:[I
 
     nop
 
@@ -57,361 +29,97 @@
 
     :array_0
     .array-data 4
-        0x3b34f05
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x15c5e1f
-        0x38b90a7
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x2681b15
+        0x38e8e91
+        0x1cdc7c2
     .end array-data
 .end method
 
-.method public constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/Class;Ljava/lang/Class;)V
-    .locals 11
+.method public constructor <init>(Lcom/ejiaogl/tiktokhook/qa;)V
+    .locals 7
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move-object/from16 v2, p2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v3, p3
-
-    move-object/from16 v4, p4
-
-    move-object/from16 v5, p5
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/ce;-><init>()V
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/ae;->b:Ljava/lang/reflect/Method;
-
-    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/ae;->c:Ljava/lang/reflect/Method;
-
-    iput-object v3, v0, Lcom/ejiaogl/tiktokhook/ae;->d:Ljava/lang/reflect/Method;
-
-    iput-object v4, v0, Lcom/ejiaogl/tiktokhook/ae;->e:Ljava/lang/Class;
-
-    iput-object v5, v0, Lcom/ejiaogl/tiktokhook/ae;->f:Ljava/lang/Class;
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/ae;->a:Lcom/ejiaogl/tiktokhook/qa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)V
-    .locals 11
-
-    move-object/from16 v4, p0
-
-    move-object/from16 v5, p1
-
-    :try_start_0
-    iget-object v0, v4, Lcom/ejiaogl/tiktokhook/ae;->d:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object v5, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/ae;->jA:[I
-
-    const v8, 0x0
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_0
-
-    :goto_0
-    const v7, 0x2cd703d
-
-    xor-int v7, v7, v8
-
-    rem-int v7, v8, v7
-
-    const v8, 0xb6d095
-
-    if-eq v7, v8, :cond_0
-
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
     :cond_0
-    return-void
+    move-object/from16 v2, p0
 
-    :catch_0
-    new-instance v5, Ljava/lang/AssertionError;
-
-    invoke-direct {v5}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v5
-.end method
-
-.method public final b(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 14
-
-    move-object/from16 v5, p0
-
-    move-object/from16 v6, p1
-
-    move-object/from16 v7, p2
-
-    move-object/from16 v8, p3
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-direct {v7, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/ejiaogl/tiktokhook/pe;
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/pe;->c:Lcom/ejiaogl/tiktokhook/pe;
-
-    if-ne v3, v4, :cond_0
-
-    goto :goto_1
+    const-string v0, "Removed["
 
     .line 1
-    :cond_0
-    iget-object v3, v3, Lcom/ejiaogl/tiktokhook/pe;->b:Ljava/lang/String;
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/sf;->c(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     .line 2
-    invoke-virtual {v7, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/ae;->a:Lcom/ejiaogl/tiktokhook/qa;
 
-    sget-object v10, Lcom/ejiaogl/tiktokhook/ae;->jB:[I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const v11, 0x0
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ae;->MS:[I
 
-    aget v11, v10, v11
+    const v5, 0x0
 
-    if-ltz v11, :cond_1
+    aget v5, v4, v5
 
-    const v10, 0x3b43d6b
+    if-ltz v5, :cond_1
 
-    xor-int v10, v10, v11
+    const v4, 0x36e1a14
 
-    rem-int v10, v11, v10
+    :goto_0
+    xor-int v4, v4, v5
 
-    const v11, 0x15c5e1f
+    and-int v4, v5, v4
 
-    if-ne v10, v11, :cond_1
+    if-eqz v4, :cond_0
 
     goto :goto_1
+
+    goto :goto_0
 
     :cond_1
     :goto_1
-    add-int/lit8 v2, v2, 0x1
+    const/16 v1, 0x5d
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_2
-    :try_start_0
-    const-class v8, Lcom/ejiaogl/tiktokhook/ce;
+    sget-object v4, Lcom/ejiaogl/tiktokhook/ae;->MS:[I
 
-    invoke-virtual {v8}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    const v5, 0x1
 
-    move-result-object v8
+    aget v5, v4, v5
 
-    const/4 v0, 0x2
-
-    new-array v2, v0, [Ljava/lang/Class;
-
-    iget-object v3, v5, Lcom/ejiaogl/tiktokhook/ae;->e:Ljava/lang/Class;
-
-    aput-object v3, v2, v1
-
-    iget-object v3, v5, Lcom/ejiaogl/tiktokhook/ae;->f:Ljava/lang/Class;
-
-    const/4 v4, 0x1
-
-    aput-object v3, v2, v4
-
-    new-instance v3, Lcom/ejiaogl/tiktokhook/be;
-
-    invoke-direct {v3, v7}, Lcom/ejiaogl/tiktokhook/be;-><init>(Ljava/util/List;)V
-
-    invoke-static {v8, v2, v3}, Ljava/lang/reflect/Proxy;->newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    iget-object v8, v5, Lcom/ejiaogl/tiktokhook/ae;->b:Ljava/lang/reflect/Method;
-
-    const/4 v2, 0x0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    aput-object v6, v0, v1
-
-    aput-object v7, v0, v4
-
-    invoke-virtual {v8, v2, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v10, Lcom/ejiaogl/tiktokhook/ae;->jB:[I
-
-    const v11, 0x1
-
-    aget v11, v10, v11
-
-    if-ltz v11, :cond_3
+    if-ltz v5, :cond_2
 
     :goto_2
-    const v10, 0x2ffd179
+    const v4, 0x55a3ffc
 
-    xor-int v10, v10, v11
+    xor-int v4, v4, v5
 
-    rem-int v10, v11, v10
+    rem-int v4, v5, v4
 
-    if-gtz v10, :cond_3
+    const v5, 0x1cdc7c2
+
+    if-eq v4, v5, :cond_2
 
     goto :goto_2
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_3
-    return-void
-
-    :catch_0
-    move-exception v6
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v6
-
-    :goto_3
-    new-instance v7, Ljava/lang/AssertionError;
-
-    invoke-direct {v7, v6}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v7
-.end method
-
-.method public final d(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 10
-
-    move-object/from16 v3, p0
-
-    move-object/from16 v4, p1
-
-    :try_start_0
-    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/ae;->c:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    aput-object v4, v1, v2
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v4, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/reflect/Proxy;->getInvocationHandler(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/ejiaogl/tiktokhook/be;
-
-    .line 1
-    iget-boolean v1, v0, Lcom/ejiaogl/tiktokhook/be;->b:Z
-
-    if-nez v1, :cond_1
-
-    .line 2
-    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/be;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    .line 3
-    sget-object v0, Lcom/ejiaogl/tiktokhook/sd;->a:Ljava/util/logging/Logger;
-
-    sget-object v1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
-
-    const-string v2, "ALPN callback dropped: SPDY and HTTP/2 are disabled. Is alpn-boot on the boot class path?"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
-
-    sget-object v6, Lcom/ejiaogl/tiktokhook/ae;->jC:[I
-
-    const v7, 0x0
-
-    aget v7, v6, v7
-
-    if-ltz v7, :cond_0
-
-    const v6, 0x4195eb7
-
-    xor-int v6, v6, v7
-
-    and-int v6, v7, v6
-
-    const v7, 0x2600100
-
-    if-ne v6, v7, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :goto_0
-    return-object v4
-
-    :cond_1
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    .line 4
     :cond_2
-    iget-object v4, v0, Lcom/ejiaogl/tiktokhook/be;->c:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_1
-    return-object v4
+    move-result-object v0
 
-    .line 5
-    :catch_0
-    new-instance v4, Ljava/lang/AssertionError;
-
-    invoke-direct {v4}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v4
+    return-object v0
 .end method

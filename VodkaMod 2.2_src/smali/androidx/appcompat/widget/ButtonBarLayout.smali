@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public e:Z
+.field public a:Z
 
-.field public f:Z
+.field public b:Z
 
-.field public g:I
+.field public c:I
 
 
 # direct methods
@@ -19,9 +19,9 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->g:I
+    iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->c:I
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/zg;->r:[I
+    sget-object v3, Lcom/ejiaogl/tiktokhook/gf;->z:[I
 
     invoke-virtual {p1, p2, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -37,7 +37,7 @@
 
     move-object v5, v0
 
-    invoke-static/range {v1 .. v6}, Lcom/ejiaogl/tiktokhook/bl;->d(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;I)V
+    invoke-static/range {v1 .. v6}, Lcom/ejiaogl/tiktokhook/ni;->h(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;I)V
 
     const/4 p1, 0x0
 
@@ -47,7 +47,7 @@
 
     move-result p1
 
-    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -57,7 +57,7 @@
 
     if-ne p1, p2, :cond_0
 
-    iget-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iget-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/ButtonBarLayout;->setStacked(Z)V
 
@@ -68,18 +68,18 @@
 .method private setStacked(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     if-eq v0, p1, :cond_4
 
     if-eqz p1, :cond_0
 
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     if-eqz v0, :cond_4
 
     :cond_0
-    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
@@ -181,18 +181,18 @@
 
     move-result v0
 
-    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->g:I
+    iget v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->c:I
 
     if-le v0, v1, :cond_0
 
     .line 1
-    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     if-eqz v1, :cond_0
 
@@ -200,11 +200,11 @@
     invoke-direct {p0, v2}, Landroidx/appcompat/widget/ButtonBarLayout;->setStacked(Z)V
 
     :cond_0
-    iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->g:I
+    iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->c:I
 
     .line 3
     :cond_1
-    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     const/4 v3, 0x1
 
@@ -237,12 +237,12 @@
     :goto_0
     invoke-super {p0, v0, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     if-eqz v0, :cond_4
 
     .line 5
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     if-nez v0, :cond_4
 
@@ -316,7 +316,7 @@
     add-int/2addr v1, v2
 
     .line 7
-    iget-boolean v2, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean v2, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     if-eqz v2, :cond_7
 
@@ -375,10 +375,10 @@
 
     :cond_8
     :goto_2
-    sget-object v0, Lcom/ejiaogl/tiktokhook/bl;->a:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/ni;->a:Ljava/util/WeakHashMap;
 
     .line 9
-    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/pk;->d(Landroid/view/View;)I
+    invoke-static {p0}, Lcom/ejiaogl/tiktokhook/ni$c;->d(Landroid/view/View;)I
 
     move-result v0
 
@@ -398,16 +398,16 @@
 .method public setAllowStacking(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     if-eq v0, p1, :cond_1
 
-    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->e:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     if-nez p1, :cond_0
 
     .line 1
-    iget-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->f:Z
+    iget-boolean p1, p0, Landroidx/appcompat/widget/ButtonBarLayout;->b:Z
 
     if-eqz p1, :cond_0
 

@@ -1,46 +1,36 @@
 .class public final Lcom/ejiaogl/tiktokhook/c2;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field private static Nq:[I
+
+# instance fields
+.field public final synthetic b:Lcom/ejiaogl/tiktokhook/b4;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/c2;->Nq:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x500721f
-    .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 7
+.method public constructor <init>(Lcom/ejiaogl/tiktokhook/b4;I)V
+    .locals 8
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    const-string v0, "Okio Watchdog"
+    move-object/from16 v1, p1
 
-    invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    move/from16 v2, p2
 
-    const/4 v0, 0x1
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/c2;->b:Lcom/ejiaogl/tiktokhook/b4;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setDaemon(Z)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -52,41 +42,11 @@
 
     move-object/from16 v1, p0
 
-    :catch_0
-    :goto_0
-    :try_start_0
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/d2;->h()Lcom/ejiaogl/tiktokhook/d2;
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/c2;->b:Lcom/ejiaogl/tiktokhook/b4;
 
-    move-result-object v0
+    check-cast v0, Lcom/ejiaogl/tiktokhook/mh$a;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/mh$a;->o:Lcom/ejiaogl/tiktokhook/ie$d;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lcom/ejiaogl/tiktokhook/d2;->n()V
-
-    sget-object v3, Lcom/ejiaogl/tiktokhook/c2;->Nq:[I
-
-    const v4, 0x0
-
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_1
-
-    :goto_1
-    const v3, 0x3b7e7d4
-
-    xor-int v3, v3, v4
-
-    rem-int v3, v4, v3
-
-    if-gtz v3, :cond_1
-
-    goto :goto_1
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_1
-    goto :goto_0
+    return-void
 .end method

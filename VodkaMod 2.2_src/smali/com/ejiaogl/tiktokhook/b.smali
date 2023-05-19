@@ -17,9 +17,9 @@
     .end annotation
 .end field
 
-.field private static TH:[I
+.field public static final c:Lcom/ejiaogl/tiktokhook/b$a;
 
-.field public static final c:Lcom/ejiaogl/tiktokhook/a;
+.field private static zv:[I
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     const v0, 0x1
 
@@ -36,27 +36,27 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/b;->TH:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/b;->zv:[I
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/a;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/b$a;
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/a;-><init>()V
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/b$a;-><init>()V
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/a;
+    sput-object v0, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/b$a;
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/vg;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/b$b;
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/vg;-><init>(I)V
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/b$b;-><init>()V
 
     sput-object v0, Lcom/ejiaogl/tiktokhook/b;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 
+    nop
+
     :array_0
     .array-data 4
-        0x22770b2
+        0x5d00b2d
     .end array-data
 .end method
 
@@ -95,7 +95,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/a;
+    sget-object v1, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/b$a;
 
     :goto_0
     iput-object v1, v0, Lcom/ejiaogl/tiktokhook/b;->b:Landroid/os/Parcelable;
@@ -114,7 +114,7 @@
 
     if-eqz v2, :cond_1
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/a;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/b;->c:Lcom/ejiaogl/tiktokhook/b$a;
 
     if-eq v2, v0, :cond_0
 
@@ -163,7 +163,7 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    sget-object v5, Lcom/ejiaogl/tiktokhook/b;->TH:[I
+    sget-object v5, Lcom/ejiaogl/tiktokhook/b;->zv:[I
 
     const v6, 0x0
 
@@ -171,19 +171,19 @@
 
     if-ltz v6, :cond_0
 
-    :goto_0
-    const v5, 0x9863a2
+    const v5, 0x2285df1
 
     xor-int v5, v5, v6
 
     rem-int v5, v6, v5
 
-    const v6, 0x22770b2
+    const v6, 0x5d00b2d
 
-    if-eq v5, v6, :cond_0
+    if-ne v5, v6, :cond_0
 
     goto :goto_0
 
     :cond_0
+    :goto_0
     return-void
 .end method

@@ -1,5 +1,5 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/b7;
-.super Lcom/ejiaogl/tiktokhook/w3;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/b7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
@@ -8,25 +8,52 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    .line 1
-    sget-object v0, Lcom/ejiaogl/tiktokhook/w3;->b:Lcom/ejiaogl/tiktokhook/v3;
-
-    const-string v1, "baseKey"
-
-    .line 2
-    invoke-static {v0, v1}, Lcom/ejiaogl/tiktokhook/t0;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    nop
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 6
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public abstract B(ZILcom/ejiaogl/tiktokhook/p1;I)V
+.end method
 
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/w3;-><init>()V
+.method public abstract F()V
+.end method
 
-    return-void
+.method public abstract J(IJ)V
+.end method
+
+.method public abstract flush()V
+.end method
+
+.method public abstract i(ZZILjava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(ZZII",
+            "Ljava/util/List<",
+            "Lcom/ejiaogl/tiktokhook/q8;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract l(ILcom/ejiaogl/tiktokhook/y5;[B)V
+.end method
+
+.method public abstract m(ILcom/ejiaogl/tiktokhook/y5;)V
+.end method
+
+.method public abstract n(ZII)V
+.end method
+
+.method public abstract o()I
+.end method
+
+.method public abstract p(Lcom/ejiaogl/tiktokhook/kf;)V
+.end method
+
+.method public abstract y(Lcom/ejiaogl/tiktokhook/kf;)V
 .end method

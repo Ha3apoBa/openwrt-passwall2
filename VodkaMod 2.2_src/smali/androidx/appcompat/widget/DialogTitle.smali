@@ -1,15 +1,13 @@
 .class public Landroidx/appcompat/widget/DialogTitle;
-.super Lcom/ejiaogl/tiktokhook/n1;
+.super Lcom/ejiaogl/tiktokhook/x0;
 .source "SourceFile"
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .locals 0
 
-    const v0, 0x1010084
-
-    invoke-direct {p0, p1, p2, v0}, Lcom/ejiaogl/tiktokhook/n1;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2}, Lcom/ejiaogl/tiktokhook/x0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -19,7 +17,7 @@
 .method public final onMeasure(II)V
     .locals 6
 
-    invoke-super {p0, p1, p2}, Lcom/ejiaogl/tiktokhook/n1;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/ejiaogl/tiktokhook/x0;->onMeasure(II)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
@@ -55,7 +53,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/zg;->A:[I
+    sget-object v3, Lcom/ejiaogl/tiktokhook/gf;->L:[I
 
     const v4, 0x1010041
 
@@ -73,12 +71,12 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {p0, v0, v2}, Lcom/ejiaogl/tiktokhook/n1;->setTextSize(IF)V
+    invoke-virtual {p0, v0, v2}, Lcom/ejiaogl/tiktokhook/x0;->setTextSize(IF)V
 
     :cond_0
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-super {p0, p1, p2}, Lcom/ejiaogl/tiktokhook/n1;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/ejiaogl/tiktokhook/x0;->onMeasure(II)V
 
     :cond_1
     return-void

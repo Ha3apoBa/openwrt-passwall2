@@ -1,32 +1,32 @@
-.class public final Lcom/ejiaogl/tiktokhook/m6;
+.class public final synthetic Lcom/ejiaogl/tiktokhook/m6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/KeyListener;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field private static oK:[I
+.field private static PF:[I
 
 
 # instance fields
-.field public final a:Landroid/text/method/KeyListener;
+.field public final synthetic b:I
 
-.field public final b:Lcom/ejiaogl/tiktokhook/j0;
+.field public final synthetic c:Landroidx/emoji2/text/f$b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x2
+    const v0, 0xf
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/m6;->oK:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
 
     nop
 
@@ -34,229 +34,677 @@
 
     :array_0
     .array-data 4
-        0x1e74374
-        0x1709340
+        0x355f655
+        0x12cd345
+        0x3d531bc
+        0x44d5f9a
+        0x334da72
+        0x51e2178
+        0x4bb4a1a
+        0x144328
+        0xb88399
+        0x57da2cc
+        0x581e555
+        0x48c9ab4
+        0x7ec980
+        0x27eff19
+        0x4dfeedf
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/text/method/KeyListener;)V
-    .locals 9
+.method public synthetic constructor <init>(Landroidx/emoji2/text/f$b;I)V
+    .locals 8
 
-    move-object/from16 v2, p0
+    move-object/from16 v0, p0
 
-    move-object/from16 v3, p1
+    move-object/from16 v1, p1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/j0;
+    move/from16 v2, p2
 
-    const/4 v1, 0x7
+    iput v2, v0, Lcom/ejiaogl/tiktokhook/m6;->b:I
 
-    invoke-direct {v0, v1}, Lcom/ejiaogl/tiktokhook/j0;-><init>(I)V
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/m6;->c:Landroidx/emoji2/text/f$b;
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iput-object v3, v2, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/m6;->b:Lcom/ejiaogl/tiktokhook/j0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
-    .locals 10
+.method public final run()V
+    .locals 12
 
-    move-object/from16 v1, p0
+    :cond_0
+    move-object/from16 v6, p0
 
-    move-object/from16 v2, p1
+    iget v0, v6, Lcom/ejiaogl/tiktokhook/m6;->b:I
 
-    move-object/from16 v3, p2
+    packed-switch v0, :pswitch_data_0
 
-    move/from16 v4, p3
+    goto/16 :goto_14
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
+    :pswitch_0
+    iget-object v0, v6, Lcom/ejiaogl/tiktokhook/m6;->c:Landroidx/emoji2/text/f$b;
 
-    invoke-interface {v0, v2, v3, v4}, Landroid/text/method/KeyListener;->clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
+    .line 1
+    iget-object v1, v0, Landroidx/emoji2/text/f$b;->d:Ljava/lang/Object;
 
-    return-void
-.end method
+    monitor-enter v1
 
-.method public final getInputType()I
-    .locals 7
+    :try_start_0
+    iget-object v2, v0, Landroidx/emoji2/text/f$b;->h:Landroidx/emoji2/text/c$h;
 
-    move-object/from16 v1, p0
+    if-nez v2, :cond_1
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
+    monitor-exit v1
 
-    invoke-interface {v0}, Landroid/text/method/KeyListener;->getInputType()I
+    goto/16 :goto_13
 
-    move-result v0
+    :cond_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_6
 
-    return v0
-.end method
+    :try_start_1
+    invoke-virtual {v0}, Landroidx/emoji2/text/f$b;->d()Lcom/ejiaogl/tiktokhook/u6;
 
-.method public final onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 13
+    move-result-object v1
 
-    move-object/from16 v3, p0
+    .line 2
+    iget v2, v1, Lcom/ejiaogl/tiktokhook/u6;->e:I
 
-    move-object/from16 v4, p1
+    const/4 v3, 0x2
 
-    move-object/from16 v5, p2
+    if-ne v2, v3, :cond_2
 
-    move/from16 v6, p3
+    .line 3
+    iget-object v3, v0, Landroidx/emoji2/text/f$b;->d:Ljava/lang/Object;
 
-    move-object/from16 v7, p4
+    monitor-enter v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/m6;->b:Lcom/ejiaogl/tiktokhook/j0;
-
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v9, Lcom/ejiaogl/tiktokhook/m6;->oK:[I
-
-    const v10, 0x0
-
-    aget v10, v9, v10
-
-    if-ltz v10, :cond_0
-
-    const v9, 0x51b85f6
-
-    xor-int v9, v9, v10
-
-    rem-int v9, v10, v9
-
-    const v10, 0x1e74374
-
-    if-ne v9, v10, :cond_0
+    :try_start_2
+    monitor-exit v3
 
     goto :goto_0
 
-    .line 1
-    :cond_0
-    :goto_0
-    sget-object v0, Lcom/ejiaogl/tiktokhook/a6;->i:Ljava/lang/Object;
+    :catchall_0
+    move-exception v1
 
-    const/16 v0, 0x43
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eq v6, v0, :cond_2
-
-    const/16 v0, 0x70
-
-    if-eq v6, v0, :cond_1
-
-    move v0, v1
-
-    goto :goto_1
-
-    .line 2
-    :cond_1
-    invoke-static {v5, v7, v2}, Lcom/ejiaogl/tiktokhook/ld;->a(Landroid/text/Editable;Landroid/view/KeyEvent;Z)Z
-
-    move-result v0
-
-    goto :goto_1
+    :try_start_3
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     :cond_2
-    invoke-static {v5, v7, v1}, Lcom/ejiaogl/tiktokhook/ld;->a(Landroid/text/Editable;Landroid/view/KeyEvent;Z)Z
+    :goto_0
+    if-nez v2, :cond_d
 
-    move-result v0
+    :try_start_4
+    const-string v2, "EmojiCompat.FontRequestEmojiCompatConfig.buildTypeface"
+
+    sget v3, Lcom/ejiaogl/tiktokhook/lh;->a:I
+
+    .line 4
+    invoke-static {v2}, Lcom/ejiaogl/tiktokhook/lh$a;->a(Ljava/lang/String;)V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x0
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_3
+
+    const v8, 0x1c57acc
 
     :goto_1
-    if-eqz v0, :cond_4
+    xor-int v8, v8, v9
 
-    invoke-static {v5}, Landroid/text/method/MetaKeyKeyListener;->adjustMetaAfterKeypress(Landroid/text/Spannable;)V
+    rem-int v8, v9, v8
 
-    sget-object v9, Lcom/ejiaogl/tiktokhook/m6;->oK:[I
-
-    const v10, 0x1
-
-    aget v10, v9, v10
-
-    if-ltz v10, :cond_3
-
-    const v9, 0x5f26de2
-
-    xor-int v9, v9, v10
-
-    and-int v9, v10, v9
-
-    const v10, 0x9200
-
-    if-ne v9, v10, :cond_3
+    if-eqz v8, :cond_0
 
     goto :goto_2
 
+    goto :goto_1
+
+    .line 5
     :cond_3
     :goto_2
-    move v0, v2
+    iget-object v2, v0, Landroidx/emoji2/text/f$b;->c:Landroidx/emoji2/text/f$a;
+
+    iget-object v3, v0, Landroidx/emoji2/text/f$b;->a:Landroid/content/Context;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x1
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_4
+
+    const v8, 0x4c12fcd
+
+    xor-int v8, v8, v9
+
+    rem-int v8, v9, v8
+
+    const v9, 0x12cd345
+
+    if-ne v8, v9, :cond_4
 
     goto :goto_3
 
     :cond_4
-    move v0, v1
-
     :goto_3
-    if-nez v0, :cond_5
+    const/4 v2, 0x1
 
-    .line 3
-    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
+    new-array v2, v2, [Lcom/ejiaogl/tiktokhook/u6;
 
-    invoke-interface {v0, v4, v5, v6, v7}, Landroid/text/method/KeyListener;->onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    const/4 v4, 0x0
 
-    move-result v4
+    aput-object v1, v2, v4
 
-    if-eqz v4, :cond_6
+    .line 6
+    sget-object v5, Lcom/ejiaogl/tiktokhook/mh;->a:Lcom/ejiaogl/tiktokhook/rh;
 
+    invoke-virtual {v5, v3, v2, v4}, Lcom/ejiaogl/tiktokhook/rh;->b(Landroid/content/Context;[Lcom/ejiaogl/tiktokhook/u6;I)Landroid/graphics/Typeface;
+
+    move-result-object v2
+
+    .line 7
+    iget-object v3, v0, Landroidx/emoji2/text/f$b;->a:Landroid/content/Context;
+
+    .line 8
+    iget-object v1, v1, Lcom/ejiaogl/tiktokhook/u6;->a:Landroid/net/Uri;
+
+    .line 9
+    invoke-static {v3, v1}, Lcom/ejiaogl/tiktokhook/sh;->e(Landroid/content/Context;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+
+    if-eqz v1, :cond_b
+
+    if-eqz v2, :cond_b
+
+    :try_start_5
+    const-string v3, "EmojiCompat.MetadataRepo.create"
+
+    .line 10
+    invoke-static {v3}, Lcom/ejiaogl/tiktokhook/lh$a;->a(Ljava/lang/String;)V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x2
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_5
+
+    :goto_4
+    const v8, 0xb93c0d
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    const v9, 0x34401b0
+
+    if-eq v8, v9, :cond_5
+
+    goto :goto_4
+
+    .line 11
     :cond_5
-    move v1, v2
+    new-instance v3, Landroidx/emoji2/text/h;
 
+    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/yb;->a(Ljava/nio/ByteBuffer;)Lcom/ejiaogl/tiktokhook/xb;
+
+    move-result-object v1
+
+    invoke-direct {v3, v2, v1}, Landroidx/emoji2/text/h;-><init>(Landroid/graphics/Typeface;Lcom/ejiaogl/tiktokhook/xb;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 12
+    :try_start_6
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/lh$a;->b()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x3
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_6
+
+    :goto_5
+    const v8, 0x4243021
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    const v9, 0x494f9a
+
+    if-eq v8, v9, :cond_6
+
+    goto :goto_5
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    .line 13
     :cond_6
-    return v1
-.end method
+    :try_start_7
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/lh$a;->b()V
 
-.method public final onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
-    .locals 10
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
 
-    move-object/from16 v1, p0
+    const v9, 0x4
 
-    move-object/from16 v2, p1
+    aget v9, v8, v9
 
-    move-object/from16 v3, p2
+    if-ltz v9, :cond_7
 
-    move-object/from16 v4, p3
+    :goto_6
+    const v8, 0x23139bc
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
+    xor-int v8, v8, v9
 
-    invoke-interface {v0, v2, v3, v4}, Landroid/text/method/KeyListener;->onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
+    rem-int v8, v9, v8
 
-    move-result v2
+    const v9, 0x232f08
 
-    return v2
-.end method
+    if-eq v8, v9, :cond_7
 
-.method public final onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 11
+    goto :goto_6
 
-    move-object/from16 v1, p0
+    .line 14
+    :cond_7
+    iget-object v1, v0, Landroidx/emoji2/text/f$b;->d:Ljava/lang/Object;
 
-    move-object/from16 v2, p1
+    monitor-enter v1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    move-object/from16 v3, p2
+    :try_start_8
+    iget-object v2, v0, Landroidx/emoji2/text/f$b;->h:Landroidx/emoji2/text/c$h;
 
-    move/from16 v4, p3
+    if-eqz v2, :cond_8
 
-    move-object/from16 v5, p4
+    invoke-virtual {v2, v3}, Landroidx/emoji2/text/c$h;->b(Landroidx/emoji2/text/h;)V
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/m6;->a:Landroid/text/method/KeyListener;
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
 
-    invoke-interface {v0, v2, v3, v4, v5}, Landroid/text/method/KeyListener;->onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    const v9, 0x5
 
-    move-result v2
+    aget v9, v8, v9
 
-    return v2
+    if-ltz v9, :cond_8
+
+    :goto_7
+    const v8, 0x104225e
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    const v9, 0x41a0120
+
+    if-eq v8, v9, :cond_8
+
+    goto :goto_7
+
+    :cond_8
+    monitor-exit v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    :try_start_9
+    invoke-virtual {v0}, Landroidx/emoji2/text/f$b;->b()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x6
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_9
+
+    :goto_8
+    const v8, 0x52e90b2
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    const v9, 0x914a08
+
+    if-eq v8, v9, :cond_9
+
+    goto :goto_8
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_4
+
+    :cond_9
+    goto/16 :goto_13
+
+    :catchall_1
+    move-exception v2
+
+    :try_start_a
+    monitor-exit v1
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
+    :try_start_b
+    throw v2
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
+
+    :catchall_2
+    move-exception v1
+
+    .line 15
+    :try_start_c
+    sget v2, Lcom/ejiaogl/tiktokhook/lh;->a:I
+
+    .line 16
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/lh$a;->b()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x7
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_a
+
+    :goto_9
+    const v8, 0x2557eca
+
+    xor-int v8, v8, v9
+
+    rem-int v8, v9, v8
+
+    if-gtz v8, :cond_a
+
+    goto :goto_9
+
+    .line 17
+    :cond_a
+    throw v1
+
+    .line 18
+    :cond_b
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v2, "Unable to open file."
+
+    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_3
+
+    :catchall_3
+    move-exception v1
+
+    :try_start_d
+    sget v2, Lcom/ejiaogl/tiktokhook/lh;->a:I
+
+    .line 19
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/lh$a;->b()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x8
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_c
+
+    const v8, 0xa1501b
+
+    :goto_a
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    if-eqz v8, :cond_0
+
+    goto :goto_b
+
+    goto :goto_a
+
+    .line 20
+    :cond_c
+    :goto_b
+    throw v1
+
+    :cond_d
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "fetchFonts result is not OK. ("
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0x9
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_e
+
+    :goto_c
+    const v8, 0x2f58d30
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    const v9, 0x50822cc
+
+    if-eq v8, v9, :cond_e
+
+    goto :goto_c
+
+    :cond_e
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0xa
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_f
+
+    :goto_d
+    const v8, 0x2755b7d
+
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    if-gtz v8, :cond_f
+
+    goto :goto_d
+
+    :cond_f
+    const-string v2, ")"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0xb
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_10
+
+    const v8, 0x1119316
+
+    :goto_e
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    if-eqz v8, :cond_0
+
+    goto :goto_f
+
+    goto :goto_e
+
+    :cond_10
+    :goto_f
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_4
+
+    :catchall_4
+    move-exception v1
+
+    iget-object v2, v0, Landroidx/emoji2/text/f$b;->d:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_e
+    iget-object v3, v0, Landroidx/emoji2/text/f$b;->h:Landroidx/emoji2/text/c$h;
+
+    if-eqz v3, :cond_11
+
+    invoke-virtual {v3, v1}, Landroidx/emoji2/text/c$h;->a(Ljava/lang/Throwable;)V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0xc
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_11
+
+    const v8, 0x47f02f3
+
+    :goto_10
+    xor-int v8, v8, v9
+
+    and-int v8, v9, v8
+
+    if-eqz v8, :cond_0
+
+    goto :goto_11
+
+    goto :goto_10
+
+    :cond_11
+    :goto_11
+    monitor-exit v2
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_5
+
+    invoke-virtual {v0}, Landroidx/emoji2/text/f$b;->b()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0xd
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_12
+
+    :goto_12
+    const v8, 0x1e970bd
+
+    xor-int v8, v8, v9
+
+    rem-int v8, v9, v8
+
+    const v9, 0x27eff19
+
+    if-eq v8, v9, :cond_12
+
+    goto :goto_12
+
+    :cond_12
+    :goto_13
+    return-void
+
+    :catchall_5
+    move-exception v0
+
+    :try_start_f
+    monitor-exit v2
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_5
+
+    throw v0
+
+    :catchall_6
+    move-exception v0
+
+    :try_start_10
+    monitor-exit v1
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_6
+
+    throw v0
+
+    .line 21
+    :goto_14
+    iget-object v0, v6, Lcom/ejiaogl/tiktokhook/m6;->c:Landroidx/emoji2/text/f$b;
+
+    invoke-virtual {v0}, Landroidx/emoji2/text/f$b;->c()V
+
+    sget-object v8, Lcom/ejiaogl/tiktokhook/m6;->PF:[I
+
+    const v9, 0xe
+
+    aget v9, v8, v9
+
+    if-ltz v9, :cond_13
+
+    const v8, 0x556264c
+
+    xor-int v8, v8, v9
+
+    rem-int v8, v9, v8
+
+    const v9, 0x429526
+
+    if-ne v8, v9, :cond_13
+
+    goto :goto_15
+
+    :cond_13
+    :goto_15
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

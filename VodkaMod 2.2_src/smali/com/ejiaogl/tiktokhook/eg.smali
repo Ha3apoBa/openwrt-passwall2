@@ -1,18 +1,9 @@
-.class public final Lcom/ejiaogl/tiktokhook/eg;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/eg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lcom/ejiaogl/tiktokhook/gg;
-
-
-# instance fields
-.field public b:Lcom/ejiaogl/tiktokhook/dg;
-
-.field public c:Z
-
-.field public final synthetic d:Lcom/ejiaogl/tiktokhook/e7;
+.implements Landroid/view/MenuItem;
 
 
 # direct methods
@@ -24,135 +15,73 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/ejiaogl/tiktokhook/e7;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/eg;->d:Lcom/ejiaogl/tiktokhook/e7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/ejiaogl/tiktokhook/eg;->c:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Lcom/ejiaogl/tiktokhook/dg;)V
-    .locals 8
-
-    move-object/from16 v1, p0
-
-    move-object/from16 v2, p1
-
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/eg;->b:Lcom/ejiaogl/tiktokhook/dg;
-
-    if-ne v2, v0, :cond_1
-
-    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/dg;->e:Lcom/ejiaogl/tiktokhook/dg;
-
-    iput-object v2, v1, Lcom/ejiaogl/tiktokhook/eg;->b:Lcom/ejiaogl/tiktokhook/dg;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    iput-boolean v2, v1, Lcom/ejiaogl/tiktokhook/eg;->c:Z
-
-    :cond_1
-    return-void
+.method public abstract a()Lcom/ejiaogl/tiktokhook/p;
 .end method
 
-.method public final hasNext()Z
-    .locals 9
-
-    move-object/from16 v3, p0
-
-    iget-boolean v0, v3, Lcom/ejiaogl/tiktokhook/eg;->c:Z
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/eg;->d:Lcom/ejiaogl/tiktokhook/e7;
-
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/e7;->b:Lcom/ejiaogl/tiktokhook/dg;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    return v1
-
-    :cond_1
-    iget-object v0, v3, Lcom/ejiaogl/tiktokhook/eg;->b:Lcom/ejiaogl/tiktokhook/dg;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/dg;->d:Lcom/ejiaogl/tiktokhook/dg;
-
-    if-eqz v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v2
-
-    :goto_1
-    return v1
+.method public abstract b(Lcom/ejiaogl/tiktokhook/p;)Lcom/ejiaogl/tiktokhook/eg;
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 7
+.method public abstract collapseActionView()Z
+.end method
 
-    move-object/from16 v1, p0
+.method public abstract expandActionView()Z
+.end method
 
-    iget-boolean v0, v1, Lcom/ejiaogl/tiktokhook/eg;->c:Z
+.method public abstract getActionView()Landroid/view/View;
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract getAlphabeticModifiers()I
+.end method
 
-    const/4 v0, 0x0
+.method public abstract getContentDescription()Ljava/lang/CharSequence;
+.end method
 
-    iput-boolean v0, v1, Lcom/ejiaogl/tiktokhook/eg;->c:Z
+.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
+.end method
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/eg;->d:Lcom/ejiaogl/tiktokhook/e7;
+.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
+.end method
 
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/e7;->b:Lcom/ejiaogl/tiktokhook/dg;
+.method public abstract getNumericModifiers()I
+.end method
 
-    goto :goto_0
+.method public abstract getTooltipText()Ljava/lang/CharSequence;
+.end method
 
-    :cond_0
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/eg;->b:Lcom/ejiaogl/tiktokhook/dg;
+.method public abstract isActionViewExpanded()Z
+.end method
 
-    if-eqz v0, :cond_1
+.method public abstract setActionView(I)Landroid/view/MenuItem;
+.end method
 
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/dg;->d:Lcom/ejiaogl/tiktokhook/dg;
+.method public abstract setActionView(Landroid/view/View;)Landroid/view/MenuItem;
+.end method
 
-    goto :goto_0
+.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
+.end method
 
-    :cond_1
-    const/4 v0, 0x0
+.method public abstract setContentDescription(Ljava/lang/CharSequence;)Lcom/ejiaogl/tiktokhook/eg;
+.end method
 
-    :goto_0
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/eg;->b:Lcom/ejiaogl/tiktokhook/dg;
+.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+.end method
 
-    return-object v0
+.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setShowAsAction(I)V
+.end method
+
+.method public abstract setShowAsActionFlags(I)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setTooltipText(Ljava/lang/CharSequence;)Lcom/ejiaogl/tiktokhook/eg;
 .end method

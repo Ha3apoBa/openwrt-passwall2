@@ -1,13 +1,45 @@
-.class public final Lcom/ejiaogl/tiktokhook/r7;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/r7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/q7;
 
-
-# instance fields
-.field public final a:[Lcom/ejiaogl/tiktokhook/s7;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<P1:",
+        "Ljava/lang/Object;",
+        "P2:",
+        "Ljava/lang/Object;",
+        "P3:",
+        "Ljava/lang/Object;",
+        "P4:",
+        "Ljava/lang/Object;",
+        "P5:",
+        "Ljava/lang/Object;",
+        "P6:",
+        "Ljava/lang/Object;",
+        "P7:",
+        "Ljava/lang/Object;",
+        "P8:",
+        "Ljava/lang/Object;",
+        "P9:",
+        "Ljava/lang/Object;",
+        "P10:",
+        "Ljava/lang/Object;",
+        "P11:",
+        "Ljava/lang/Object;",
+        "P12:",
+        "Ljava/lang/Object;",
+        "P13:",
+        "Ljava/lang/Object;",
+        "P14:",
+        "Ljava/lang/Object;",
+        "R:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # direct methods
@@ -15,20 +47,6 @@
     .locals 1
 
     nop
-
-    return-void
-.end method
-
-.method public constructor <init>([Lcom/ejiaogl/tiktokhook/s7;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/r7;->a:[Lcom/ejiaogl/tiktokhook/s7;
 
     return-void
 .end method

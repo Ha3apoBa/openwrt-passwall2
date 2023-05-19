@@ -1,94 +1,80 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/ck;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/ck;
+.super Lde/robv/android/xposed/XC_MethodHook;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/nio/charset/Charset;
+.field private static Fl:[I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "UTF-8"
+    const v0, 0x1
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ck;->a:Ljava/nio/charset/Charset;
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ck;->Fl:[I
+
+    nop
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x3a77808
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0}, Lde/robv/android/xposed/XC_MethodHook;-><init>()V
 
     return-void
 .end method
 
-.method public static a(JJJ)V
-    .locals 15
 
-    move-wide/from16 v4, p0
+# virtual methods
+.method public final afterHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
+    .locals 7
 
-    move-wide/from16 v6, p2
+    move-object/from16 v0, p0
 
-    move-wide/from16 v8, p4
+    move-object/from16 v1, p1
 
-    or-long v0, v6, v8
+    invoke-super {v0, v1}, Lde/robv/android/xposed/XC_MethodHook;->afterHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)V
 
-    const-wide/16 v2, 0x0
+    sget-object v3, Lcom/ejiaogl/tiktokhook/ck;->Fl:[I
 
-    cmp-long v0, v0, v2
+    const v4, 0x0
 
-    if-ltz v0, :cond_0
+    aget v4, v3, v4
 
-    cmp-long v0, v6, v4
+    if-ltz v4, :cond_0
 
-    if-gtz v0, :cond_0
+    :goto_0
+    const v3, 0x1053e59
 
-    sub-long v0, v4, v6
+    xor-int v3, v3, v4
 
-    cmp-long v0, v0, v8
+    and-int v3, v4, v3
 
-    if-ltz v0, :cond_0
+    const v4, 0x2a24000
 
-    return-void
+    if-eq v3, v4, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+    iget-object v1, v1, Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;->thisObject:Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    sput-object v1, Lcom/ejiaogl/tiktokhook/bl;->b:Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v1, v2
-
-    const/4 v4, 0x1
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    aput-object v5, v1, v4
-
-    const/4 v4, 0x2
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    aput-object v5, v1, v4
-
-    const-string v4, "size=%s offset=%s byteCount=%s"
-
-    invoke-static {v4, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v0, v4}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

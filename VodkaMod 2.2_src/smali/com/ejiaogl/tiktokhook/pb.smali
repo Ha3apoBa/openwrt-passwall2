@@ -1,150 +1,193 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/pb;
+.class public final Lcom/ejiaogl/tiktokhook/pb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lcom/ejiaogl/tiktokhook/nb;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 1
 
-    const-string v0, "kotlinx.coroutines.fast.service.loader"
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/ejiaogl/tiktokhook/zg;->k0(Ljava/lang/String;Z)Z
-
-    .line 1
-    :try_start_0
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/a4;->e()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/dh;->z(Ljava/util/Iterator;)Lcom/ejiaogl/tiktokhook/ah;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/bh;->A(Lcom/ejiaogl/tiktokhook/ah;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    move-object v2, v3
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move-object v4, v2
-
-    check-cast v4, Lcom/ejiaogl/tiktokhook/ob;
-
-    invoke-interface {v4}, Lcom/ejiaogl/tiktokhook/ob;->getLoadPriority()I
-
-    move-result v4
-
-    :cond_2
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v6, v5
-
-    check-cast v6, Lcom/ejiaogl/tiktokhook/ob;
-
-    invoke-interface {v6}, Lcom/ejiaogl/tiktokhook/ob;->getLoadPriority()I
-
-    move-result v6
-
-    if-ge v4, v6, :cond_3
-
-    move-object v2, v5
-
-    move v4, v6
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    :goto_0
-    check-cast v2, Lcom/ejiaogl/tiktokhook/ob;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    if-nez v2, :cond_4
-
-    goto :goto_1
-
-    .line 2
-    :cond_4
-    :try_start_1
-    invoke-interface {v2, v0}, Lcom/ejiaogl/tiktokhook/ob;->createDispatcher(Ljava/util/List;)Lcom/ejiaogl/tiktokhook/nb;
-
-    move-result-object v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    :try_start_2
-    invoke-interface {v2}, Lcom/ejiaogl/tiktokhook/ob;->hintOnError()Ljava/lang/String;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :goto_1
-    if-eqz v3, :cond_5
-
-    .line 3
-    sput-object v3, Lcom/ejiaogl/tiktokhook/pb;->a:Lcom/ejiaogl/tiktokhook/nb;
+    nop
 
     return-void
+.end method
 
-    .line 4
-    :cond_5
-    :try_start_3
-    new-instance v0, Ljava/lang/IllegalStateException;
+.method public static a(Landroid/view/MenuItem;)I
+    .locals 6
 
-    const-string v1, "Module with the Main dispatcher is missing. Add dependency providing the Main dispatcher, e.g. \'kotlinx-coroutines-android\' and ensure it has the same version as \'kotlinx-coroutines-core\'"
+    move-object/from16 v0, p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Landroid/view/MenuItem;->getAlphabeticModifiers()I
 
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    move-result v0
 
-    :catchall_1
-    move-exception v0
+    return v0
+.end method
 
-    .line 5
-    throw v0
+.method public static b(Landroid/view/MenuItem;)Ljava/lang/CharSequence;
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static c(Landroid/view/MenuItem;)Landroid/content/res/ColorStateList;
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getIconTintList()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static d(Landroid/view/MenuItem;)Landroid/graphics/PorterDuff$Mode;
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getIconTintMode()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static e(Landroid/view/MenuItem;)I
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getNumericModifiers()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static f(Landroid/view/MenuItem;)Ljava/lang/CharSequence;
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getTooltipText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static g(Landroid/view/MenuItem;CI)Landroid/view/MenuItem;
+    .locals 8
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move/from16 v2, p2
+
+    invoke-interface {v0, v1, v2}, Landroid/view/MenuItem;->setAlphabeticShortcut(CI)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static h(Landroid/view/MenuItem;Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static i(Landroid/view/MenuItem;Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static j(Landroid/view/MenuItem;Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static k(Landroid/view/MenuItem;CI)Landroid/view/MenuItem;
+    .locals 8
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move/from16 v2, p2
+
+    invoke-interface {v0, v1, v2}, Landroid/view/MenuItem;->setNumericShortcut(CI)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static l(Landroid/view/MenuItem;CCII)Landroid/view/MenuItem;
+    .locals 10
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move/from16 v3, p3
+
+    move/from16 v4, p4
+
+    invoke-interface {v0, v1, v2, v3, v4}, Landroid/view/MenuItem;->setShortcut(CCII)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static m(Landroid/view/MenuItem;Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 7
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
 .end method

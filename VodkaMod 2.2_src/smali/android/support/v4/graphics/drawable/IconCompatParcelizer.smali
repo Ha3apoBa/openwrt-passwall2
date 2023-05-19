@@ -12,20 +12,20 @@
     return-void
 .end method
 
-.method public static read(Lcom/ejiaogl/tiktokhook/ik;)Landroidx/core/graphics/drawable/IconCompat;
+.method public static read(Lcom/ejiaogl/tiktokhook/ii;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
-    invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->read(Lcom/ejiaogl/tiktokhook/ik;)Landroidx/core/graphics/drawable/IconCompat;
+    invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->read(Lcom/ejiaogl/tiktokhook/ii;)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static write(Landroidx/core/graphics/drawable/IconCompat;Lcom/ejiaogl/tiktokhook/ik;)V
+.method public static write(Landroidx/core/graphics/drawable/IconCompat;Lcom/ejiaogl/tiktokhook/ii;)V
     .locals 0
 
-    invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->write(Landroidx/core/graphics/drawable/IconCompat;Lcom/ejiaogl/tiktokhook/ik;)V
+    invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->write(Landroidx/core/graphics/drawable/IconCompat;Lcom/ejiaogl/tiktokhook/ii;)V
 
     return-void
 .end method

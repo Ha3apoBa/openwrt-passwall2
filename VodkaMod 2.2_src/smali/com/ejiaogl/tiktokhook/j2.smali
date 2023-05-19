@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/ih;
+.implements Lcom/ejiaogl/tiktokhook/aa;
 
 
 # direct methods
@@ -17,38 +17,12 @@
 
 
 # virtual methods
-.method public abstract B()S
-.end method
-
-.method public abstract E()J
-.end method
-
-.method public abstract G()Ljava/io/InputStream;
-.end method
-
-.method public abstract H()B
-.end method
-
-.method public abstract J()I
-.end method
-
-.method public abstract a()Lcom/ejiaogl/tiktokhook/h2;
-.end method
-
-.method public abstract n()Ljava/lang/String;
-.end method
-
-.method public abstract r()[B
-.end method
-
-.method public abstract s(J)V
-.end method
-
-.method public abstract u(J)Lcom/ejiaogl/tiktokhook/k2;
-.end method
-
-.method public abstract x(J)V
-.end method
-
-.method public abstract y()Z
+.method public abstract a()Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
 .end method

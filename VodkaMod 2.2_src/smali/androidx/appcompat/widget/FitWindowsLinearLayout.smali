@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public e:Lcom/ejiaogl/tiktokhook/g7;
+.field public a:Lcom/ejiaogl/tiktokhook/i6;
 
 
 # direct methods
@@ -21,11 +21,11 @@
 .method public final fitSystemWindows(Landroid/graphics/Rect;)Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsLinearLayout;->e:Lcom/ejiaogl/tiktokhook/g7;
+    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsLinearLayout;->a:Lcom/ejiaogl/tiktokhook/i6;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/ejiaogl/tiktokhook/g7;->a()V
+    invoke-interface {v0}, Lcom/ejiaogl/tiktokhook/i6;->a()V
 
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->fitSystemWindows(Landroid/graphics/Rect;)Z
@@ -35,10 +35,10 @@
     return p1
 .end method
 
-.method public setOnFitSystemWindowsListener(Lcom/ejiaogl/tiktokhook/g7;)V
+.method public setOnFitSystemWindowsListener(Lcom/ejiaogl/tiktokhook/i6;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsLinearLayout;->e:Lcom/ejiaogl/tiktokhook/g7;
+    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsLinearLayout;->a:Lcom/ejiaogl/tiktokhook/i6;
 
     return-void
 .end method

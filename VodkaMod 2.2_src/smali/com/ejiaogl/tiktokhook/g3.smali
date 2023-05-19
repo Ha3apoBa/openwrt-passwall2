@@ -1,25 +1,29 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/g3;
+.class public Lcom/ejiaogl/tiktokhook/g3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ejiaogl/tiktokhook/g3$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Ljava/lang/Object;
+
+
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    nop
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/g3;->a:Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-static {v0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    return-object v0
 .end method

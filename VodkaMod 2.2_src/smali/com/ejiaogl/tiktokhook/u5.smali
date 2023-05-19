@@ -1,201 +1,146 @@
 .class public final Lcom/ejiaogl/tiktokhook/u5;
-.super Lcom/ejiaogl/tiktokhook/zg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/ListIterator;
 
 
 # static fields
-.field private static MO:[I
-
-.field private static MP:[I
-
-
-# instance fields
-.field public final synthetic K:Lcom/ejiaogl/tiktokhook/v5;
+.field public static final b:Lcom/ejiaogl/tiktokhook/u5;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x2
+    new-instance v0, Lcom/ejiaogl/tiktokhook/u5;
 
-    new-array v0, v0, [I
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/u5;-><init>()V
 
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/u5;->MP:[I
-
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/u5;->MO:[I
-
-    nop
+    sput-object v0, Lcom/ejiaogl/tiktokhook/u5;->b:Lcom/ejiaogl/tiktokhook/u5;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x2a833c7
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0xd1dbc2
-        0xe91311
-    .end array-data
 .end method
 
-.method public constructor <init>(Lcom/ejiaogl/tiktokhook/v5;)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 6
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
-
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/u5;->K:Lcom/ejiaogl/tiktokhook/v5;
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/zg;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final P(Ljava/lang/Throwable;)V
+.method public final bridge synthetic add(Ljava/lang/Object;)V
     .locals 8
 
     move-object/from16 v1, p0
 
     move-object/from16 v2, p1
 
-    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/u5;->K:Lcom/ejiaogl/tiktokhook/v5;
+    new-instance v2, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v0, v0, Lcom/ejiaogl/tiktokhook/e6;->a:Ljava/lang/Object;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    check-cast v0, Lcom/ejiaogl/tiktokhook/a6;
+    invoke-direct {v2, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/ejiaogl/tiktokhook/a6;->f(Ljava/lang/Throwable;)V
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/u5;->MO:[I
-
-    const v5, 0x0
-
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_0
-
-    const v4, 0x4278ccf
-
-    xor-int v4, v4, v5
-
-    and-int v4, v5, v4
-
-    const v5, 0x2883300
-
-    if-ne v4, v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :goto_0
-    return-void
+    throw v2
 .end method
 
-.method public final R(Lcom/ejiaogl/tiktokhook/bd;)V
-    .locals 12
+.method public final hasNext()Z
+    .locals 7
 
-    :cond_0
-    move-object/from16 v5, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v6, p1
+    const/4 v0, 0x0
 
-    iget-object v0, v5, Lcom/ejiaogl/tiktokhook/u5;->K:Lcom/ejiaogl/tiktokhook/v5;
+    return v0
+.end method
 
-    .line 1
-    iput-object v6, v0, Lcom/ejiaogl/tiktokhook/v5;->c:Lcom/ejiaogl/tiktokhook/bd;
+.method public final hasPrevious()Z
+    .locals 7
 
-    new-instance v6, Lcom/ejiaogl/tiktokhook/ld;
+    move-object/from16 v1, p0
 
-    iget-object v1, v0, Lcom/ejiaogl/tiktokhook/v5;->c:Lcom/ejiaogl/tiktokhook/bd;
+    const/4 v0, 0x0
 
-    new-instance v2, Lcom/ejiaogl/tiktokhook/j0;
+    return v0
+.end method
 
-    const/4 v3, 0x2
+.method public final next()Ljava/lang/Object;
+    .locals 7
 
-    invoke-direct {v2, v3}, Lcom/ejiaogl/tiktokhook/j0;-><init>(I)V
+    move-object/from16 v1, p0
 
-    iget-object v3, v0, Lcom/ejiaogl/tiktokhook/e6;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    move-object v4, v3
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    check-cast v4, Lcom/ejiaogl/tiktokhook/a6;
+    throw v0
+.end method
 
-    .line 2
-    iget-object v4, v4, Lcom/ejiaogl/tiktokhook/a6;->h:Lcom/ejiaogl/tiktokhook/q4;
+.method public final nextIndex()I
+    .locals 7
 
-    .line 3
-    check-cast v3, Lcom/ejiaogl/tiktokhook/a6;
+    move-object/from16 v1, p0
 
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/u5;->MP:[I
+    return v0
+.end method
 
-    const v9, 0x0
+.method public final previous()Ljava/lang/Object;
+    .locals 7
 
-    aget v9, v8, v9
+    move-object/from16 v1, p0
 
-    if-ltz v9, :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    :goto_0
-    const v8, 0x1db65c6
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    xor-int v8, v8, v9
+    throw v0
+.end method
 
-    rem-int v8, v9, v8
+.method public final previousIndex()I
+    .locals 7
 
-    const v9, 0xd1dbc2
+    move-object/from16 v1, p0
 
-    if-eq v8, v9, :cond_1
+    const/4 v0, -0x1
 
-    goto :goto_0
+    return v0
+.end method
 
-    :cond_1
-    invoke-direct {v6, v1, v2, v4}, Lcom/ejiaogl/tiktokhook/ld;-><init>(Lcom/ejiaogl/tiktokhook/bd;Lcom/ejiaogl/tiktokhook/j0;Lcom/ejiaogl/tiktokhook/x5;)V
+.method public final remove()V
+    .locals 8
 
-    iput-object v6, v0, Lcom/ejiaogl/tiktokhook/v5;->b:Lcom/ejiaogl/tiktokhook/ld;
+    move-object/from16 v2, p0
 
-    iget-object v6, v0, Lcom/ejiaogl/tiktokhook/e6;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    check-cast v6, Lcom/ejiaogl/tiktokhook/a6;
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v6}, Lcom/ejiaogl/tiktokhook/a6;->g()V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/u5;->MP:[I
+    throw v0
+.end method
 
-    const v9, 0x1
+.method public final bridge synthetic set(Ljava/lang/Object;)V
+    .locals 8
 
-    aget v9, v8, v9
+    move-object/from16 v1, p0
 
-    if-ltz v9, :cond_2
+    move-object/from16 v2, p1
 
-    const v8, 0x8aa3b9
+    new-instance v2, Ljava/lang/UnsupportedOperationException;
 
-    :goto_1
-    xor-int v8, v8, v9
+    const-string v0, "Operation is not supported for read-only collection"
 
-    rem-int v8, v9, v8
+    invoke-direct {v2, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v8, :cond_0
-
-    goto :goto_2
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    return-void
+    throw v2
 .end method

@@ -3,260 +3,461 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/ra;
+.implements Lcom/ejiaogl/tiktokhook/nf;
 
 
 # static fields
-.field private static dY:[I
+.field private static ee:[I
 
-.field private static dZ:[I
-
-.field public static final i:Lcom/ejiaogl/tiktokhook/oe;
+.field private static eg:[I
 
 
 # instance fields
-.field public a:I
+.field public b:Z
 
-.field public b:I
+.field public final c:I
 
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Landroid/os/Handler;
-
-.field public final f:Lcom/ejiaogl/tiktokhook/sa;
-
-.field public g:Lcom/ejiaogl/tiktokhook/i5;
-
-.field public h:Lcom/ejiaogl/tiktokhook/z;
+.field public final d:Lcom/ejiaogl/tiktokhook/p1;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
+    const v0, 0x4
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/oe;->dZ:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/oe;->eg:[I
 
-    const v0, 0x2
+    const v0, 0x3
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/oe;->dY:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/oe;->ee:[I
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/oe;
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/oe;-><init>()V
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/oe;->i:Lcom/ejiaogl/tiktokhook/oe;
+    nop
 
     return-void
 
     :array_0
     .array-data 4
-        0x5690455
-        0x49f77ef
+        0x8687d0
+        0x46cb2ea
+        0x48b0ed5
     .end array-data
 
     :array_1
     .array-data 4
-        0x1164237
+        0xc6d1de
+        0x51d17b9
+        0xbd8a
+        0x327133b
     .end array-data
 .end method
 
 .method public constructor <init>()V
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    .line 1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/ejiaogl/tiktokhook/p1;
+
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/p1;-><init>()V
+
+    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
+
+    const/4 v0, -0x1
+
+    iput v0, v1, Lcom/ejiaogl/tiktokhook/oe;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 8
 
-    move-object/from16 v2, p0
+    move-object/from16 v1, p0
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    move/from16 v2, p1
 
-    const/4 v0, 0x0
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iput v0, v2, Lcom/ejiaogl/tiktokhook/oe;->a:I
+    new-instance v0, Lcom/ejiaogl/tiktokhook/p1;
 
-    iput v0, v2, Lcom/ejiaogl/tiktokhook/oe;->b:I
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/p1;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
 
-    iput-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->c:Z
-
-    iput-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->d:Z
-
-    new-instance v0, Lcom/ejiaogl/tiktokhook/sa;
-
-    invoke-direct {v0, v2}, Lcom/ejiaogl/tiktokhook/sa;-><init>(Lcom/ejiaogl/tiktokhook/ra;)V
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->f:Lcom/ejiaogl/tiktokhook/sa;
-
-    new-instance v0, Lcom/ejiaogl/tiktokhook/i5;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v2, v1}, Lcom/ejiaogl/tiktokhook/i5;-><init>(Ljava/lang/Object;I)V
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->g:Lcom/ejiaogl/tiktokhook/i5;
-
-    new-instance v0, Lcom/ejiaogl/tiktokhook/z;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v2, v1}, Lcom/ejiaogl/tiktokhook/z;-><init>(Ljava/lang/Object;I)V
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->h:Lcom/ejiaogl/tiktokhook/z;
+    iput v2, v1, Lcom/ejiaogl/tiktokhook/oe;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 8
+.method public final a(Lcom/ejiaogl/tiktokhook/nf;)V
+    .locals 14
+
+    move-object/from16 v7, p0
+
+    move-object/from16 v8, p1
+
+    new-instance v6, Lcom/ejiaogl/tiktokhook/p1;
+
+    invoke-direct {v6}, Lcom/ejiaogl/tiktokhook/p1;-><init>()V
+
+    iget-object v0, v7, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
+
+    .line 1
+    iget-wide v4, v0, Lcom/ejiaogl/tiktokhook/p1;->c:J
+
+    const-wide/16 v2, 0x0
+
+    move-object v1, v6
+
+    .line 2
+    invoke-virtual/range {v0 .. v5}, Lcom/ejiaogl/tiktokhook/p1;->h(Lcom/ejiaogl/tiktokhook/p1;JJ)Lcom/ejiaogl/tiktokhook/p1;
+
+    .line 3
+    iget-wide v0, v6, Lcom/ejiaogl/tiktokhook/p1;->c:J
+
+    .line 4
+    invoke-interface {v8, v6, v0, v1}, Lcom/ejiaogl/tiktokhook/nf;->j(Lcom/ejiaogl/tiktokhook/p1;J)V
+
+    return-void
+.end method
+
+.method public final c()Lcom/ejiaogl/tiktokhook/bh;
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    sget-object v0, Lcom/ejiaogl/tiktokhook/bh;->d:Lcom/ejiaogl/tiktokhook/bh$a;
+
+    return-object v0
+.end method
+
+.method public final close()V
+    .locals 10
 
     :cond_0
-    move-object/from16 v2, p0
+    move-object/from16 v4, p0
 
-    iget v0, v2, Lcom/ejiaogl/tiktokhook/oe;->b:I
+    iget-boolean v0, v4, Lcom/ejiaogl/tiktokhook/oe;->b:Z
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_1
 
-    add-int/2addr v0, v1
+    return-void
 
-    iput v0, v2, Lcom/ejiaogl/tiktokhook/oe;->b:I
+    :cond_1
+    const/4 v0, 0x1
 
-    if-ne v0, v1, :cond_3
+    iput-boolean v0, v4, Lcom/ejiaogl/tiktokhook/oe;->b:Z
 
-    iget-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->c:Z
+    iget-object v0, v4, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
 
-    if-eqz v0, :cond_2
+    .line 1
+    iget-wide v0, v0, Lcom/ejiaogl/tiktokhook/p1;->c:J
 
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->f:Lcom/ejiaogl/tiktokhook/sa;
+    .line 2
+    iget v2, v4, Lcom/ejiaogl/tiktokhook/oe;->c:I
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_RESUME:Lcom/ejiaogl/tiktokhook/la;
+    int-to-long v2, v2
 
-    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/sa;->C(Lcom/ejiaogl/tiktokhook/la;)V
+    cmp-long v0, v0, v2
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/oe;->dY:[I
+    if-ltz v0, :cond_2
 
-    const v5, 0x0
+    return-void
 
-    aget v5, v4, v5
+    :cond_2
+    new-instance v0, Ljava/net/ProtocolException;
 
-    if-ltz v5, :cond_1
+    const-string v1, "content-length promised "
 
-    const v4, 0x5bf9996
+    .line 3
+    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/sf;->c(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 4
+    iget v2, v4, Lcom/ejiaogl/tiktokhook/oe;->c:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    sget-object v6, Lcom/ejiaogl/tiktokhook/oe;->ee:[I
+
+    const v7, 0x0
+
+    aget v7, v6, v7
+
+    if-ltz v7, :cond_3
+
+    const v6, 0x18577be
 
     :goto_0
-    xor-int v4, v4, v5
+    xor-int v6, v6, v7
 
-    and-int v4, v5, v4
+    rem-int v6, v7, v6
 
-    if-eqz v4, :cond_0
+    if-eqz v6, :cond_0
 
     goto :goto_1
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     :goto_1
-    const/4 v0, 0x0
+    const-string v2, " bytes, but received "
 
-    iput-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->c:Z
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_3
+    sget-object v6, Lcom/ejiaogl/tiktokhook/oe;->ee:[I
 
-    :cond_2
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->e:Landroid/os/Handler;
+    const v7, 0x1
 
-    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/oe;->g:Lcom/ejiaogl/tiktokhook/i5;
+    aget v7, v6, v7
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    if-ltz v7, :cond_4
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/oe;->dY:[I
-
-    const v5, 0x1
-
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_3
-
-    const v4, 0x4926e11
+    const v6, 0x21bef0
 
     :goto_2
-    xor-int v4, v4, v5
+    xor-int v6, v6, v7
 
-    rem-int v4, v5, v4
+    and-int v6, v7, v6
 
-    if-eqz v4, :cond_0
+    if-eqz v6, :cond_0
 
     goto :goto_3
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     :goto_3
+    iget-object v2, v4, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
+
+    .line 5
+    iget-wide v2, v2, Lcom/ejiaogl/tiktokhook/p1;->c:J
+
+    .line 6
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    sget-object v6, Lcom/ejiaogl/tiktokhook/oe;->ee:[I
+
+    const v7, 0x2
+
+    aget v7, v6, v7
+
+    if-ltz v7, :cond_5
+
+    :goto_4
+    const v6, 0xbedaca
+
+    xor-int v6, v6, v7
+
+    rem-int v6, v7, v6
+
+    const v7, 0x553ab6
+
+    if-eq v6, v7, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 6
+
+    move-object/from16 v0, p0
+
     return-void
 .end method
 
-.method public final b()V
-    .locals 8
+.method public final j(Lcom/ejiaogl/tiktokhook/p1;J)V
+    .locals 14
 
-    move-object/from16 v2, p0
+    move-object/from16 v5, p0
 
-    iget v0, v2, Lcom/ejiaogl/tiktokhook/oe;->a:I
+    move-object/from16 v6, p1
 
-    const/4 v1, 0x1
+    move-wide/from16 v7, p2
 
-    add-int/2addr v0, v1
+    iget-boolean v0, v5, Lcom/ejiaogl/tiktokhook/oe;->b:Z
 
-    iput v0, v2, Lcom/ejiaogl/tiktokhook/oe;->a:I
+    if-nez v0, :cond_6
 
-    if-ne v0, v1, :cond_1
+    .line 1
+    iget-wide v0, v6, Lcom/ejiaogl/tiktokhook/p1;->c:J
 
-    iget-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->d:Z
+    .line 2
+    invoke-static {v0, v1, v7, v8}, Lcom/ejiaogl/tiktokhook/di;->a(JJ)V
 
-    if-eqz v0, :cond_1
+    sget-object v10, Lcom/ejiaogl/tiktokhook/oe;->eg:[I
 
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/oe;->f:Lcom/ejiaogl/tiktokhook/sa;
+    const v11, 0x0
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/la;->ON_START:Lcom/ejiaogl/tiktokhook/la;
+    aget v11, v10, v11
 
-    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/sa;->C(Lcom/ejiaogl/tiktokhook/la;)V
-
-    sget-object v4, Lcom/ejiaogl/tiktokhook/oe;->dZ:[I
-
-    const v5, 0x0
-
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_0
+    if-ltz v11, :cond_0
 
     :goto_0
-    const v4, 0x300003f
+    const v10, 0xadfd20
 
-    xor-int v4, v4, v5
+    xor-int v10, v10, v11
 
-    rem-int v4, v5, v4
+    and-int v10, v11, v10
 
-    const v5, 0x1164237
-
-    if-eq v4, v5, :cond_0
+    if-gtz v10, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    iget v0, v5, Lcom/ejiaogl/tiktokhook/oe;->c:I
 
-    iput-boolean v0, v2, Lcom/ejiaogl/tiktokhook/oe;->d:Z
+    const/4 v1, -0x1
 
+    if-eq v0, v1, :cond_4
+
+    iget-object v1, v5, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
+
+    .line 3
+    iget-wide v1, v1, Lcom/ejiaogl/tiktokhook/p1;->c:J
+
+    int-to-long v3, v0
+
+    sub-long/2addr v3, v7
+
+    cmp-long v0, v1, v3
+
+    if-gtz v0, :cond_1
+
+    goto :goto_3
+
+    .line 4
     :cond_1
+    new-instance v6, Ljava/net/ProtocolException;
+
+    const-string v7, "exceeded content-length limit of "
+
+    .line 5
+    invoke-static {v7}, Lcom/ejiaogl/tiktokhook/sf;->c(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    .line 6
+    iget v8, v5, Lcom/ejiaogl/tiktokhook/oe;->c:I
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    sget-object v10, Lcom/ejiaogl/tiktokhook/oe;->eg:[I
+
+    const v11, 0x1
+
+    aget v11, v10, v11
+
+    if-ltz v11, :cond_2
+
+    const v10, 0x2e19fae
+
+    xor-int v10, v10, v11
+
+    and-int v10, v11, v10
+
+    const v11, 0x51c0011
+
+    if-ne v10, v11, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_1
+    const-string v8, " bytes"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v10, Lcom/ejiaogl/tiktokhook/oe;->eg:[I
+
+    const v11, 0x2
+
+    aget v11, v10, v11
+
+    if-ltz v11, :cond_3
+
+    :goto_2
+    const v10, 0xfe3426
+
+    xor-int v10, v10, v11
+
+    and-int v10, v11, v10
+
+    const v11, 0x8988
+
+    if-eq v10, v11, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v6, v7}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+
+    :cond_4
+    :goto_3
+    iget-object v0, v5, Lcom/ejiaogl/tiktokhook/oe;->d:Lcom/ejiaogl/tiktokhook/p1;
+
+    invoke-virtual {v0, v6, v7, v8}, Lcom/ejiaogl/tiktokhook/p1;->j(Lcom/ejiaogl/tiktokhook/p1;J)V
+
+    sget-object v10, Lcom/ejiaogl/tiktokhook/oe;->eg:[I
+
+    const v11, 0x3
+
+    aget v11, v10, v11
+
+    if-ltz v11, :cond_5
+
+    const v10, 0x1d2682a
+
+    xor-int v10, v10, v11
+
+    and-int v10, v11, v10
+
+    const v11, 0x2251311
+
+    if-ne v10, v11, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    :goto_4
     return-void
+
+    :cond_6
+    new-instance v6, Ljava/lang/IllegalStateException;
+
+    const-string v7, "closed"
+
+    invoke-direct {v6, v7}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v6
 .end method

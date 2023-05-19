@@ -12,20 +12,20 @@
     return-void
 .end method
 
-.method public static read(Lcom/ejiaogl/tiktokhook/ik;)Landroidx/core/app/RemoteActionCompat;
+.method public static read(Lcom/ejiaogl/tiktokhook/ii;)Landroidx/core/app/RemoteActionCompat;
     .locals 0
 
-    invoke-static {p0}, Landroidx/core/app/RemoteActionCompatParcelizer;->read(Lcom/ejiaogl/tiktokhook/ik;)Landroidx/core/app/RemoteActionCompat;
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompatParcelizer;->read(Lcom/ejiaogl/tiktokhook/ii;)Landroidx/core/app/RemoteActionCompat;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ik;)V
+.method public static write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ii;)V
     .locals 0
 
-    invoke-static {p0, p1}, Landroidx/core/app/RemoteActionCompatParcelizer;->write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ik;)V
+    invoke-static {p0, p1}, Landroidx/core/app/RemoteActionCompatParcelizer;->write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ii;)V
 
     return-void
 .end method

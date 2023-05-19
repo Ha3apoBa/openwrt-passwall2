@@ -1,53 +1,23 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/qk;
-.super Ljava/lang/Object;
+.class public final Lcom/ejiaogl/tiktokhook/qk;
+.super Lde/robv/android/xposed/XC_MethodReplacement;
 .source "SourceFile"
 
 
 # static fields
-.field private static Vf:[I
-
-.field private static Vg:[I
-
-.field private static Vh:[I
-
-.field private static Vi:[I
+.field private static afy:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_3
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qk;->Vi:[I
-
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qk;->Vh:[I
-
-    const v0, 0x1
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qk;->Vg:[I
-
-    const v0, 0x1
+    const v0, 0x3
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qk;->Vf:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/qk;->afy:[I
 
     nop
 
@@ -55,188 +25,40 @@
 
     :array_0
     .array-data 4
-        0x27a00a0
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x35b7572
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x4ca8008
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x24c23fc
+        0x1c3d067
+        0x2c5d8d1
+        0x2c38167
     .end array-data
 .end method
 
-.method public static a()I
-    .locals 6
-
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/View;)Landroid/view/Display;
+.method public constructor <init>()V
     .locals 6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
+    invoke-direct {v0}, Lde/robv/android/xposed/XC_MethodReplacement;-><init>()V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static c(Landroid/view/View;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getLabelFor()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/View;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static e(Landroid/view/View;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static f(Landroid/view/View;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static g(Landroid/view/View;)Z
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->isPaddingRelative()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static h(Landroid/view/View;I)V
-    .locals 7
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLabelFor(I)V
-
-    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->Vf:[I
-
-    const v4, 0x0
-
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_1
-
-    const v3, 0x14d321b
-
-    :goto_0
-    xor-int v3, v3, v4
-
-    and-int v3, v4, v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
     return-void
 .end method
 
-.method public static i(Landroid/view/View;Landroid/graphics/Paint;)V
+
+# virtual methods
+.method public final replaceHookedMethod(Lde/robv/android/xposed/XC_MethodHook$MethodHookParam;)Ljava/lang/Object;
     .locals 7
 
+    :cond_0
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayerPaint(Landroid/graphics/Paint;)V
+    :try_start_0
+    sget-boolean v1, Lcom/ejiaogl/tiktokhook/zk;->b:Z
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->Vg:[I
+    if-nez v1, :cond_2
 
-    const v4, 0x0
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/zk;->a()V
 
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_0
-
-    :goto_0
-    const v3, 0x1821b5d
-
-    xor-int v3, v3, v4
-
-    and-int v3, v4, v3
-
-    const v4, 0x2596422
-
-    if-eq v3, v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static j(Landroid/view/View;I)V
-    .locals 7
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutDirection(I)V
-
-    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->Vh:[I
+    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->afy:[I
 
     const v4, 0x0
 
@@ -244,12 +66,12 @@
 
     if-ltz v4, :cond_1
 
-    const v3, 0x13850e8
+    const v3, 0x1227739
 
     :goto_0
     xor-int v3, v3, v4
 
-    and-int v3, v4, v3
+    rem-int v3, v4, v3
 
     if-eqz v3, :cond_0
 
@@ -259,47 +81,70 @@
 
     :cond_1
     :goto_1
-    return-void
-.end method
+    goto :goto_4
 
-.method public static k(Landroid/view/View;IIII)V
-    .locals 10
+    :cond_2
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/zk;->b()V
 
-    :cond_0
-    move-object/from16 v0, p0
+    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->afy:[I
 
-    move/from16 v1, p1
+    const v4, 0x1
 
-    move/from16 v2, p2
+    aget v4, v3, v4
 
-    move/from16 v3, p3
+    if-ltz v4, :cond_3
 
-    move/from16 v4, p4
+    const v3, 0x36e4115
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPaddingRelative(IIII)V
+    :goto_2
+    xor-int v3, v3, v4
 
-    sget-object v6, Lcom/ejiaogl/tiktokhook/qk;->Vi:[I
+    rem-int v3, v4, v3
 
-    const v7, 0x0
+    if-eqz v3, :cond_0
 
-    aget v7, v6, v7
+    goto :goto_3
 
-    if-ltz v7, :cond_1
+    goto :goto_2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const v6, 0x582a31d
+    :cond_3
+    :goto_3
+    goto :goto_4
 
-    :goto_0
-    xor-int v6, v6, v7
+    :catch_0
+    move-exception v1
 
-    rem-int v6, v7, v6
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    if-eqz v6, :cond_0
+    move-result-object v1
 
-    goto :goto_1
+    invoke-static {v1}, Lcom/ejiaogl/tiktokhook/hook;->g(Ljava/lang/String;)V
 
-    goto :goto_0
+    sget-object v3, Lcom/ejiaogl/tiktokhook/qk;->afy:[I
 
-    :cond_1
-    :goto_1
-    return-void
+    const v4, 0x2
+
+    aget v4, v3, v4
+
+    if-ltz v4, :cond_4
+
+    const v3, 0x45e953f
+
+    xor-int v3, v3, v4
+
+    and-int v3, v4, v3
+
+    const v4, 0x2810040
+
+    if-ne v3, v4, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    :goto_4
+    const/4 v1, 0x0
+
+    return-object v1
 .end method

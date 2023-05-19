@@ -1,13 +1,15 @@
-.class public final Lcom/ejiaogl/tiktokhook/ng;
+.class public abstract Lcom/ejiaogl/tiktokhook/ng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/SearchView;
+.field public b:J
+
+.field public c:Lcom/ejiaogl/tiktokhook/og;
 
 
 # direct methods
@@ -19,39 +21,39 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 9
 
-    move-object/from16 v0, p0
+    move-object/from16 v3, p0
 
-    move-object/from16 v1, p1
+    sget-object v0, Lcom/ejiaogl/tiktokhook/rg;->f:Lcom/ejiaogl/tiktokhook/pg;
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/ng;->a:Landroidx/appcompat/widget/SearchView;
+    .line 1
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v3, Lcom/ejiaogl/tiktokhook/ng;->b:J
+
+    iput-object v0, v3, Lcom/ejiaogl/tiktokhook/ng;->c:Lcom/ejiaogl/tiktokhook/og;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
+.method public constructor <init>(JLcom/ejiaogl/tiktokhook/og;)V
     .locals 9
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    move-object/from16 v2, p1
+    move-wide/from16 v1, p1
 
-    move/from16 v3, p2
+    move-object/from16 v3, p3
 
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/ng;->a:Landroidx/appcompat/widget/SearchView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, v2, Landroidx/appcompat/widget/SearchView;->Q:Landroid/view/View$OnFocusChangeListener;
+    iput-wide v1, v0, Lcom/ejiaogl/tiktokhook/ng;->b:J
 
-    if-eqz v0, :cond_0
+    iput-object v3, v0, Lcom/ejiaogl/tiktokhook/ng;->c:Lcom/ejiaogl/tiktokhook/og;
 
-    invoke-interface {v0, v2, v3}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
-
-    :cond_0
     return-void
 .end method

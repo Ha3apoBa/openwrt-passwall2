@@ -1,9 +1,6 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/pa;
-.super Ljava/lang/Object;
+.class public Lcom/ejiaogl/tiktokhook/pa;
+.super Lcom/ejiaogl/tiktokhook/qa;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/qa;
 
 
 # direct methods
@@ -15,7 +12,24 @@
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 6
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/qa;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b(Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;)V
+.method public final k()Z
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

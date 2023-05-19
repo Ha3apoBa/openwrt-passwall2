@@ -1,191 +1,101 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/y3;
+.class public final synthetic Lcom/ejiaogl/tiktokhook/y3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
 
 # static fields
-.field public static final a:Ljava/util/List;
+.field private static hF:[I
 
-.field private static jV:[I
+
+# instance fields
+.field public final synthetic a:Lcom/ejiaogl/tiktokhook/x7;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x2
+    const v0, 0x1
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/y3;->jV:[I
-
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/a4;->c()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/dh;->z(Ljava/util/Iterator;)Lcom/ejiaogl/tiktokhook/ah;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/bh;->A(Lcom/ejiaogl/tiktokhook/ah;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/y3;->a:Ljava/util/List;
-
-    return-void
+    sput-object v0, Lcom/ejiaogl/tiktokhook/y3;->hF:[I
 
     nop
 
+    return-void
+
     :array_0
     .array-data 4
-        0x30a5cfb
-        0x23a2a4c
+        0x229630d
     .end array-data
 .end method
 
-.method public static final a(Ljava/lang/Throwable;)V
-    .locals 13
+.method public synthetic constructor <init>(Lcom/ejiaogl/tiktokhook/x7;)V
+    .locals 7
 
-    move-object/from16 v7, p0
+    move-object/from16 v0, p0
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/v6;->b:Lcom/ejiaogl/tiktokhook/v6;
+    move-object/from16 v1, p1
 
-    sget-object v1, Lcom/ejiaogl/tiktokhook/y3;->a:Ljava/util/List;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/y3;->a:Lcom/ejiaogl/tiktokhook/x7;
 
-    move-result-object v1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 9
+
+    :cond_0
+    move-object/from16 v1, p0
+
+    move-object/from16 v2, p1
+
+    move/from16 v3, p2
+
+    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/y3;->a:Lcom/ejiaogl/tiktokhook/x7;
+
+    const-string v0, "$block"
+
+    invoke-static {v2, v0}, Lcom/ejiaogl/tiktokhook/b4;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v5, Lcom/ejiaogl/tiktokhook/y3;->hF:[I
+
+    const v6, 0x0
+
+    aget v6, v5, v6
+
+    if-ltz v6, :cond_1
+
+    const v5, 0x10cf829
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    xor-int v5, v5, v6
 
-    move-result v2
+    rem-int v5, v6, v5
 
-    if-eqz v2, :cond_2
+    if-eqz v5, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/ejiaogl/tiktokhook/x3;
-
-    :try_start_0
-    invoke-interface {v2, v0, v7}, Lcom/ejiaogl/tiktokhook/x3;->handleException(Lcom/ejiaogl/tiktokhook/u3;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v2
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    :cond_1
+    :goto_1
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/Thread;->getUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-result-object v4
-
-    if-ne v7, v2, :cond_0
-
-    move-object v5, v7
-
-    goto :goto_1
-
-    .line 1
-    :cond_0
-    new-instance v5, Ljava/lang/RuntimeException;
-
-    const-string v6, "Exception while trying to handle coroutine exception"
-
-    invoke-direct {v5, v6, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {v5, v7}, Lcom/ejiaogl/tiktokhook/t0;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    sget-object v9, Lcom/ejiaogl/tiktokhook/y3;->jV:[I
-
-    const v10, 0x0
-
-    aget v10, v9, v10
-
-    if-ltz v10, :cond_1
-
-    const v9, 0x35ee382
-
-    xor-int v9, v9, v10
-
-    and-int v9, v10, v9
-
-    const v10, 0x1c79
-
-    if-ne v9, v10, :cond_1
-
-    goto :goto_1
-
-    .line 2
-    :cond_1
-    :goto_1
-    invoke-interface {v4, v3, v5}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    :try_start_1
-    sget-object v1, Lcom/ejiaogl/tiktokhook/wf;->b:Lcom/ejiaogl/tiktokhook/j0;
-
-    new-instance v1, Lcom/ejiaogl/tiktokhook/z4;
-
-    invoke-direct {v1}, Lcom/ejiaogl/tiktokhook/z4;-><init>()V
-
-    invoke-static {v7, v1}, Lcom/ejiaogl/tiktokhook/t0;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    sget-object v9, Lcom/ejiaogl/tiktokhook/y3;->jV:[I
-
-    const v10, 0x1
-
-    aget v10, v9, v10
-
-    if-ltz v10, :cond_3
-
-    const v9, 0x28797a7
-
-    xor-int v9, v9, v10
-
-    rem-int v9, v10, v9
-
-    const v10, 0xf08b
-
-    if-ne v9, v10, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_2
-    sget-object v1, Lcom/ejiaogl/tiktokhook/wf;->b:Lcom/ejiaogl/tiktokhook/j0;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_3
-
-    :catchall_1
-    sget-object v1, Lcom/ejiaogl/tiktokhook/wf;->b:Lcom/ejiaogl/tiktokhook/j0;
-
-    sget-object v1, Lcom/ejiaogl/tiktokhook/wf;->b:Lcom/ejiaogl/tiktokhook/j0;
-
-    :goto_3
-    invoke-virtual {v0}, Ljava/lang/Thread;->getUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0, v7}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v3}, Lcom/ejiaogl/tiktokhook/x7;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

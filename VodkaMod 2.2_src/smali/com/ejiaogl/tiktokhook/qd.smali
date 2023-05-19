@@ -1,141 +1,238 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/qd;
-.super Ljava/lang/Object;
+.class public final enum Lcom/ejiaogl/tiktokhook/qd;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/ejiaogl/tiktokhook/qd;",
+        ">;"
+    }
+.end annotation
 
-.field public static final b:Ljava/lang/String;
+
+# static fields
+.field public static final enum c:Lcom/ejiaogl/tiktokhook/qd;
+
+.field public static final enum d:Lcom/ejiaogl/tiktokhook/qd;
+
+.field public static final enum e:Lcom/ejiaogl/tiktokhook/qd;
+
+.field public static final enum f:Lcom/ejiaogl/tiktokhook/qd;
+
+.field public static final synthetic g:[Lcom/ejiaogl/tiktokhook/qd;
+
+
+# instance fields
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 10
 
-    .line 1
-    sget-object v0, Lcom/ejiaogl/tiktokhook/ce;->a:Lcom/ejiaogl/tiktokhook/ce;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/qd;
 
-    .line 2
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "HTTP_1_0"
 
-    const-string v0, "OkHttp-Sent-Millis"
+    const/4 v2, 0x0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qd;->a:Ljava/lang/String;
+    const-string v3, "http/1.0"
 
-    const-string v0, "OkHttp-Received-Millis"
+    invoke-direct {v0, v1, v2, v3}, Lcom/ejiaogl/tiktokhook/qd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/qd;->b:Ljava/lang/String;
+    sput-object v0, Lcom/ejiaogl/tiktokhook/qd;->c:Lcom/ejiaogl/tiktokhook/qd;
+
+    new-instance v1, Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v3, "HTTP_1_1"
+
+    const/4 v4, 0x1
+
+    const-string v5, "http/1.1"
+
+    invoke-direct {v1, v3, v4, v5}, Lcom/ejiaogl/tiktokhook/qd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lcom/ejiaogl/tiktokhook/qd;->d:Lcom/ejiaogl/tiktokhook/qd;
+
+    new-instance v3, Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v5, "SPDY_3"
+
+    const/4 v6, 0x2
+
+    const-string v7, "spdy/3.1"
+
+    invoke-direct {v3, v5, v6, v7}, Lcom/ejiaogl/tiktokhook/qd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lcom/ejiaogl/tiktokhook/qd;->e:Lcom/ejiaogl/tiktokhook/qd;
+
+    new-instance v5, Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v7, "HTTP_2"
+
+    const/4 v8, 0x3
+
+    const-string v9, "h2"
+
+    invoke-direct {v5, v7, v8, v9}, Lcom/ejiaogl/tiktokhook/qd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lcom/ejiaogl/tiktokhook/qd;->f:Lcom/ejiaogl/tiktokhook/qd;
+
+    const/4 v7, 0x4
+
+    new-array v7, v7, [Lcom/ejiaogl/tiktokhook/qd;
+
+    aput-object v0, v7, v2
+
+    aput-object v1, v7, v4
+
+    aput-object v3, v7, v6
+
+    aput-object v5, v7, v8
+
+    sput-object v7, Lcom/ejiaogl/tiktokhook/qd;->g:[Lcom/ejiaogl/tiktokhook/qd;
 
     return-void
 .end method
 
-.method public static a(Lcom/ejiaogl/tiktokhook/z;)J
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move-object/from16 v3, p3
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object v3, v0, Lcom/ejiaogl/tiktokhook/qd;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/qd;
     .locals 8
 
     move-object/from16 v2, p0
 
-    const-string v0, "Content-Length"
+    sget-object v0, Lcom/ejiaogl/tiktokhook/qd;->c:Lcom/ejiaogl/tiktokhook/qd;
 
-    invoke-virtual {v2, v0}, Lcom/ejiaogl/tiktokhook/z;->r(Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, "http/1.0"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/ejiaogl/tiktokhook/qd;->d:Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v1, "http/1.1"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return-object v0
+
+    :cond_1
+    sget-object v0, Lcom/ejiaogl/tiktokhook/qd;->f:Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v1, "h2"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return-object v0
+
+    :cond_2
+    sget-object v0, Lcom/ejiaogl/tiktokhook/qd;->e:Lcom/ejiaogl/tiktokhook/qd;
+
+    const-string v1, "spdy/3.1"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return-object v0
+
+    :cond_3
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Unexpected protocol: "
+
+    .line 1
+    invoke-static {v1, v2}, Lcom/ejiaogl/tiktokhook/sf;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-wide/16 v0, -0x1
+    .line 2
+    invoke-direct {v0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :goto_0
-    return-wide v0
+    throw v0
 .end method
 
-.method public static b(Ljava/lang/String;)Z
+.method public static valueOf(Ljava/lang/String;)Lcom/ejiaogl/tiktokhook/qd;
     .locals 7
 
     move-object/from16 v1, p0
 
-    const-string v0, "Connection"
+    const-class v0, Lcom/ejiaogl/tiktokhook/qd;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_0
+    check-cast v1, Lcom/ejiaogl/tiktokhook/qd;
 
-    const-string v0, "Keep-Alive"
+    return-object v1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+.method public static values()[Lcom/ejiaogl/tiktokhook/qd;
+    .locals 6
 
-    move-result v0
+    sget-object v0, Lcom/ejiaogl/tiktokhook/qd;->g:[Lcom/ejiaogl/tiktokhook/qd;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, [Lcom/ejiaogl/tiktokhook/qd;->clone()Ljava/lang/Object;
 
-    const-string v0, "Proxy-Authenticate"
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    check-cast v0, [Lcom/ejiaogl/tiktokhook/qd;
 
-    move-result v0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_0
 
-    const-string v0, "Proxy-Authorization"
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 7
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-object/from16 v1, p0
 
-    move-result v0
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/qd;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_0
-
-    const-string v0, "TE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Trailers"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Transfer-Encoding"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Upgrade"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    return v1
+    return-object v0
 .end method

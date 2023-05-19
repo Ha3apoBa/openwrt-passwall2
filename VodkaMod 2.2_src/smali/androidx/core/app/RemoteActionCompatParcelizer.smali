@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static read(Lcom/ejiaogl/tiktokhook/ik;)Landroidx/core/app/RemoteActionCompat;
+.method public static read(Lcom/ejiaogl/tiktokhook/ii;)Landroidx/core/app/RemoteActionCompat;
     .locals 3
 
     new-instance v0, Landroidx/core/app/RemoteActionCompat;
@@ -24,7 +24,7 @@
     const/4 v2, 0x1
 
     .line 1
-    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ik;->h(I)Z
+    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ii;->i(I)Z
 
     move-result v2
 
@@ -33,7 +33,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ik;->k()Lcom/ejiaogl/tiktokhook/kk;
+    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ii;->o()Lcom/ejiaogl/tiktokhook/ki;
 
     move-result-object v1
 
@@ -47,27 +47,51 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ik;->g(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
+    .line 3
+    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ii;->i(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ii;->h()Ljava/lang/CharSequence;
 
     move-result-object v1
 
+    .line 4
+    :goto_1
     iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
     iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
     const/4 v2, 0x3
 
-    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ik;->g(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
+    .line 5
+    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ii;->i(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ii;->h()Ljava/lang/CharSequence;
 
     move-result-object v1
 
+    .line 6
+    :goto_2
     iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
     iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
     const/4 v2, 0x4
 
-    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ik;->j(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ii;->m(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -79,27 +103,51 @@
 
     const/4 v2, 0x5
 
-    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ik;->f(ZI)Z
+    .line 7
+    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ii;->i(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ii;->f()Z
 
     move-result v1
 
+    .line 8
+    :goto_3
     iput-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
     iget-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     const/4 v2, 0x6
 
-    invoke-virtual {p0, v1, v2}, Lcom/ejiaogl/tiktokhook/ik;->f(ZI)Z
+    .line 9
+    invoke-virtual {p0, v2}, Lcom/ejiaogl/tiktokhook/ii;->i(I)Z
 
-    move-result p0
+    move-result v2
 
-    iput-boolean p0, v0, Landroidx/core/app/RemoteActionCompat;->f:Z
+    if-nez v2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/ejiaogl/tiktokhook/ii;->f()Z
+
+    move-result v1
+
+    .line 10
+    :goto_4
+    iput-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     return-object v0
 .end method
 
-.method public static write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ik;)V
-    .locals 4
+.method public static write(Landroidx/core/app/RemoteActionCompat;Lcom/ejiaogl/tiktokhook/ii;)V
+    .locals 2
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -108,9 +156,9 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ik;->l(I)V
+    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ii;->p(I)V
 
-    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ik;->q(Lcom/ejiaogl/tiktokhook/kk;)V
+    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ii;->y(Lcom/ejiaogl/tiktokhook/ki;)V
 
     .line 2
     iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
@@ -118,63 +166,45 @@
     const/4 v1, 0x2
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ik;->l(I)V
+    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ii;->p(I)V
 
-    move-object v1, p1
-
-    check-cast v1, Lcom/ejiaogl/tiktokhook/jk;
+    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ii;->s(Ljava/lang/CharSequence;)V
 
     .line 4
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/jk;->e:Landroid/os/Parcel;
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v2, v3}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
-
-    .line 5
     iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
+
+    .line 5
+    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ii;->p(I)V
+
+    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ii;->s(Ljava/lang/CharSequence;)V
 
     .line 6
-    invoke-virtual {p1, v2}, Lcom/ejiaogl/tiktokhook/ik;->l(I)V
-
-    .line 7
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/jk;->e:Landroid/os/Parcel;
-
-    invoke-static {v0, v2, v3}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
-
-    .line 8
     iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
-    const/4 v2, 0x4
+    const/4 v1, 0x4
 
-    invoke-virtual {p1, v0, v2}, Lcom/ejiaogl/tiktokhook/ik;->o(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/ejiaogl/tiktokhook/ii;->w(Landroid/os/Parcelable;I)V
 
     iget-boolean v0, p0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
-    const/4 v2, 0x5
+    const/4 v1, 0x5
 
-    .line 9
-    invoke-virtual {p1, v2}, Lcom/ejiaogl/tiktokhook/ik;->l(I)V
+    .line 7
+    invoke-virtual {p1, v1}, Lcom/ejiaogl/tiktokhook/ii;->p(I)V
 
-    .line 10
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/jk;->e:Landroid/os/Parcel;
+    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ii;->q(Z)V
 
-    invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 11
+    .line 8
     iget-boolean p0, p0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     const/4 v0, 0x6
 
-    .line 12
-    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ik;->l(I)V
+    .line 9
+    invoke-virtual {p1, v0}, Lcom/ejiaogl/tiktokhook/ii;->p(I)V
 
-    .line 13
-    iget-object p1, v1, Lcom/ejiaogl/tiktokhook/jk;->e:Landroid/os/Parcel;
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, p0}, Lcom/ejiaogl/tiktokhook/ii;->q(Z)V
 
     return-void
 .end method

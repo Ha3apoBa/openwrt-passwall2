@@ -1,9 +1,9 @@
 .class public final Lkotlinx/coroutines/android/AndroidExceptionPreHandler;
-.super Lcom/ejiaogl/tiktokhook/c;
+.super Lcom/ejiaogl/tiktokhook/d;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/x3;
+.implements Lcom/ejiaogl/tiktokhook/o3;
 
 
 # instance fields
@@ -14,9 +14,9 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/j0;->f:Lcom/ejiaogl/tiktokhook/j0;
+    sget-object v0, Lcom/ejiaogl/tiktokhook/o3$a;->b:Lcom/ejiaogl/tiktokhook/o3$a;
 
-    invoke-direct {p0, v0}, Lcom/ejiaogl/tiktokhook/c;-><init>(Lcom/ejiaogl/tiktokhook/t3;)V
+    invoke-direct {p0, v0}, Lcom/ejiaogl/tiktokhook/d;-><init>(Lcom/ejiaogl/tiktokhook/l3$b;)V
 
     iput-object p0, p0, Lkotlinx/coroutines/android/AndroidExceptionPreHandler;->_preHandler:Ljava/lang/Object;
 
@@ -88,7 +88,7 @@
 
 
 # virtual methods
-.method public handleException(Lcom/ejiaogl/tiktokhook/u3;Ljava/lang/Throwable;)V
+.method public handleException(Lcom/ejiaogl/tiktokhook/l3;Ljava/lang/Throwable;)V
     .locals 2
 
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I

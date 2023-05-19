@@ -2,29 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
 
 # static fields
-.field private static YK:[I
+.field private static ahE:[I
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Landroid/view/DisplayCutout;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x1
+    const v0, 0x2
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/u4;->YK:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/u4;->ahE:[I
 
     nop
 
@@ -32,86 +29,161 @@
 
     :array_0
     .array-data 4
-        0x94a9a9
+        0x4b46e1d
+        0x2583015
     .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 8
+.method public constructor <init>(Landroid/view/DisplayCutout;)V
+    .locals 7
 
-    move-object/from16 v2, p0
+    move-object/from16 v0, p0
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v1, p1
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/u4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/u4;->a:Landroid/view/DisplayCutout;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 9
 
-    move-object/from16 v3, p0
+    move-object/from16 v2, p0
 
-    move-object/from16 v4, p1
+    move-object/from16 v3, p1
 
-    new-instance v0, Ljava/lang/Thread;
+    if-ne v2, v3, :cond_0
 
-    invoke-direct {v0, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    return v3
 
-    new-array v4, v4, [Ljava/lang/Object;
+    :cond_0
+    if-eqz v3, :cond_2
 
-    iget-object v1, v3, Lcom/ejiaogl/tiktokhook/u4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-class v0, Lcom/ejiaogl/tiktokhook/u4;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    if-eq v0, v1, :cond_1
 
-    aput-object v1, v4, v2
+    goto :goto_0
 
-    const-string v1, "arch_disk_io_%d"
+    :cond_1
+    check-cast v3, Lcom/ejiaogl/tiktokhook/u4;
 
-    invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/u4;->a:Landroid/view/DisplayCutout;
 
-    move-result-object v4
+    iget-object v3, v3, Lcom/ejiaogl/tiktokhook/u4;->a:Landroid/view/DisplayCutout;
 
-    invoke-virtual {v0, v4}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/ejiaogl/tiktokhook/lc;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v6, Lcom/ejiaogl/tiktokhook/u4;->YK:[I
+    move-result v3
 
-    const v7, 0x0
+    return v3
 
-    aget v7, v6, v7
-
-    if-ltz v7, :cond_0
-
+    :cond_2
     :goto_0
-    const v6, 0x21c7c23
+    const/4 v3, 0x0
 
-    xor-int v6, v6, v7
+    return v3
+.end method
 
-    rem-int v6, v7, v6
+.method public final hashCode()I
+    .locals 7
 
-    if-gtz v6, :cond_0
+    move-object/from16 v1, p0
+
+    iget-object v0, v1, Lcom/ejiaogl/tiktokhook/u4;->a:Landroid/view/DisplayCutout;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
+    invoke-virtual {v0}, Landroid/view/DisplayCutout;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 8
+
+    move-object/from16 v2, p0
+
+    const-string v0, "DisplayCutoutCompat{"
+
+    .line 1
+    invoke-static {v0}, Lcom/ejiaogl/tiktokhook/sf;->c(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, v2, Lcom/ejiaogl/tiktokhook/u4;->a:Landroid/view/DisplayCutout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/u4;->ahE:[I
+
+    const v5, 0x0
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_0
+
+    :goto_0
+    const v4, 0x8996ce
+
+    xor-int v4, v4, v5
+
+    and-int v4, v5, v4
+
+    if-gtz v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Lcom/ejiaogl/tiktokhook/u4;->ahE:[I
+
+    const v5, 0x1
+
+    aget v5, v4, v5
+
+    if-ltz v5, :cond_1
+
+    const v4, 0x1f39bfe
+
+    xor-int v4, v4, v5
+
+    and-int v4, v5, v4
+
+    const v5, 0x2082001    # 1.0000887E-37f
+
+    if-ne v4, v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

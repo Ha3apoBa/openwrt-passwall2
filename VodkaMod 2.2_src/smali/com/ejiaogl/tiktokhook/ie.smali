@@ -1,137 +1,68 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/ie;
+.class public final Lcom/ejiaogl/tiktokhook/ie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field private static HQ:[I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ejiaogl/tiktokhook/ie$a;,
+        Lcom/ejiaogl/tiktokhook/ie$d;,
+        Lcom/ejiaogl/tiktokhook/ie$b;,
+        Lcom/ejiaogl/tiktokhook/ie$c;
+    }
+.end annotation
 
-.field private static HR:[I
+
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal<",
+            "Landroid/util/TypedValue;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final b:Ljava/util/WeakHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/WeakHashMap<",
+            "Lcom/ejiaogl/tiktokhook/ie$c;",
+            "Landroid/util/SparseArray<",
+            "Lcom/ejiaogl/tiktokhook/ie$b;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field public static final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
-    const v0, 0x1
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    new-array v0, v0, [I
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    fill-array-data v0, :array_1
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ie;->a:Ljava/lang/ThreadLocal;
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ie;->HR:[I
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    const v0, 0x1
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
 
-    fill-array-data v0, :array_0
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ie;->b:Ljava/util/WeakHashMap;
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/ie;->HQ:[I
+    new-instance v0, Ljava/lang/Object;
 
-    nop
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    sput-object v0, Lcom/ejiaogl/tiktokhook/ie;->c:Ljava/lang/Object;
 
-    :array_0
-    .array-data 4
-        0x109c102
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3c72fb0
-    .end array-data
-.end method
-
-.method public static a(Landroid/widget/PopupWindow;)Z
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getOverlapAnchor()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/widget/PopupWindow;)I
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getWindowLayoutType()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static c(Landroid/widget/PopupWindow;Z)V
-    .locals 7
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
-
-    sget-object v3, Lcom/ejiaogl/tiktokhook/ie;->HQ:[I
-
-    const v4, 0x0
-
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_1
-
-    const v3, 0x4e46170
-
-    :goto_0
-    xor-int v3, v3, v4
-
-    rem-int v3, v4, v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public static d(Landroid/widget/PopupWindow;I)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
-
-    sget-object v3, Lcom/ejiaogl/tiktokhook/ie;->HR:[I
-
-    const v4, 0x0
-
-    aget v4, v3, v4
-
-    if-ltz v4, :cond_0
-
-    :goto_0
-    const v3, 0x8f011
-
-    xor-int v3, v3, v4
-
-    and-int v3, v4, v3
-
-    if-gtz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

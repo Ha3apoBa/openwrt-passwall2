@@ -1,30 +1,30 @@
-.class public final Lcom/ejiaogl/tiktokhook/dc;
+.class public abstract Lcom/ejiaogl/tiktokhook/dc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field private static vO:[I
+.field private static nF:[I
 
 
 # instance fields
-.field public final synthetic e:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x5
+    const v0, 0x4
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/dc;->nF:[I
 
     nop
 
@@ -32,206 +32,164 @@
 
     :array_0
     .array-data 4
-        0x5473664
-        0x25b96f1
-        0x49462ac
-        0x5390b7f
-        0x5cae98b
+        0x268a70e
+        0x53b525b
+        0x1e8be82
+        0x46d2512
     .end array-data
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 7
+.method public varargs constructor <init>(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 8
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/dc;->e:Ljava/lang/String;
+    move-object/from16 v2, p2
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/dc;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 12
+.method public abstract a()V
+.end method
 
-    move-object/from16 v1, p0
+.method public final run()V
+    .locals 9
 
-    move-object/from16 v2, p1
+    move-object/from16 v3, p0
 
-    move-object/from16 v3, p2
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move/from16 v4, p3
+    move-result-object v0
 
-    move-wide/from16 v5, p4
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
-    iget-object v2, v1, Lcom/ejiaogl/tiktokhook/dc;->e:Ljava/lang/String;
+    move-result-object v0
 
-    sget-object v3, Lcom/ejiaogl/tiktokhook/t0;->g:[Ljava/lang/String;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    aget-object v3, v3, v4
+    move-result-object v1
 
-    :try_start_0
-    invoke-static {}, Lcom/ejiaogl/tiktokhook/t0;->n()Lorg/json/JSONObject;
+    iget-object v2, v3, Lcom/ejiaogl/tiktokhook/dc;->b:Ljava/lang/String;
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    new-instance v5, Ljava/io/FileOutputStream;
+    sget-object v5, Lcom/ejiaogl/tiktokhook/dc;->nF:[I
 
-    new-instance v6, Ljava/io/File;
+    const v6, 0x0
 
-    sget-object v0, Lcom/ejiaogl/tiktokhook/t0;->e:Ljava/lang/String;
+    aget v6, v5, v6
 
-    invoke-direct {v6, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    if-ltz v6, :cond_0
 
-    invoke-direct {v5, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    const v5, 0x5bcc898
 
-    invoke-virtual {v4, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    xor-int v5, v5, v6
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
+    and-int v5, v6, v5
 
-    const v9, 0x0
+    const v6, 0x2402706
 
-    aget v9, v8, v9
-
-    if-ltz v9, :cond_0
-
-    :goto_0
-    const v8, 0x4986a47
-
-    xor-int v8, v8, v9
-
-    rem-int v8, v9, v8
-
-    if-gtz v8, :cond_0
+    if-ne v5, v6, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v4}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    :goto_0
+    :try_start_0
+    invoke-virtual {v3}, Lcom/ejiaogl/tiktokhook/dc;->a()V
 
-    move-result-object v2
+    sget-object v5, Lcom/ejiaogl/tiktokhook/dc;->nF:[I
 
-    sget-object v3, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    const v6, 0x1
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    aget v6, v5, v6
 
-    move-result-object v2
-
-    invoke-virtual {v5, v2}, Ljava/io/FileOutputStream;->write([B)V
-
-    sget-object v8, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
-
-    const v9, 0x1
-
-    aget v9, v8, v9
-
-    if-ltz v9, :cond_1
+    if-ltz v6, :cond_1
 
     :goto_1
-    const v8, 0x25b3f35
+    const v5, 0x1aaabf8
 
-    xor-int v8, v8, v9
+    xor-int v5, v5, v6
 
-    and-int v8, v9, v8
+    rem-int v5, v6, v5
 
-    const v9, 0x80c0
-
-    if-eq v8, v9, :cond_1
+    if-gtz v5, :cond_1
 
     goto :goto_1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_1
-    invoke-virtual {v5}, Ljava/io/OutputStream;->flush()V
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
+    move-result-object v1
 
-    const v9, 0x2
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    aget v9, v8, v9
+    sget-object v5, Lcom/ejiaogl/tiktokhook/dc;->nF:[I
 
-    if-ltz v9, :cond_2
+    const v6, 0x2
 
-    const v8, 0x335fc4e
+    aget v6, v5, v6
 
-    xor-int v8, v8, v9
+    if-ltz v6, :cond_2
 
-    rem-int v8, v9, v8
+    :goto_2
+    const v5, 0x1dcc160
 
-    const v9, 0x49462ac
+    xor-int v5, v5, v6
 
-    if-ne v8, v9, :cond_2
+    rem-int v5, v6, v5
+
+    if-gtz v5, :cond_2
 
     goto :goto_2
 
     :cond_2
-    :goto_2
-    invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
+    return-void
 
-    sget-object v8, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
+    :catchall_0
+    move-exception v1
 
-    const v9, 0x3
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    aget v9, v8, v9
+    move-result-object v2
 
-    if-ltz v9, :cond_3
+    invoke-virtual {v2, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    sget-object v5, Lcom/ejiaogl/tiktokhook/dc;->nF:[I
+
+    const v6, 0x3
+
+    aget v6, v5, v6
+
+    if-ltz v6, :cond_3
 
     :goto_3
-    const v8, 0x540c885
+    const v5, 0x25a223e
 
-    xor-int v8, v8, v9
+    xor-int v5, v5, v6
 
-    and-int v8, v9, v8
+    and-int v5, v6, v5
 
-    if-gtz v8, :cond_3
+    const v6, 0x4250500
+
+    if-eq v5, v6, :cond_3
 
     goto :goto_3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_3
-    goto :goto_4
-
-    :catch_0
-    move-exception v2
-
-    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
-
-    sget-object v8, Lcom/ejiaogl/tiktokhook/dc;->vO:[I
-
-    const v9, 0x4
-
-    aget v9, v8, v9
-
-    if-ltz v9, :cond_4
-
-    const v8, 0x5da4b2
-
-    xor-int v8, v8, v9
-
-    rem-int v8, v9, v8
-
-    const v9, 0x339c52
-
-    if-ne v8, v9, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    :goto_4
-    return-void
-.end method
-
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    return-void
+    throw v1
 .end method

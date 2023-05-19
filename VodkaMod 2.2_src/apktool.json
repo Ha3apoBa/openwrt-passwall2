@@ -1,8 +1,8 @@
 {
-  "apkFileName": "VodkaMod 2.2_src.apk",
+  "apkFileName": "TikTok小能手_v1.5(2035)_src.apk",
   "VersionInfo": {
-    "versionName": "2.2",
-    "versionCode": "1"
+    "versionName": "1.5",
+    "versionCode": "2035"
   },
   "UsesFramework": {
     "ids": [1],
@@ -18,10 +18,10 @@
   },
   "doNotCompress": [
     "resources.arsc",
+    "png",
     "jpg",
     "assets/dexopt/baseline.prof",
-    "assets/dexopt/baseline.profm",
-    "png"
+    "assets/dexopt/baseline.profm"
   ],
   "isFrameworkApk": false,
   "compressionType": false,

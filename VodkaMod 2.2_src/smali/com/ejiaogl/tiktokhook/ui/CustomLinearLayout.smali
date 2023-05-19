@@ -25,7 +25,7 @@
 
     const-string v0, "context"
 
-    invoke-static {v4, v0}, Lcom/ejiaogl/tiktokhook/t0;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/ejiaogl/tiktokhook/b4;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, v4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
@@ -61,19 +61,19 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/t0;->f(Landroid/content/Context;)I
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/b4;->m(Landroid/content/Context;)I
 
     move-result v5
 
-    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/t0;->f(Landroid/content/Context;)I
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/b4;->m(Landroid/content/Context;)I
 
     move-result v6
 
-    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/t0;->f(Landroid/content/Context;)I
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/b4;->m(Landroid/content/Context;)I
 
     move-result v0
 
-    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/t0;->f(Landroid/content/Context;)I
+    invoke-static {v4}, Lcom/ejiaogl/tiktokhook/b4;->m(Landroid/content/Context;)I
 
     move-result v4
 
@@ -82,7 +82,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;ZZILcom/ejiaogl/tiktokhook/l4;)V
+.method public synthetic constructor <init>(Landroid/content/Context;ZZILcom/ejiaogl/tiktokhook/e4;)V
     .locals 12
 
     move-object/from16 v1, p0

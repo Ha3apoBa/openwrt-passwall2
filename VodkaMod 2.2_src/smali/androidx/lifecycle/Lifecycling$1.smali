@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/pa;
+.implements Landroidx/lifecycle/e;
 
 
 # virtual methods
-.method public final b(Lcom/ejiaogl/tiktokhook/ra;Lcom/ejiaogl/tiktokhook/la;)V
+.method public final f(Lcom/ejiaogl/tiktokhook/ha;Landroidx/lifecycle/d$b;)V
     .locals 0
 
     const/4 p1, 0x0

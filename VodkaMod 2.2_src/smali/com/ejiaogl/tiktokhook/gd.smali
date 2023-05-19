@@ -1,31 +1,17 @@
 .class public final Lcom/ejiaogl/tiktokhook/gd;
-.super Lcom/ejiaogl/tiktokhook/ig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lcom/ejiaogl/tiktokhook/gd;
+# instance fields
+.field public a:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/gd;
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/gd;-><init>()V
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/gd;->a:Lcom/ejiaogl/tiktokhook/gd;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 6
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/ig;-><init>()V
+    nop
 
     return-void
 .end method

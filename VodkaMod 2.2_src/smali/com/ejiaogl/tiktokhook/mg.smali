@@ -1,143 +1,120 @@
-.class public final Lcom/ejiaogl/tiktokhook/mg;
+.class public Lcom/ejiaogl/tiktokhook/mg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field private static NC:[I
-
 
 # instance fields
-.field public final synthetic b:I
+.field public a:I
 
-.field public final synthetic c:Landroidx/appcompat/widget/SearchView;
+.field public b:Ljava/nio/ByteBuffer;
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const v0, 0x2
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcom/ejiaogl/tiktokhook/mg;->NC:[I
-
     nop
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x107fb53
-        0x5598a34
-    .end array-data
 .end method
 
-.method public synthetic constructor <init>(Landroidx/appcompat/widget/SearchView;I)V
-    .locals 8
+.method public constructor <init>()V
+    .locals 7
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v1, p1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    move/from16 v2, p2
+    sget-object v0, Lcom/ejiaogl/tiktokhook/b4;->m:Lcom/ejiaogl/tiktokhook/b4;
 
-    iput v2, v0, Lcom/ejiaogl/tiktokhook/mg;->b:I
+    if-nez v0, :cond_0
 
-    iput-object v1, v0, Lcom/ejiaogl/tiktokhook/mg;->c:Landroidx/appcompat/widget/SearchView;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/b4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/b4;-><init>()V
 
+    sput-object v0, Lcom/ejiaogl/tiktokhook/b4;->m:Lcom/ejiaogl/tiktokhook/b4;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(I)I
+    .locals 9
 
     move-object/from16 v2, p0
 
-    iget v0, v2, Lcom/ejiaogl/tiktokhook/mg;->b:I
+    move/from16 v3, p1
 
-    packed-switch v0, :pswitch_data_0
+    iget v0, v2, Lcom/ejiaogl/tiktokhook/mg;->d:I
 
-    goto :goto_1
+    if-ge v3, v0, :cond_0
 
-    .line 1
-    :pswitch_0
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/mg;->c:Landroidx/appcompat/widget/SearchView;
+    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/mg;->b:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->r()V
+    iget v1, v2, Lcom/ejiaogl/tiktokhook/mg;->c:I
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/mg;->NC:[I
+    add-int/2addr v1, v3
 
-    const v5, 0x0
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_0
-
-    const v4, 0x46c24b0
-
-    xor-int v4, v4, v5
-
-    rem-int v4, v5, v4
-
-    const v5, 0x107fb53
-
-    if-ne v4, v5, :cond_0
+    move-result v3
 
     goto :goto_0
 
     :cond_0
+    const/4 v3, 0x0
+
     :goto_0
-    return-void
+    return v3
+.end method
 
-    .line 2
-    :goto_1
-    iget-object v0, v2, Lcom/ejiaogl/tiktokhook/mg;->c:Landroidx/appcompat/widget/SearchView;
+.method public final b(ILjava/nio/ByteBuffer;)V
+    .locals 8
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->V:Lcom/ejiaogl/tiktokhook/d4;
+    move-object/from16 v0, p0
 
-    instance-of v1, v0, Lcom/ejiaogl/tiktokhook/xh;
+    move/from16 v1, p1
 
-    if-eqz v1, :cond_1
+    move-object/from16 v2, p2
 
+    iput-object v2, v0, Lcom/ejiaogl/tiktokhook/mg;->b:Ljava/nio/ByteBuffer;
+
+    if-eqz v2, :cond_0
+
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/mg;->a:I
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/mg;->c:I
+
+    iget-object v2, v0, Lcom/ejiaogl/tiktokhook/mg;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/d4;->b(Landroid/database/Cursor;)V
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/mg;->a:I
 
-    sget-object v4, Lcom/ejiaogl/tiktokhook/mg;->NC:[I
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/mg;->c:I
 
-    const v5, 0x1
+    :goto_0
+    iput v1, v0, Lcom/ejiaogl/tiktokhook/mg;->d:I
 
-    aget v5, v4, v5
-
-    if-ltz v5, :cond_1
-
-    :goto_2
-    const v4, 0x3ce86
-
-    xor-int v4, v4, v5
-
-    and-int v4, v5, v4
-
-    if-gtz v4, :cond_1
-
-    goto :goto_2
-
-    :cond_1
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

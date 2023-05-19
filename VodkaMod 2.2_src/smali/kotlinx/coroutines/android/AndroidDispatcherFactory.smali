@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/ejiaogl/tiktokhook/ob;
+.implements Lcom/ejiaogl/tiktokhook/za;
 
 
 # direct methods
@@ -17,16 +17,16 @@
 
 
 # virtual methods
-.method public createDispatcher(Ljava/util/List;)Lcom/ejiaogl/tiktokhook/nb;
+.method public createDispatcher(Ljava/util/List;)Lcom/ejiaogl/tiktokhook/ya;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/ejiaogl/tiktokhook/ob;",
+            "Lcom/ejiaogl/tiktokhook/za;",
             ">;)",
-            "Lcom/ejiaogl/tiktokhook/nb;"
+            "Lcom/ejiaogl/tiktokhook/ya;"
         }
     .end annotation
 
@@ -36,9 +36,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/ejiaogl/tiktokhook/v8;
+    new-instance v0, Lcom/ejiaogl/tiktokhook/l8;
 
-    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/w8;->a(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/ejiaogl/tiktokhook/n8;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -47,7 +47,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {v0, p1, v1, v2}, Lcom/ejiaogl/tiktokhook/v8;-><init>(Landroid/os/Handler;Ljava/lang/String;Z)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/ejiaogl/tiktokhook/l8;-><init>(Landroid/os/Handler;Ljava/lang/String;Z)V
 
     return-object v0
 

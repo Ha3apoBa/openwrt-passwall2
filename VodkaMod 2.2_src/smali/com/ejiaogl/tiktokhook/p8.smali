@@ -14,5 +14,12 @@
 
 
 # virtual methods
-.method public abstract a()V
+.method public b()Lcom/ejiaogl/tiktokhook/t3;
+    .locals 7
+
+    move-object/from16 v1, p0
+
+    sget-object v0, Lcom/ejiaogl/tiktokhook/t3$a;->b:Lcom/ejiaogl/tiktokhook/t3$a;
+
+    return-object v0
 .end method

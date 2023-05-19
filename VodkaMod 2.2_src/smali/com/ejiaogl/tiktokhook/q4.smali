@@ -1,199 +1,194 @@
 .class public final Lcom/ejiaogl/tiktokhook/q4;
-.super Ljava/lang/Object;
+.super Lcom/ejiaogl/tiktokhook/df;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/ejiaogl/tiktokhook/x5;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/ejiaogl/tiktokhook/df<",
+        "TT;>;"
+    }
+.end annotation
 
 
 # static fields
-.field private static KA:[I
+.field private static aav:[I
 
-.field public static final b:Ljava/lang/ThreadLocal;
+.field private static aaw:[I
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field private volatile synthetic _decision:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const v0, 0x3
+    const v0, 0x1
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q4;->aav:[I
+
+    const v0, 0x1
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/q4;->KA:[I
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q4;->aaw:[I
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    const-class v0, Lcom/ejiaogl/tiktokhook/q4;
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    const-string v1, "_decision"
 
-    sput-object v0, Lcom/ejiaogl/tiktokhook/q4;->b:Ljava/lang/ThreadLocal;
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/q4;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
-        0x20ca9f4
-        0x215dfe5
-        0x5b85049
+        0xc13bb3
     .end array-data
-.end method
 
-.method public constructor <init>()V
-    .locals 8
-
-    move-object/from16 v2, p0
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/text/TextPaint;
-
-    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
-
-    iput-object v0, v2, Lcom/ejiaogl/tiktokhook/q4;->a:Landroid/text/TextPaint;
-
-    const/high16 v1, 0x41200000    # 10.0f
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    return-void
+    :array_1
+    .array-data 4
+        0x12782fd
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;II)Z
-    .locals 11
+.method public final C(Ljava/lang/Object;)V
+    .locals 10
 
-    :cond_0
-    move-object/from16 v2, p0
+    move-object/from16 v3, p0
 
-    move-object/from16 v3, p1
-
-    move/from16 v4, p2
-
-    move/from16 v5, p3
+    move-object/from16 v4, p1
 
     .line 1
-    sget-object v0, Lcom/ejiaogl/tiktokhook/q4;->b:Ljava/lang/ThreadLocal;
+    :cond_0
+    iget v4, v3, Lcom/ejiaogl/tiktokhook/q4;->_decision:I
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    if-nez v1, :cond_1
+    if-eqz v4, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q4;->KA:[I
-
-    const v8, 0x0
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_1
-
-    const v7, 0x169098c
-
-    xor-int v7, v7, v8
-
-    and-int v7, v8, v7
-
-    const v8, 0x204a070
-
-    if-ne v7, v8, :cond_1
+    if-ne v4, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    new-instance v4, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Already resumed"
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/StringBuilder;
+    invoke-direct {v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    throw v4
+
+    :cond_2
+    sget-object v4, Lcom/ejiaogl/tiktokhook/q4;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v4, v3, v0, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_3
+
+    return-void
 
     .line 2
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
+    :cond_3
+    invoke-static {}, Lcom/ejiaogl/tiktokhook/b4;->u()Lcom/ejiaogl/tiktokhook/h3;
 
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q4;->KA:[I
+    sget-object v6, Lcom/ejiaogl/tiktokhook/q4;->aav:[I
 
-    const v8, 0x1
+    const v7, 0x0
 
-    aget v8, v7, v8
+    aget v7, v6, v7
 
-    if-ltz v8, :cond_2
+    if-ltz v7, :cond_4
 
-    const v7, 0x309350a
+    const v6, 0x3be1bcc
 
-    :goto_1
-    xor-int v7, v7, v8
+    xor-int v6, v6, v7
 
-    and-int v7, v8, v7
+    rem-int v6, v7, v6
 
-    if-eqz v7, :cond_0
+    const v7, 0x12782fd
 
-    goto :goto_2
+    if-ne v6, v7, :cond_4
 
     goto :goto_1
 
-    :cond_2
-    :goto_2
-    if-ge v4, v5, :cond_4
-
-    invoke-interface {v3, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    sget-object v7, Lcom/ejiaogl/tiktokhook/q4;->KA:[I
-
-    const v8, 0x2
-
-    aget v8, v7, v8
-
-    if-ltz v8, :cond_3
-
-    :goto_3
-    const v7, 0x403bbc1
-
-    xor-int v7, v7, v8
-
-    and-int v7, v8, v7
-
-    if-gtz v7, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
     :cond_4
-    iget-object v3, v2, Lcom/ejiaogl/tiktokhook/q4;->a:Landroid/text/TextPaint;
+    :goto_1
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
+.end method
 
-    move-result-object v4
+.method public final e(Ljava/lang/Object;)V
+    .locals 7
 
-    sget v5, Lcom/ejiaogl/tiktokhook/yd;->a:I
+    :cond_0
+    move-object/from16 v0, p0
 
-    .line 3
-    invoke-static {v3, v4}, Lcom/ejiaogl/tiktokhook/xd;->a(Landroid/graphics/Paint;Ljava/lang/String;)Z
+    move-object/from16 v1, p1
 
-    move-result v3
+    invoke-virtual {v0, v1}, Lcom/ejiaogl/tiktokhook/q4;->C(Ljava/lang/Object;)V
 
-    return v3
+    sget-object v3, Lcom/ejiaogl/tiktokhook/q4;->aaw:[I
+
+    const v4, 0x0
+
+    aget v4, v3, v4
+
+    if-ltz v4, :cond_1
+
+    const v3, 0x421b091
+
+    :goto_0
+    xor-int v3, v3, v4
+
+    rem-int v3, v4, v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method

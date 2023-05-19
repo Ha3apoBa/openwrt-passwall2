@@ -1,6 +1,41 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/p7;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/p7;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<P1:",
+        "Ljava/lang/Object;",
+        "P2:",
+        "Ljava/lang/Object;",
+        "P3:",
+        "Ljava/lang/Object;",
+        "P4:",
+        "Ljava/lang/Object;",
+        "P5:",
+        "Ljava/lang/Object;",
+        "P6:",
+        "Ljava/lang/Object;",
+        "P7:",
+        "Ljava/lang/Object;",
+        "P8:",
+        "Ljava/lang/Object;",
+        "P9:",
+        "Ljava/lang/Object;",
+        "P10:",
+        "Ljava/lang/Object;",
+        "P11:",
+        "Ljava/lang/Object;",
+        "P12:",
+        "Ljava/lang/Object;",
+        "R:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # direct methods
@@ -10,18 +45,4 @@
     nop
 
     return-void
-.end method
-
-.method public static a(Landroid/content/res/TypedArray;I)I
-    .locals 7
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getType(I)I
-
-    move-result v0
-
-    return v0
 .end method

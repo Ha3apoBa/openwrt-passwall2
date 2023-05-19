@@ -1,4 +1,4 @@
-.class public abstract Lcom/ejiaogl/tiktokhook/za;
+.class public interface abstract Lcom/ejiaogl/tiktokhook/za;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -12,20 +12,23 @@
     return-void
 .end method
 
-.method public static a(Landroid/widget/PopupWindow;Landroid/view/View;IZ)I
-    .locals 9
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public abstract createDispatcher(Ljava/util/List;)Lcom/ejiaogl/tiktokhook/ya;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/ejiaogl/tiktokhook/za;",
+            ">;)",
+            "Lcom/ejiaogl/tiktokhook/ya;"
+        }
+    .end annotation
+.end method
 
-    move-object/from16 v1, p1
+.method public abstract getLoadPriority()I
+.end method
 
-    move/from16 v2, p2
-
-    move/from16 v3, p3
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/widget/PopupWindow;->getMaxAvailableHeight(Landroid/view/View;IZ)I
-
-    move-result v0
-
-    return v0
+.method public abstract hintOnError()Ljava/lang/String;
 .end method

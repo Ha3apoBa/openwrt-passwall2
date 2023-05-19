@@ -2,86 +2,135 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/ejiaogl/tiktokhook/l3$a;
+.implements Lcom/ejiaogl/tiktokhook/l3$b;
 
-# instance fields
-.field public final a:Landroid/widget/TextView;
 
-.field public final b:Landroid/widget/TextView;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/ejiaogl/tiktokhook/l3$a;",
+        "Lcom/ejiaogl/tiktokhook/l3$b<",
+        "Lcom/ejiaogl/tiktokhook/wh;",
+        ">;"
+    }
+.end annotation
 
-.field public final c:Landroid/widget/ImageView;
 
-.field public final d:Landroid/widget/ImageView;
-
-.field public final e:Landroid/widget/ImageView;
+# static fields
+.field public static final b:Lcom/ejiaogl/tiktokhook/wh;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    nop
+    new-instance v0, Lcom/ejiaogl/tiktokhook/wh;
+
+    invoke-direct {v0}, Lcom/ejiaogl/tiktokhook/wh;-><init>()V
+
+    sput-object v0, Lcom/ejiaogl/tiktokhook/wh;->b:Lcom/ejiaogl/tiktokhook/wh;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 8
+.method public constructor <init>()V
+    .locals 6
 
-    move-object/from16 v1, p0
+    move-object/from16 v0, p0
 
-    move-object/from16 v2, p1
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0x1020014
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/wh;->a:Landroid/widget/TextView;
-
-    const v0, 0x1020015
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/wh;->b:Landroid/widget/TextView;
-
-    const v0, 0x1020007
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/wh;->c:Landroid/widget/ImageView;
-
-    const v0, 0x1020008
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v1, Lcom/ejiaogl/tiktokhook/wh;->d:Landroid/widget/ImageView;
-
-    const v0, 0x7f09004f
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    iput-object v2, v1, Lcom/ejiaogl/tiktokhook/wh;->e:Landroid/widget/ImageView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final fold(Ljava/lang/Object;Lcom/ejiaogl/tiktokhook/b8;)Ljava/lang/Object;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lcom/ejiaogl/tiktokhook/b8<",
+            "-TR;-",
+            "Lcom/ejiaogl/tiktokhook/l3$a;",
+            "+TR;>;)TR;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    invoke-interface {v2, v1, v0}, Lcom/ejiaogl/tiktokhook/b8;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public final get(Lcom/ejiaogl/tiktokhook/l3$b;)Lcom/ejiaogl/tiktokhook/l3$a;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E::",
+            "Lcom/ejiaogl/tiktokhook/l3$a;",
+            ">(",
+            "Lcom/ejiaogl/tiktokhook/l3$b<",
+            "TE;>;)TE;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-static {v0, v1}, Lcom/ejiaogl/tiktokhook/l3$a$a;->a(Lcom/ejiaogl/tiktokhook/l3$a;Lcom/ejiaogl/tiktokhook/l3$b;)Lcom/ejiaogl/tiktokhook/l3$a;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public final getKey()Lcom/ejiaogl/tiktokhook/l3$b;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/ejiaogl/tiktokhook/l3$b<",
+            "*>;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    return-object v0
+.end method
+
+.method public final minusKey(Lcom/ejiaogl/tiktokhook/l3$b;)Lcom/ejiaogl/tiktokhook/l3;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/ejiaogl/tiktokhook/l3$b<",
+            "*>;)",
+            "Lcom/ejiaogl/tiktokhook/l3;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-static {v0, v1}, Lcom/ejiaogl/tiktokhook/l3$a$a;->b(Lcom/ejiaogl/tiktokhook/l3$a;Lcom/ejiaogl/tiktokhook/l3$b;)Lcom/ejiaogl/tiktokhook/l3;
+
+    move-result-object v1
+
+    return-object v1
 .end method

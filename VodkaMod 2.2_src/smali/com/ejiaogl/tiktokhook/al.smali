@@ -1,6 +1,24 @@
-.class public interface abstract Lcom/ejiaogl/tiktokhook/al;
+.class public final Lcom/ejiaogl/tiktokhook/al;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# static fields
+.field public static a:Ljava/lang/Object; = null
+
+.field public static b:Landroid/app/Activity; = null
+
+.field public static c:Landroid/view/View; = null
+
+.field public static d:Ljava/lang/String; = ""
+
+.field public static e:Ljava/lang/String; = ""
+
+.field public static f:Ljava/lang/String; = ""
+
+.field public static g:Ljava/lang/Object;
+
+.field public static h:Landroid/view/View;
 
 
 # direct methods
@@ -10,9 +28,4 @@
     nop
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Z
 .end method
