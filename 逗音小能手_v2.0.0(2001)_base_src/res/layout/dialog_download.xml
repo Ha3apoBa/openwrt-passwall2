@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="40.0dip"
+        android:paddingVertical="15.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="#ff000000"
+        android:id="@id/proBarTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip"
+        android:text="下载中： 0%"
+        android:paddingHorizontal="20.0dip" />
+</LinearLayout>

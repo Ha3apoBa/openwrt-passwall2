@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#d7dddddd"
+    android:paddingTop="10.0sp"
+    android:paddingBottom="10.0sp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="7.0sp"
+    android:paddingEnd="7.0sp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_title"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip">
+            <Switch
+                android:textSize="17.0sp"
+                android:textColor="#ff000000"
+                android:id="@id/iconWwitch"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="15.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="隐藏桌面图标" />
+            <View
+                android:background="#90dddddd"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="15.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="17.0sp"
+                    android:textColor="#ff000000"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="当前模块版本"
+                    android:layout_weight="6.0" />
+                <TextView
+                    android:textSize="17.0sp"
+                    android:textColor="#ff000000"
+                    android:id="@id/version"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+            <View
+                android:background="#90dddddd"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="15.0dip"
+                android:paddingBottom="15.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="17.0sp"
+                    android:textColor="#ff000000"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="模块激活状态"
+                    android:layout_weight="6.0" />
+                <TextView
+                    android:textSize="17.0sp"
+                    android:textColor="#ff000000"
+                    android:id="@id/staut"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/dialog_bg"
+        android:paddingTop="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0sp"
+        android:paddingStart="10.0dip"
+        android:paddingEnd="10.0dip">
+        <TextView
+            android:textSize="17.0sp"
+            android:textColor="#ff000000"
+            android:id="@id/note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

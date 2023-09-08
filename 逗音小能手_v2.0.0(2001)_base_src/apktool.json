@@ -1,0 +1,36 @@
+{
+  "apkFileName": "逗音小能手_v2.0.0(2001)_src.apk",
+  "VersionInfo": {
+    "versionName": "2.0.0",
+    "versionCode": "2001"
+  },
+  "UsesFramework": {
+    "ids": [1],
+    "tag": null
+  },
+  "unknownFiles": {
+    "r_styles.ini": "8",
+    "r_values.ini": "8",
+    "okhttp3/internal/publicsuffix/publicsuffixes.gz": "8",
+    "okhttp3/internal/publicsuffix/NOTICE": "8"
+  },
+  "PackageInfo": {
+    "forcedPackageId": "127",
+    "renameManifestPackage": null
+  },
+  "doNotCompress": [
+    "classes.dex",
+    "resources.arsc",
+    "png",
+    "gif"
+  ],
+  "isFrameworkApk": false,
+  "compressionType": false,
+  "sparseResources": false,
+  "version": "2.4.0-230616",
+  "sharedLibrary": false,
+  "sdkInfo": {
+    "minSdkVersion": "28",
+    "targetSdkVersion": "33"
+  }
+}
